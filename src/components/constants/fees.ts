@@ -1,0 +1,1 @@
+export const SERVICE_FEE_MULTIPLIER = 0.8
