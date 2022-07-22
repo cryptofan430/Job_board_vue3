@@ -1,0 +1,50 @@
+{
+  "name": "freelance",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "prepare": "husky install",
+    "lint": "vue-cli-service lint",
+    "lint-check": "vue-cli-service lint --no-fix --max-warnings 0",
+    "lint:styles": "node_modules/.bin/prettier --config .prettierrc.json \"src/**/*.{scss,css,sass}\" --write",
+    "lint-check:styles": "node_modules/.bin/prettier --config .prettierrc.json \"src/**/*.{scss,css,sass}\" --check",
+    "format": "npm run lint && npm run lint:styles",
+    "format:check": "npm run lint-check && npm run lint-check:styles"
+  },
+  "dependencies": {
+    "@stomp/stompjs": "^5.4.4",
+    "@stripe/stripe-js": "^1.20.3",
+    "autolinker": "^3.14.3",
+    "axios": "^0.21.4",
+    "core-js": "^3.6.5",
+    "cropperjs": "^1.5.12",
+    "resize-observer-polyfill": "^1.5.1",
+    "sockjs-client": "^1.5.0",
+    "vue": "^3.0.0-0",
+    "vue-router": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@types/sockjs-client": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "^4.5.6",
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/cli-plugin-router": "^4.5.6",
+    "@vue/cli-plugin-typescript": "^4.5.6",
+    "@vue/cli-service": "^4.5.6",
+    "@vue/compiler-sfc": "^3.0.0-0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "husky": "^7.0.0",
+    "image-minimizer-webpack-plugin": "^3.2.1",
+    "prettier": "^2.2.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "typescript": "~4.3.5"
+  }
+}

@@ -1,0 +1,10 @@
+image: node:14
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run format:check
+    - npm run build
+  only:
+    - merge_requests
