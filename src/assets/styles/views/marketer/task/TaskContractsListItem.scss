@@ -1,0 +1,179 @@
+.task-contracts-list-item {
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.boxes-container {
+  @include flex;
+}
+
+.influencer-box {
+  width: 32.5rem;
+  min-width: 32.5rem;
+  border-right: 1px solid $c-grey-200;
+  padding-right: 2.5rem;
+  @include flex(space-between, flex-end);
+
+  .status {
+    @include font(p3);
+    color: $c-primary-500;
+
+    &.--accepted {
+      color: $c-system-green-600;
+    }
+  }
+
+  .avatar-with-name {
+    @include flex(false, center);
+    margin-top: 0.5rem;
+  }
+
+  .avatar {
+    margin-right: 0.5rem;
+  }
+
+  .influencer-name {
+    @include font(p3);
+    color: $c-grey-700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .contract-info-wrapper {
+    margin-right: 1.5rem;
+  }
+  .open-link {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+}
+
+.milestone-box {
+  margin-left: 4rem;
+  overflow: hidden;
+
+  .milestone-text {
+    @include font(p3);
+  }
+
+  .progress-with-name {
+    @include flex(false, center);
+    margin-top: 0.5rem;
+  }
+
+  .completion-progress {
+    @include square(1.625rem, 50%);
+    min-width: max-content;
+    margin-right: 0.5rem;
+  }
+
+  .milestone-name {
+    @include font(p3);
+    color: $c-grey-700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.desktop-contract-button {
+  @include flex;
+}
+
+.mobile-contract-button {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .influencer-box {
+    width: 56%;
+    min-width: auto;
+  }
+
+  .milestone-box {
+    margin-left: 3rem;
+    width: 44%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .influencer-box {
+    width: 68%;
+    min-width: auto;
+
+    .contract-info-wrapper {
+      margin-right: 1rem;
+    }
+
+    .open-link {
+      margin-left: auto;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .milestone-box {
+    margin-left: 2rem;
+    width: 32%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .task-contracts-list-item {
+    padding: 0rem;
+    width: 100%;
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    margin-top: 1rem;
+  }
+
+  .desktop-contract-button {
+    display: none;
+  }
+
+  .mobile-contract-button {
+    display: block;
+  }
+
+  .boxes-container {
+    display: block;
+  }
+
+  .influencer-box {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    padding: 1rem 1rem 0rem 1rem;
+    display: block;
+
+    .contract-info-wrapper {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $c-grey-200;
+    }
+
+    .avatar-with-name {
+      margin-top: 1rem;
+    }
+  }
+
+  .milestone-box {
+    margin-left: 0rem;
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+
+  .mobile-contract-button {
+    @include flex(space-between);
+    margin-top: 1rem;
+
+    .open-link {
+      width: 50%;
+    }
+
+    .button {
+      width: 50%;
+      margin-left: 1rem;
+    }
+  }
+}

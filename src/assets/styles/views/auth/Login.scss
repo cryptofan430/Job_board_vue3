@@ -1,0 +1,147 @@
+.title {
+  @include font(h3);
+  margin: 2rem 0 0.5rem;
+  text-align: center;
+  color: $c-primary-900;
+}
+
+.welcome-message {
+  @include font(p3);
+  margin-bottom: 2rem;
+  text-align: center;
+  color: $c-grey-700;
+}
+
+.form {
+  width: min-content;
+  margin: 0 auto;
+
+  @include flex(false, false, column);
+
+  .email-container {
+    @include flex(center, false, column);
+    margin-bottom: 1rem;
+  }
+
+  .password-text {
+    @include flex(space-between, flex-end);
+  }
+  .password-container {
+    @include flex(center, false, column);
+  }
+
+  .password-input-container {
+    position: relative;
+
+    .input {
+      padding-right: 3.5rem;
+    }
+
+    .show-password-button {
+      @include flex(center, center, false, inline-flex);
+      @include position(absolute, 0, 0);
+      height: calc(100% - 0.25rem);
+      padding: 0 1rem;
+      margin-top: 0.25rem;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+
+  .forgot-password {
+    @include font(p3);
+    color: $c-system-blue-600;
+  }
+
+  .remember-me-container {
+    @include flex(false, center);
+    width: 24rem;
+    margin: 1.5rem 0 2rem;
+
+    .label {
+      margin-left: 0.5rem;
+    }
+  }
+  .form-error-message {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.social-media-auth-buttons {
+  @include flex(false, center, column);
+  margin-bottom: 2rem;
+
+  .social-media-auth-button.--google {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.register-info {
+  @include flex(center, false, row);
+  margin: 1.5rem 0;
+  @include font(p2);
+  text-align: center;
+
+  .register-text {
+    color: $c-primary-900;
+  }
+
+  .register-link {
+    margin-left: 1rem;
+    color: $c-system-blue-600;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .title {
+    @include font(h5);
+    margin: 2rem 0 0.5rem;
+    text-align: center;
+    color: $c-primary-900;
+  }
+
+  .welcome-message {
+    @include font(p4);
+    margin-bottom: 2rem;
+    text-align: center;
+    color: $c-grey-700;
+  }
+
+  .form {
+    .forgot-password {
+      @include font(p4);
+    }
+
+    .remember-me-container {
+      width: 18rem;
+    }
+
+    .login-button {
+      width: 100%;
+    }
+  }
+
+  .register-info {
+    flex-direction: column;
+
+    .register-link {
+      @include font(p3);
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .form {
+    .login-button {
+      @include rect(24rem, 3.375rem);
+      @include font(h3);
+      @include shadow(md);
+
+      &.--outlined {
+        border-width: 0.1875rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+.input {
+  @include shadow(md15);
+  margin: 0.25rem 0 0;
+  border: 0.125rem solid transparent;
+  border-radius: $br-sm;
+  color: $c-grey-700;
+
+  &:focus {
+    border-color: $c-primary-500;
+    outline: none;
+    caret-color: $c-primary-500;
+  }
+
+  &.--error {
+    border-color: $c-system-red-500;
+    caret-color: $c-system-red-500;
+  }
+
+  &[type='password'] {
+    letter-spacing: 0.25rem;
+    color: $c-primary-500;
+  }
+
+  &[type='number'] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    -moz-appearance: textfield;
+  }
+
+  &.--sh-md15 {
+    @include shadow(md15);
+  }
+  &.--sh-smm15 {
+    @include shadow(smm15);
+  }
+  &.--sh-sm {
+    @include shadow(sm);
+  }
+}
+
+.--tall {
+  @include rect(24rem, 3.375rem);
+  @include font(p3);
+  padding: 0.8125rem 0.875rem;
+}
+
+.--responsive {
+  width: 24rem;
+}
+
+.--full-width {
+  width: 100%;
+}
+
+.--short {
+  @include font(p3);
+  height: 2.5rem;
+  padding: 0.5rem 0.875rem 0.5625rem;
+
+  &.--xl {
+    width: 45rem;
+  }
+  &.--lg {
+    width: 38.5625rem;
+  }
+  &.--md {
+    width: 13.75rem;
+  }
+  &.--sm {
+    width: 6.75rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .--short {
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .--responsive {
+    @include rect(18rem, 2.5rem);
+
+    &.--sm {
+      width: 16rem;
+    }
+  }
+
+  .--full-width {
+    @include rect(100%, 2.5rem);
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .--responsive {
+    @include rect(24rem, 2.9rem);
+
+    &.--sm {
+      width: 22rem;
+    }
+  }
+
+  .--full-width {
+    @include rect(100%, 2.9rem);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .--responsive {
+    &.--sm {
+      @include rect(22rem, 2.9rem);
+      @include font(p3);
+      padding: 0.4125rem 0.475rem;
+    }
+  }
+
+  .--full-width {
+    @include rect(100%, 2.9rem);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .--responsive {
+    @include rect(24rem, 3.375rem);
+
+    &.--sm {
+      @include rect(24rem, 3.375rem);
+      padding: 0.8125rem 0.875rem;
+    }
+  }
+
+  .--full-width {
+    @include rect(100%, 3.375rem);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .--responsive {
+    @include rect(24rem, 3.375rem);
+
+    &.--sm {
+      @include rect(24rem, 3.375rem);
+      padding: 0.8125rem 0.875rem;
+    }
+  }
+}

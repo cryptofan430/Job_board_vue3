@@ -1,0 +1,63 @@
+.verify {
+  @include flex(center, center, column);
+}
+
+.base-info {
+  @include font(p2);
+  margin-bottom: 2rem;
+
+  &.--success {
+    margin-bottom: 1rem;
+    color: $c-system-green-500;
+  }
+
+  &.--error {
+    margin-bottom: 1rem;
+    color: $c-system-red-500;
+  }
+}
+
+.additional-info {
+  @include font(p1);
+  color: $c-grey-700;
+  max-width: 30rem;
+  text-align: center;
+}
+
+.completion-progress {
+  @include square(4rem);
+  margin-top: 1.5rem;
+  animation: rotate 1s infinite linear;
+}
+
+.link {
+  margin-top: 2.5rem;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .verify {
+    @include flex(initial, center, column);
+    margin-top: 1.5rem;
+  }
+
+  .base-info {
+    @include font(p3);
+
+    &.--error {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .additional-info {
+    @include font(p2);
+  }
+}

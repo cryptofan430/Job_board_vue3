@@ -1,0 +1,151 @@
+.popup {
+  @include position(fixed, 0, false, false, 0);
+  @include square(100%);
+  @include flex(center, center);
+  background: $c-overlay;
+}
+
+.popup-content {
+  @include rect(37rem, false, $br-lg);
+  @include flex(false, center, column);
+  padding-bottom: 4.5rem;
+  background: $c-grey-000;
+}
+
+.popup-header {
+  @include rect(100%, auto);
+  @include flex(space-between);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+
+  &.--justify-flex-end {
+    justify-content: flex-end;
+  }
+}
+
+.back-button {
+  @include flex(false, center);
+  @include button-reset;
+  cursor: pointer;
+
+  .back-content {
+    @include font(p3, $c-grey-600);
+    margin-left: 0.5rem;
+  }
+}
+
+.popup-title {
+  @include font(p3);
+  text-align: center;
+
+  &.--error {
+    color: $c-system-red-500;
+  }
+}
+
+.list-step-wrapper {
+  width: 100%;
+  padding: 0 1.5rem;
+
+  .popup-title {
+    margin-bottom: 1.5rem;
+  }
+  .social-name {
+    @include font(p2);
+    margin-right: 1rem;
+  }
+  .social-list {
+    @include flex(false, center, column);
+  }
+
+  .social-item {
+    @include flex(false, center);
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.tags-step-wrapper {
+  @include flex(false, center, column);
+
+  .popup-title {
+    margin-bottom: 0.25rem;
+  }
+  .account-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .additional-info {
+    @include font(p5, $c-grey-500);
+    margin-bottom: 1rem;
+  }
+
+  .label {
+    @include flex(false, false, column);
+    margin-bottom: 1.5rem;
+  }
+
+  .add-account-button {
+    margin-top: 1.5rem;
+  }
+
+  .social-box {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.popup-back-button {
+  margin-right: auto;
+  margin-bottom: 2.675rem;
+}
+
+@media (min-width: 640px) {
+  .popup-back-button {
+    display: none;
+  }
+  .popup-content {
+    @include custom-scrollbar;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup {
+    display: block;
+    position: static;
+    background: transparent;
+    min-height: 33.125rem;
+  }
+  .popup-close-button {
+    display: none;
+  }
+  .popup-header {
+    padding: 0;
+  }
+  .popup-content {
+    @include flex(center, center);
+    background: transparent;
+    padding: 1.75rem 1rem 1rem;
+    width: 100%;
+  }
+  .popup-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .action-button {
+    width: calc(100vw - 4rem);
+  }
+  .popup-title {
+    margin-bottom: 1rem;
+  }
+  .additional-info {
+    text-align: center;
+  }
+  :deep(.c-autocomplete-wrapper) {
+    width: calc(100vw - 4rem);
+  }
+}

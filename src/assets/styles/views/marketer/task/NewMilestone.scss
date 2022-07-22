@@ -1,0 +1,129 @@
+.milestone {
+  @include flex;
+  margin-bottom: 1rem;
+}
+
+.counter {
+  @include font(p4);
+  width: 1.3125rem;
+}
+
+.mobile-counter {
+  display: none;
+}
+
+.name-with-budget {
+  @include flex(false, flex-end);
+
+  .name,
+  .budget {
+    @include flex(false, false, column);
+    margin-right: 0.5rem;
+  }
+
+  .budget-input-wrapper {
+    position: relative;
+
+    .input {
+      padding-left: 2rem;
+    }
+  }
+
+  .budget-input-wrapper::before {
+    @include rect(100%, 100%);
+    @include flex(false, center);
+    @include font(p3);
+    content: attr(data-currency);
+    color: $c-grey-700;
+    padding-top: 0.25rem;
+    position: absolute;
+    padding-left: 1rem;
+    pointer-events: none;
+  }
+}
+
+.description {
+  @include flex(false, false, column);
+  margin-top: 1rem;
+}
+
+.remove-this-milestone {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .counter {
+    display: none;
+  }
+
+  .mobile-counter {
+    display: block;
+    @include font(p4);
+    color: $c-grey-700;
+    margin-bottom: 0.5rem;
+  }
+
+  .milestone {
+    @include flex(false, false, column);
+    margin-bottom: 1.5rem;
+  }
+
+  .name-with-budget {
+    @include flex(false, flex-start, column);
+
+    .name,
+    .budget {
+      @include flex(false, false, column);
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .budget-input-wrapper {
+      position: relative;
+      width: 100%;
+
+      .input {
+        width: 100%;
+      }
+    }
+  }
+
+  .--icon {
+    display: none;
+  }
+
+  .--sm {
+    @include font(p3);
+
+    .--short.--md {
+      width: 100%;
+    }
+  }
+
+  .description {
+    @include flex(false, false, column);
+    margin-top: 0rem;
+
+    .textarea {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .name-with-budget + .input-error {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .description + .input-error {
+    margin-top: 1rem;
+  }
+
+  .remove-this-milestone {
+    display: block;
+    @include font(p4);
+    color: $c-system-red-500;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+}

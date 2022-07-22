@@ -1,0 +1,202 @@
+.header {
+  @include flex(center, center);
+  @include rect(100%, 5rem);
+  min-height: 5rem;
+  padding: 0 7rem;
+  background: $c-primary-900;
+  position: relative;
+}
+
+.nav {
+  @include flex(space-between, center);
+  width: 100%;
+
+  .logo-sm-container {
+    display: none;
+  }
+
+  .mobile-menu-open-btn-container {
+    display: none;
+  }
+
+  .right-side {
+    @include flex(center, center);
+  }
+}
+
+.link {
+  @include font(p3);
+  color: $c-grey-100;
+}
+
+.auth-links {
+  .login-link {
+    @extend .link;
+    margin-right: 2rem;
+  }
+}
+
+.influencer-links {
+  .tasks-link {
+    @include font(p2);
+    color: $c-grey-100;
+  }
+
+  .find-job-link {
+    @extend .tasks-link;
+    margin-right: 2rem;
+    color: $c-grey-100;
+  }
+}
+
+.circle-link-sm {
+  @include square(2rem, 100%);
+  padding: 0.25rem;
+  display: inline-block;
+}
+
+.user-common-links {
+  margin-left: calc(2rem - 0.25rem);
+  margin-right: calc(4rem - 0.25rem);
+
+  .chat-link {
+    @extend .circle-link-sm;
+  }
+  .settings-link {
+    @extend .circle-link-sm;
+  }
+
+  .notification-link {
+    @extend .circle-link-sm;
+    margin: 0 calc(1.5rem - 0.25rem);
+  }
+}
+
+.menu-button {
+  @include square(2.5rem, 100%);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.menu {
+  @include position(absolute, 5rem, 0, false, false, 100);
+}
+
+@media only screen and (max-width: 576px) {
+  .header {
+    padding: 0 1rem;
+  }
+
+  .nav {
+    .logo-container,
+    .logo-container-open-mobile {
+      display: none;
+    }
+
+    .logo-sm-container {
+      display: block;
+    }
+
+    .logo-sm-container-open-mobile {
+      flex: 1;
+      text-align: center;
+    }
+
+    .menu-button {
+      @include position(absolute, 1.2rem, 1rem);
+    }
+
+    .mobile-menu-open-btn-container {
+      display: block;
+    }
+
+    .right-side {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .header {
+    padding: 0 3rem;
+  }
+
+  .nav {
+    .logo-container-open-mobile {
+      flex: 1;
+      text-align: center;
+    }
+
+    .logo-sm-container-open-mobile {
+      display: none;
+    }
+
+    .menu-button {
+      @include position(absolute, 1.2rem, 1.8rem);
+    }
+
+    .mobile-menu-open-btn-container {
+      display: block;
+    }
+
+    .right-side {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 0 1.8rem;
+  }
+
+  .nav {
+    @include flex(space-between, center);
+    width: 100%;
+
+    .logo-sm-container {
+      display: none;
+    }
+
+    .mobile-menu-open-btn-container {
+      display: none;
+    }
+
+    .right-side {
+      @include flex(center, center);
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header {
+    padding: 0 4rem;
+  }
+
+  .nav {
+    .menu-button {
+      @include position(absolute, 1.2rem, 4rem);
+    }
+
+    .right-side {
+      margin-right: 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header {
+    padding: 0 7rem;
+  }
+
+  .nav {
+    .menu-button {
+      @include position(absolute, 1.2rem, 7rem);
+    }
+
+    .right-side {
+      margin-right: 4rem;
+    }
+  }
+}

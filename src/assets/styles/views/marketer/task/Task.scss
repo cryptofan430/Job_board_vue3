@@ -1,0 +1,49 @@
+.task {
+  margin: 0 auto;
+}
+
+.task-name {
+  @include font(p1);
+  margin: 4rem 0 1.5rem 2.5rem;
+}
+
+@media only screen and (max-width: 1399px) {
+  .task {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 6.5rem;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .task {
+    padding: 0 5.5rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .task {
+    padding: 0 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .task {
+    padding: 0 3.5rem;
+  }
+
+  .task-name {
+    @include font(p2);
+    margin: 2rem 0 1rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .task {
+    padding: 0 1rem;
+  }
+
+  .task-name {
+    @include font(p3);
+  }
+}

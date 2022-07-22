@@ -1,0 +1,196 @@
+@mixin font($name, $color: false) {
+  font-feature-settings: 'salt' on;
+
+  @if $name == h1 {
+    font-size: 4rem;
+    line-height: 4.875rem;
+    font-weight: 600;
+    font-style: normal;
+  } @else if $name == h2 {
+    font-size: 3rem;
+    line-height: 3.625rem;
+    font-weight: 400;
+    font-style: normal;
+  } @else if $name == h3 {
+    font-size: 2rem;
+    line-height: 2.4375rem;
+    font-weight: 400;
+    font-style: normal;
+  } @else if $name == h4 {
+    font-size: 2rem;
+    line-height: 2.4375rem;
+    font-weight: 400;
+    font-style: italic;
+  } @else if $name == h5 {
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+    font-weight: 600;
+    font-style: normal;
+  } @else if $name == h7 {
+    font-size: 1rem;
+    line-height: 1.188rem;
+    font-weight: 600;
+    font-style: normal;
+  } @else if $name == p1 {
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+    font-weight: 400;
+    font-style: normal;
+  } @else if $name == p2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+  } @else if $name == p3 {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    font-weight: 400;
+    font-style: normal;
+  } @else if $name == p4 {
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    font-weight: 400;
+    font-style: normal;
+  } @else if $name == p5 {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    font-weight: 400;
+    font-style: normal;
+  } @else if $name == p6 {
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @if $color {
+    color: $color;
+  }
+}
+
+@mixin rect($w: false, $h: false, $r: false) {
+  @if $w {
+    width: $w;
+  }
+  @if $h {
+    height: $h;
+  }
+  @if $r {
+    border-radius: $r;
+  }
+}
+
+@mixin square($edge: false, $r: false) {
+  @if $edge {
+    width: $edge;
+    height: $edge;
+  }
+  @if $r {
+    border-radius: $r;
+  }
+}
+
+@mixin shadow($size) {
+  $shadow: 0 0 0.25rem rgba(0, 0, 0, 0.1);
+
+  @if $size == md15 {
+    $shadow: 0 0 0.25rem rgba(0, 0, 0, 0.15);
+  }
+  @if $size == smm15 {
+    $shadow: 0 0 0.1875rem rgba(0, 0, 0, 0.15);
+  }
+  @if $size == sm {
+    $shadow: 0 0 0.125rem rgba(0, 0, 0, 0.1);
+  }
+  @if $size == fake-focus {
+    $shadow: 0 0 0 0.125rem $c-primary-500;
+  }
+
+  box-shadow: $shadow;
+}
+
+@mixin flex($justify: false, $align: false, $direction: false, $display: false, $wrap: false) {
+  @if $display {
+    display: $display;
+  } @else {
+    display: flex;
+  }
+
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $align {
+    align-items: $align;
+  }
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin position($position, $t: false, $r: false, $b: false, $l: false, $z: false) {
+  position: $position;
+
+  @if $t {
+    top: $t;
+  }
+  @if $r {
+    right: $r;
+  }
+  @if $b {
+    bottom: $b;
+  }
+  @if $l {
+    left: $l;
+  }
+  @if $z {
+    z-index: $z;
+  }
+}
+
+@mixin hover() {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin button-reset() {
+  background: none;
+  border: none;
+}
+
+@mixin line-clamp($n: 3) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+}
+
+@mixin visually-hidden {
+  @include square(0.0625rem);
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  z-index: -1;
+}
+
+@mixin custom-scrollbar($width: 0.5rem) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $c-grey-100;
+    border-radius: 0.3125rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.3125rem;
+    background-clip: content-box;
+    background-color: $c-primary-500;
+  }
+}

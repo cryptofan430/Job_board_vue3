@@ -1,0 +1,75 @@
+.file-upload-message-attachments {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.file-upload-attachment {
+  @include flex(flex-start, center);
+  padding: 0;
+}
+
+.progress-icon {
+  @include flex;
+  @include square(1rem);
+  @include position(relative);
+}
+
+.attachment-icon-uploaded,
+.attachment-icon {
+  @include flex(false, flex-end);
+}
+
+.attached-file-title {
+  @include font(p3, $c-grey-900);
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-left: 0.625rem;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 35.9375rem;
+}
+
+.attached-file-title:hover {
+  color: $c-grey-600;
+}
+
+.file-entry-close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 0;
+  background: transparent;
+  margin-left: auto;
+  margin-top: auto;
+  width: 1.6rem;
+  height: 1.2rem;
+  min-width: 1.6rem;
+}
+
+.file-entry-close-btn::before,
+.file-entry-close-btn::after {
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  width: 0.125rem;
+  height: inherit;
+  background: $c-grey-900;
+}
+
+.file-entry-close-btn::before {
+  transform: rotate(135deg);
+}
+
+.file-entry-close-btn::after {
+  transform: rotate(45deg);
+}
+
+.file-entry-close-btn:hover .file-entry-close-btn::before,
+.file-entry-close-btn:focus .file-entry-close-btn::before,
+.file-entry-close-btn:hover .file-entry-close-btn::after,
+.file-entry-close-btn:focus .file-entry-close-btn::after {
+  background: $c-grey-600;
+}

@@ -1,0 +1,108 @@
+.invitation {
+  padding-bottom: 1rem;
+}
+
+.invitation:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.invitation:not(:last-child) {
+  border-bottom: 1px solid $c-grey-200;
+}
+
+.name {
+  @include font(p2, $c-primary-500);
+  @include line-clamp(1);
+}
+
+.box {
+  @include flex(false, center);
+  @include rect(min-content, auto, $br-sm);
+  @include shadow(md15);
+  min-width: 21.5rem;
+  margin-top: 1rem;
+  padding: 0.625rem 1rem;
+}
+
+.account {
+  @include font(p2);
+  @include line-clamp(1);
+  margin-left: 0.5rem;
+}
+
+.created {
+  @include font(p4, $c-grey-500);
+  margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .invitation:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  .name {
+    @include font(p3, $c-primary-500);
+  }
+
+  .box {
+    min-width: 13.5rem;
+    margin-top: 0.5rem;
+    padding: 0.625rem 0.5rem;
+  }
+
+  .account {
+    @include font(p4, $c-primary-900);
+  }
+
+  .created {
+    @include font(p6, $c-grey-500);
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .invitation:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  .name {
+    @include font(p3, $c-primary-500);
+  }
+
+  .box {
+    min-width: 18.5rem;
+    margin-top: 0.5rem;
+    padding: 0.625rem 0.5rem;
+  }
+
+  .account {
+    @include font(p4, $c-primary-900);
+  }
+
+  .created {
+    @include font(p6, $c-grey-500);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .invitation:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  .name {
+    @include font(p2, $c-primary-500);
+  }
+
+  .box {
+    min-width: 21.5rem;
+    margin-top: 1rem;
+    padding: 0.625rem 1rem;
+  }
+
+  .account {
+    @include font(p2);
+  }
+
+  .created {
+    @include font(p4, $c-grey-500);
+  }
+}

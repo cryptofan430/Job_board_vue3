@@ -1,0 +1,69 @@
+.textarea {
+  @include rect(24rem, 9.625rem);
+  @include shadow(md15);
+  @include custom-scrollbar;
+  max-width: 24rem;
+  margin: 0.25rem 0 0;
+  padding: 0.5rem 1rem;
+  border: 0.125rem solid transparent;
+  border-radius: $br-sm;
+  color: $c-grey-700;
+  resize: none;
+
+  &:focus {
+    border-color: $c-primary-500;
+    outline: none;
+    caret-color: $c-primary-500;
+  }
+
+  &.--error {
+    border-color: $c-system-red-500;
+    caret-color: $c-system-red-500;
+  }
+
+  &.--lg {
+    @include font(p3);
+  }
+  &.--md {
+    @include font(p3);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .textarea {
+    @include rect(16rem, 11.25rem);
+
+    &.--lg {
+      @include font(p4);
+    }
+    &.--md {
+      @include font(p4);
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .textarea {
+    @include rect(22rem, 10rem);
+
+    &.--lg {
+      @include font(p3);
+    }
+    &.--md {
+      @include font(p3);
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .textarea {
+    @include rect(24rem, 9.625rem);
+
+    &.--lg {
+      @include font(p3);
+    }
+    &.--md {
+      @include font(p3);
+    }
+  }
+}

@@ -1,0 +1,236 @@
+.send-message-panel {
+  @include flex(false, flex-start);
+  padding: 1rem 5.75rem 0;
+
+  @media (max-width: 960px) {
+    padding: 1rem 3.5rem 0;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.message-input-wrapper {
+  @include flex(false, stretch, column);
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.message-input.message-input {
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+.attachment-button {
+  margin-right: 1rem;
+}
+
+.chat-reply-wrapper {
+  @include flex;
+  flex: 1;
+  padding: 0.5rem 1rem 0rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  .chat-reply {
+    max-width: 35.9375rem;
+
+    .attached-file-item {
+      list-style: none;
+      margin-top: 0;
+      padding-bottom: 0;
+
+      :deep(.attach-icon) {
+        width: 1.25rem;
+        height: 1.25rem;
+        color: $c-primary-400;
+      }
+
+      :deep(.attached-file-name) {
+        color: $c-primary-400;
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 767px) {
+      max-width: calc(100vw - 8rem);
+    }
+  }
+}
+
+.post-content {
+  min-height: 5rem;
+  padding-bottom: 2rem;
+}
+
+.mobile-attach-file {
+  display: none;
+}
+
+.mobile-version-input,
+.mobile-send-button {
+  display: none;
+}
+
+.mobile-send-button {
+  margin-left: 0.5rem;
+}
+
+.chat-reply-content {
+  @include flex(false, center);
+  background: $c-grey-100;
+  margin-top: 0.5rem;
+  border-radius: $br-sm;
+
+  @media (max-width: 1216px) {
+    max-width: 24rem;
+  }
+
+  @media (max-width: 1156px) {
+    max-width: 18rem;
+  }
+
+  @media (max-width: 1056px) {
+    max-width: 12rem;
+  }
+
+  @media (max-width: 840px) {
+    max-width: 8rem;
+  }
+
+  @media (max-width: 767px) {
+    max-width: calc(100vw - 6rem);
+  }
+}
+
+.chat-reply-close-btn {
+  @include flex(center, center);
+  position: relative;
+  border: 0;
+  background: transparent;
+  margin-left: auto;
+  margin-top: 0;
+  width: 1.6rem;
+  height: 1.2rem;
+  min-width: 1.6rem;
+  padding-right: 1rem;
+}
+
+.chat-reply-close-btn::before {
+  transform: rotate(135deg);
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  width: 0.125rem;
+  height: inherit;
+  background: #171617;
+}
+
+.chat-reply-close-btn::after {
+  transform: rotate(45deg);
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  width: 0.125rem;
+  height: inherit;
+  background: #171617;
+}
+
+@media only screen and (max-width: 1199px) {
+  .desktop-attach-file + .--md {
+    width: 9rem;
+    height: 2.5rem;
+    @include font(p3);
+    @include shadow(md15);
+    min-height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .desktop-attach-file + .--md {
+    width: 7rem;
+    height: 2.5rem;
+    @include font(p3);
+    @include shadow(md15);
+    min-height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-version-input,
+  .mobile-send-button {
+    display: block;
+  }
+  .desktop-version-input,
+  .desktop-send-button {
+    display: none;
+  }
+
+  .send-message-panel {
+    padding: 1rem 1rem 0;
+  }
+
+  .mobile-attach-file {
+    display: block;
+  }
+
+  .desktop-attach-file {
+    display: none;
+  }
+
+  .message-input-wrapper {
+    @include flex(false, stretch, column);
+    flex: 1;
+    margin-right: 0rem;
+  }
+
+  .message-input-wrapper :deep(input) {
+    font-size: 0.875rem;
+  }
+
+  .attach-file {
+    @include flex;
+  }
+
+  .attachment-button {
+    background: transparent;
+    box-shadow: none;
+    width: 6rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+    @include flex;
+    margin-right: 0rem;
+    z-index: 1;
+  }
+
+  .attachment-button:hover {
+    background: transparent;
+  }
+
+  .send-message-panel :deep(.attachment-button:hover) {
+    background-color: transparent;
+  }
+
+  .attach-file-label {
+    position: absolute;
+    left: 2.1625rem;
+    display: inline;
+    color: #6665dd;
+    padding-top: 0.5rem;
+  }
+
+  .post-content {
+    min-height: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .desktop-attach-file + .--md {
+    width: 100%;
+    height: 2.5rem;
+    @include font(p3);
+    @include shadow(md15);
+    min-height: 2.5rem;
+  }
+}

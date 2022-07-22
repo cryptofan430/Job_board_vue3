@@ -1,0 +1,74 @@
+.notifications {
+  width: 50rem;
+  margin: 0 auto;
+}
+
+.notifications-container {
+  padding: 1.5rem 1.5rem 2rem;
+  background: $c-grey-000;
+  border-radius: $br-lg;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  @include font(p1);
+  margin: 4rem 0 1.5rem 1.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .notifications {
+    width: 18rem;
+    margin: 0 auto;
+  }
+
+  .notifications-container {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    @include font(p3);
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .notifications {
+    width: 24rem;
+    margin: 0 auto;
+  }
+
+  .notifications-container {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    @include font(p3);
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .notifications {
+    width: 36rem;
+  }
+
+  .notifications-container {
+    padding: 1.5rem 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .title {
+    @include font(p1);
+    margin: 4rem 0 1.5rem 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .notifications {
+    width: 50rem;
+  }
+}

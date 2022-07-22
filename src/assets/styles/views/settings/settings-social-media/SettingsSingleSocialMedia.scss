@@ -1,0 +1,55 @@
+.edit-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  height: min-content;
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.social-media-item {
+  @include flex(false, center);
+
+  &:not(:first-of-type) {
+    margin-top: 1rem;
+  }
+}
+
+.delete-button {
+  margin-left: 1.5rem;
+}
+
+.mobile-delete-button {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .social-media-item {
+    @include flex(false, center);
+
+    &:not(:first-of-type) {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .mobile-delete-button {
+    display: block;
+    margin-left: 2rem;
+    align-self: center;
+
+    :deep(svg) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .edit-button {
+    align-self: center;
+
+    :deep(svg) {
+      path {
+        fill: $c-grey-500;
+      }
+    }
+  }
+}

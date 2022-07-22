@@ -1,0 +1,16 @@
+.chat {
+  @include flex;
+  width: 100%;
+  height: 100%;
+  // max-height: calc(100vh - 5rem);
+}
+
+.chat ~ :deep(.footer) {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .chat {
+    overflow-y: hidden;
+  }
+}

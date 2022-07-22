@@ -1,0 +1,80 @@
+.proposals {
+  margin: 0 auto;
+  width: min-content;
+  padding-top: 4rem;
+}
+
+.title {
+  @include font(p1);
+  margin: 0 1.5rem 1.5rem;
+}
+
+.wrapper {
+  @include rect(50rem, auto, $br-lg);
+  background: $c-grey-000;
+  padding: 1.5rem;
+}
+
+.pagination {
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .proposals {
+    padding-top: 2rem;
+  }
+
+  .title {
+    @include font(h7, $c-primary-900);
+    margin: 0rem 0rem 1rem 0rem;
+  }
+
+  .wrapper {
+    @include rect(18rem, auto, $br-lg);
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .proposals {
+    padding-top: 2rem;
+  }
+
+  .title {
+    @include font(h7, $c-primary-900);
+    margin: 0rem 0rem 1rem 0rem;
+  }
+
+  .wrapper {
+    @include rect(24rem, auto, $br-lg);
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .proposals {
+    padding-top: 4rem;
+  }
+
+  .title {
+    @include font(p1);
+    margin: 0rem 0rem 1.5rem 1.5rem;
+  }
+
+  .wrapper {
+    @include rect(34rem, auto, $br-lg);
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .wrapper {
+    @include rect(48rem, auto, $br-lg);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    @include rect(50rem, auto, $br-lg);
+  }
+}

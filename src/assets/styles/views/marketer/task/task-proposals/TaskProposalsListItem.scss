@@ -1,0 +1,163 @@
+.proposals-list-item {
+  padding: 1rem 0 2rem;
+  border-top: 0.0625rem solid $c-grey-200;
+  display: grid;
+  grid-template-columns: 1fr 21.5rem;
+  grid-column-gap: 0.5rem;
+  column-gap: 1rem;
+}
+
+.proposal-column {
+  .user-box {
+    @include flex(false, center);
+    margin-bottom: 1rem;
+
+    .avatar {
+      margin-right: 0.5rem;
+    }
+
+    .name {
+      @include font(p3);
+      margin-bottom: 0.25rem;
+    }
+
+    .location {
+      @include font(p5);
+      color: $c-grey-500;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 31rem;
+    }
+  }
+
+  .overall-stats {
+    margin-bottom: 1rem;
+
+    .rating-box,
+    .money-box {
+      @include flex(false, center);
+
+      .icon {
+        margin-right: 0.25rem;
+      }
+    }
+
+    .rating-box {
+      margin-bottom: 0.4375rem;
+    }
+
+    .rating,
+    .money-earned {
+      @include font(p4);
+    }
+  }
+
+  .proposal-text {
+    @include font(p4);
+    color: $c-grey-700;
+    white-space: pre-wrap;
+    margin-bottom: 0.25rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .read-more-button {
+    @include font(p4);
+    color: $c-system-blue-600;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+  }
+
+  .buttons-wrapper {
+    :not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.mobile-buttons-wrapper {
+  display: none;
+}
+
+.line-clamped {
+  @include line-clamp(3);
+}
+
+.truncated.truncated,
+.proposal-text:not(.line-clamped) {
+  margin-bottom: 1.5rem;
+}
+
+.truncated ~ .read-more-button {
+  display: none;
+}
+
+.mobile-social-media-column {
+  display: none;
+}
+
+.desktop-social-media-column {
+  display: block;
+}
+
+@media only screen and (max-width: 991px) {
+  .proposals-list-item {
+    padding: 1rem 0 2rem;
+    border-top: 0.0625rem solid $c-grey-200;
+    display: grid;
+    grid-template-columns: 1fr 16.5rem;
+    grid-column-gap: 0.5rem;
+    column-gap: 0rem;
+  }
+
+  .buttons-wrapper :deep(.--md) {
+    width: 7.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .proposals-list-item {
+    padding: 1rem;
+    background: $c-grey-000;
+    @include rect(100%, false, $br-lg);
+    display: block;
+    border-top: none;
+  }
+
+  .mobile-social-media-column {
+    display: block;
+  }
+
+  .desktop-social-media-column {
+    display: none;
+  }
+
+  .buttons-wrapper {
+    display: none;
+  }
+
+  .mobile-buttons-wrapper {
+    @include flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-buttons-wrapper {
+    .button:first-child {
+      width: 50%;
+    }
+    .link {
+      width: 50%;
+      margin-left: 1rem;
+    }
+    .button:last-child {
+      width: 50%;
+      margin-left: 1rem;
+    }
+  }
+}

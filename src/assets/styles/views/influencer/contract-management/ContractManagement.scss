@@ -1,0 +1,55 @@
+.i-contract-management {
+  margin: 4rem auto 0 auto;
+
+  &.--empty {
+    width: 50rem;
+  }
+}
+
+.contract-management-mobile-popup {
+  margin: 0;
+}
+
+@media only screen and (max-width: 576px) {
+  .i-contract-management {
+    margin: 2rem auto 0 auto;
+
+    &.--empty {
+      width: 18rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .i-contract-management {
+    margin: 4rem auto 0 auto;
+
+    &.--empty {
+      width: 24rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .i-contract-management {
+    &.--empty {
+      width: 34rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .i-contract-management {
+    &.--empty {
+      width: 48rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .i-contract-management {
+    &.--empty {
+      width: 50rem;
+    }
+  }
+}

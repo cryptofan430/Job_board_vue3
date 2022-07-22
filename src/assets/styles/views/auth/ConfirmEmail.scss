@@ -1,0 +1,51 @@
+.confirm-email {
+  @include flex(center, center, column);
+  margin-bottom: 2rem;
+}
+
+.message {
+  @include font(p2);
+  max-width: 24rem;
+  text-align: center;
+}
+
+.email-info {
+  @include font(p1);
+  margin: 4rem 0 2.5rem;
+  color: $c-grey-700;
+  text-align: center;
+}
+
+.no-email-text {
+  @include font(p3);
+  margin-bottom: 0.5rem;
+  color: $c-grey-700;
+}
+
+.resend-email {
+  @include font(p3);
+  background: none;
+  border: none;
+  color: $c-system-blue-600;
+}
+
+@media only screen and (max-width: 576px) {
+  .confirm-email {
+    @include flex(initial, center, column);
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .message {
+    @include font(p3);
+  }
+
+  .email-info {
+    @include font(p2);
+    margin: 2rem 0 3rem;
+  }
+
+  .no-email-text {
+    @include font(h5);
+  }
+}

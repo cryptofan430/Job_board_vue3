@@ -1,0 +1,181 @@
+.task {
+  width: 47rem;
+  padding: 1rem 1rem 2.125rem 1.625rem;
+  border-radius: $br-lg;
+  @include shadow(smm15);
+}
+
+.task:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.name {
+  @include font(p3, $c-primary-500);
+  @include line-clamp(1);
+}
+
+.desc {
+  @include font(p4, $c-grey-700);
+  margin-top: 0.5rem;
+  word-break: break-word;
+}
+
+.read-more-button {
+  display: inline-block;
+  @include font(p4, $c-system-blue-600);
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: min-content;
+  margin-top: 1rem;
+}
+
+.task-footer {
+  @include flex();
+  margin-top: 1rem;
+}
+
+.footer-col {
+  margin-right: 1rem;
+
+  &.--milestone {
+    padding-left: 1.5rem;
+    border-left: 1px solid $c-grey-200;
+  }
+}
+
+.marketer-col {
+  width: 14.75rem;
+  min-width: 14.75rem;
+}
+
+.milestone-col {
+  width: 29.5625rem;
+  padding-right: 1rem;
+}
+
+.marketer-content {
+  margin-left: 0.5rem;
+}
+
+.marketer-box {
+  @include flex();
+  margin-top: 0.5rem;
+}
+
+.marketer-name {
+  @include font(p3, $c-grey-700);
+  @include line-clamp(1);
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  @include font(p5, $c-grey-500);
+}
+
+.milestone-box {
+  @include flex(false, center);
+  margin-top: 0.5rem;
+}
+
+.milestone-content {
+  @include font(p3, $c-grey-700);
+  @include line-clamp(1);
+  margin-left: 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 27rem;
+}
+
+.completion-progress {
+  min-width: 1.625rem;
+}
+
+.line-clamped {
+  @include line-clamp(3);
+}
+
+.truncated.truncated,
+.desc:not(.line-clamped) {
+  margin-bottom: 1.5rem;
+}
+
+.truncated ~ .read-more-button {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .task {
+    width: 100%;
+  }
+
+  .milestone-content {
+    @include font(p3, $c-grey-700);
+    @include flex;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    white-space: initial;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .marketer-col {
+    width: 10.75rem;
+    min-width: 10.75rem;
+  }
+
+  .milestone-col {
+    width: 15.5625rem;
+    padding-right: 0rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .marketer-col {
+    width: 7.75rem;
+    min-width: 7.75rem;
+  }
+
+  .marketer-name {
+    @include flex;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .task {
+    padding: 0rem;
+    box-shadow: 0 0 0 rgb(0 0 0);
+  }
+
+  .task-footer {
+    @include flex(false, false, column);
+    margin-top: 1rem;
+  }
+
+  .marketer-col {
+    width: 100%;
+    height: 5.875rem;
+    border-top: 1px solid $c-grey-200;
+    border-bottom: 1px solid $c-grey-200;
+    padding-top: 1rem;
+  }
+
+  .footer-col {
+    margin-right: 0rem;
+
+    &.--milestone {
+      padding-left: 0rem;
+      border-left: 0;
+    }
+  }
+
+  .milestone-col {
+    width: 100%;
+    padding-right: 0rem;
+    padding-top: 1rem;
+    height: 5.6875rem;
+  }
+}

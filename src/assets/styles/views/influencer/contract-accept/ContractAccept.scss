@@ -1,0 +1,43 @@
+.i-contract-accept {
+  margin: 0 auto;
+  width: 37rem;
+}
+
+.title {
+  @include font(p1);
+  margin: 4rem 0 1.5rem 1.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .i-contract-accept {
+    width: 18rem;
+  }
+
+  .title {
+    @include font(h7, $c-primary-900);
+    margin: 2rem 0rem 1rem 0rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .i-contract-accept {
+    width: 24rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .i-contract-accept {
+    width: 34rem;
+  }
+
+  .title {
+    @include font(p1);
+    margin: 4rem 0 1.5rem 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .i-contract-accept {
+    width: 37rem;
+  }
+}

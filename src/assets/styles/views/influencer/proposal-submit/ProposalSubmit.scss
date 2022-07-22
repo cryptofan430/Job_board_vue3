@@ -1,0 +1,102 @@
+.proposal {
+  margin: 0 auto;
+  width: min-content;
+}
+
+.title {
+  @include font(p1);
+  margin: 4rem 0 1.5rem 1.5rem;
+}
+
+.wrapper {
+  @include rect(63rem, auto, $br-lg);
+  @include flex(false, false, row);
+  background: $c-grey-000;
+  padding: 2rem 1.5rem;
+
+  .side {
+    width: 100%;
+    padding-left: 2rem;
+  }
+}
+
+.wrapper-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .title {
+    @include font(h7);
+    margin: 4rem 0 1rem;
+  }
+
+  .wrapper {
+    display: none;
+  }
+
+  .wrapper-mobile {
+    @include rect(18rem, auto, $br-lg);
+    @include flex(false, false, column);
+
+    .side {
+      @include rect(auto, auto, $br-lg);
+      background: $c-grey-000;
+      padding: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .title {
+    @include font(h6);
+    margin: 4rem 0 1rem;
+  }
+
+  .wrapper {
+    display: none;
+  }
+
+  .wrapper-mobile {
+    @include rect(24rem, auto, $br-lg);
+    @include flex(false, false, column);
+
+    .side {
+      @include rect(auto, auto, $br-lg);
+      background: $c-grey-000;
+      padding: 2rem 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .title {
+    @include font(p1);
+    margin: 4rem 0 1.5rem 1.5rem;
+  }
+
+  .wrapper {
+    @include rect(55rem, auto, $br-lg);
+    @include flex(false, false, row);
+    padding: 2rem 1.5rem;
+
+    .side {
+      width: 100%;
+      padding: 0 0 0 2rem;
+      background: none;
+    }
+  }
+
+  .wrapper-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    @include rect(63rem, auto, $br-lg);
+
+    .side {
+      padding: 0 0 0 2rem;
+    }
+  }
+}

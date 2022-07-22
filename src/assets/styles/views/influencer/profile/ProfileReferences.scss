@@ -1,0 +1,123 @@
+.profile-references {
+  @include rect(50rem, auto, $br-lg);
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  background: $c-grey-000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.5rem;
+}
+
+.mobile-profile-references {
+  display: none;
+}
+
+.reference {
+  &:first-child {
+    padding: 0;
+  }
+
+  &:nth-child(2) {
+    padding: 0 0 1.5rem 1.5rem;
+  }
+
+  &:nth-child(3) {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+  }
+
+  &:nth-child(4) {
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+
+  &:nth-child(5) {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+  }
+
+  &:nth-child(6) {
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+
+  &:nth-child(7) {
+    padding: 1.5rem 1.5rem 0 0;
+  }
+
+  &:nth-child(8) {
+    padding: 1.5rem 0 0 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1399px) {
+  .profile-references {
+    @include rect(100%, auto, $br-lg);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .profile-references {
+    @include rect(100%, auto, $br-lg);
+    display: block;
+    padding: 0rem;
+  }
+
+  .desktop-profile-references {
+    display: none;
+  }
+
+  .mobile-profile-references {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-profile-references :deep(.header) {
+    @include font(p3);
+    padding: 1rem;
+  }
+
+  .reference :deep(.header) {
+    padding: 0rem;
+  }
+
+  .mobile-profile-references :deep(.expand-menu-icon) {
+    width: 1.21875rem;
+    height: 1.21875rem;
+  }
+
+  .mobile-profile-references :deep(.content) {
+    padding: 0rem;
+  }
+
+  .reference {
+    &:first-child {
+      padding: 0rem 1rem 1.1875rem 1rem;
+    }
+
+    &:nth-child(2) {
+      padding: 1rem 1rem 1.1875rem 1rem;
+    }
+
+    &:nth-child(3) {
+      padding: 1rem 1rem 1.1875rem 1rem;
+    }
+
+    &:nth-child(4) {
+      padding: 1rem 1rem 1.1875rem 1rem;
+    }
+
+    &:nth-child(5) {
+      padding: 1rem 1rem 1.1875rem 1rem;
+    }
+
+    &:nth-child(6) {
+      padding: 1rem 1rem 1.1875rem 1rem;
+    }
+
+    &:nth-child(7) {
+      padding: 1rem 1rem 1.1875rem 1rem;
+    }
+
+    &:nth-child(8) {
+      padding: 1rem 1rem 1.1875rem 1rem;
+    }
+  }
+}

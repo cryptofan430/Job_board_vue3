@@ -1,0 +1,135 @@
+.settings-account {
+  @include rect(50.125rem, false, $br-lg);
+  background: $c-grey-000;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.box {
+  &:not(:first-of-type) {
+    margin-top: 2rem;
+  }
+
+  &:not(:last-of-type) {
+    .button {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &:last-of-type {
+    .button {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.title {
+  @include font(p1);
+  border-bottom: 0.0625rem solid $c-grey-200;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.email {
+  @include font(p1);
+  color: $c-primary-500;
+  margin-bottom: 1.5rem;
+}
+
+.password-info {
+  @include font(p1);
+  color: $c-grey-600;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-email-change-button,
+.mobile-password-change-button,
+.mobile-account-delete-button {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .settings-account {
+    @include rect(65%, false, $br-lg);
+    background: $c-grey-000;
+    padding: 1.5rem 1.5rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .title {
+    @include font(p2);
+  }
+
+  .email {
+    @include font(p2);
+  }
+
+  .password-info {
+    @include font(p2);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .settings-account {
+    @include rect(100%, false, $br-lg);
+    background: $c-grey-100;
+    padding: 0rem;
+  }
+
+  .title {
+    @include font(p3);
+  }
+
+  .email {
+    @include font(p4);
+    margin-bottom: 0rem;
+  }
+
+  .password-info {
+    @include font(p4);
+    margin-bottom: 0rem;
+  }
+
+  .box {
+    &:not(:first-of-type) {
+      margin-top: 1rem;
+    }
+
+    &:not(:last-of-type) {
+      .button {
+        margin-top: 1rem;
+      }
+    }
+
+    &:last-of-type {
+      .button {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .email-box {
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    padding: 1rem 1rem 1.5rem 1rem;
+
+    .--md {
+      display: none;
+    }
+  }
+
+  .--md {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .mobile-password-change-button + .email-box {
+    padding: 1rem;
+
+    .title {
+      border-bottom: none;
+      padding-bottom: 0rem;
+      margin-bottom: 0rem;
+    }
+  }
+}

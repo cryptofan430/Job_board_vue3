@@ -1,0 +1,17 @@
+.settings-profile {
+  @include rect(50.125rem, false, $br-lg);
+  background: $c-grey-000;
+}
+
+@media only screen and (max-width: 1399px) {
+  .settings-profile {
+    @include rect(65%, false, $br-lg);
+    background: $c-grey-000;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .settings-profile {
+    @include rect(100%, false, $br-lg);
+  }
+}

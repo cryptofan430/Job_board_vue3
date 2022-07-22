@@ -1,0 +1,139 @@
+.dispute-members {
+  @include flex(space-between);
+}
+
+.account-type-headline {
+  @include font(p1, $c-grey-900);
+  margin-bottom: 1rem;
+}
+
+.account-type-headline-marketer {
+  text-align: right;
+}
+
+.dispute-members {
+  margin-bottom: 2.5rem;
+}
+
+.marketer-info,
+.influencer-info {
+  @include flex;
+  align-items: center;
+}
+.user-avatar {
+  margin-right: 0.5rem;
+}
+
+.contract-milestones-payload {
+  @include font(p1, $c-grey-900);
+  @include flex(space-between);
+  padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .dispute-members {
+    @include flex(false, false, column-reverse);
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+
+  .account-type-headline {
+    @include font(p3, $c-primary-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .account-type-headline-marketer {
+    text-align: left;
+  }
+
+  .marketer-info,
+  .influencer-info {
+    @include font(p3, $c-grey-700);
+  }
+
+  .influencer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+
+  .contract-milestones-payload {
+    @include font(p3, $c-primary-900);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .dispute-members {
+    @include flex(false, false, column-reverse);
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+
+  .account-type-headline {
+    @include font(p3, $c-primary-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .account-type-headline-marketer {
+    text-align: left;
+  }
+
+  .marketer-info,
+  .influencer-info {
+    @include font(p3, $c-grey-700);
+  }
+
+  .influencer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+
+  .contract-milestones-payload {
+    @include font(p3, $c-primary-900);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .dispute-members {
+    @include flex(space-between, false, row);
+    margin-bottom: 2.5rem;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .account-type-headline {
+    @include font(p1, $c-grey-900);
+    margin-bottom: 1rem;
+  }
+
+  .account-type-headline-marketer {
+    text-align: right;
+  }
+
+  .marketer-info,
+  .influencer-info {
+    @include font(p3, $c-grey-700);
+  }
+
+  .influencer {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .contract-milestones-payload {
+    @include font(p1, $c-grey-900);
+    padding-bottom: 1rem;
+    padding-top: 0;
+    border-top: none;
+  }
+}

@@ -1,0 +1,41 @@
+.insights-content {
+  margin-top: 1rem;
+  @include rect(50rem, auto, $br-lg);
+  padding: 1rem;
+}
+
+.cities-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cities-header,
+.cities-value {
+  border: 0.0625rem solid $c-grey-800;
+}
+
+.cities-header {
+  @include font(p1, $c-grey-800);
+  text-align: left;
+  padding: 1rem;
+}
+
+.cities-value {
+  @include font(p1, $c-grey-600);
+  padding: 1rem;
+}
+
+.cities-caption {
+  @include font(h3, $c-grey-900);
+  text-align: left;
+  padding: 0 0 1rem;
+}
+
+.expandable:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+.instagram-insight-header {
+  @include font(h2, $c-grey-900);
+  margin-bottom: 2rem;
+}

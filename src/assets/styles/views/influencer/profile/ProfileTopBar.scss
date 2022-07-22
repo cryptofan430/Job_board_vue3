@@ -1,0 +1,233 @@
+.top-bar {
+  @include rect(50rem, auto, $br-lg);
+  @include flex();
+  background: $c-grey-000;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+}
+
+.profile-info {
+  margin: 0 1.5rem 0 1rem;
+}
+
+.name {
+  @include font(p2);
+  @include line-clamp(1);
+  margin-bottom: 1.0625rem;
+}
+
+.mobile-name {
+  display: none;
+}
+
+.profile-info-row {
+  @include flex(false, center);
+}
+
+.profile-info-row:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.profile-info-content {
+  @include flex(false, center);
+  @include font(p3);
+  margin-left: 0.5rem;
+}
+
+.about-me {
+  @include rect(28.375rem);
+  padding-left: 1.5rem;
+  border-left: 1px solid $c-grey-200;
+}
+
+.about-me-title {
+  @include font(p2);
+  margin-bottom: 1rem;
+}
+
+.about-me-content {
+  @include font(p3, $c-grey-600);
+  @include line-clamp(6);
+}
+
+@media only screen and (max-width: 1399px) {
+  .wrapper {
+    margin-right: 1.5rem;
+  }
+
+  .top-bar {
+    @include rect(100%, auto, $br-lg);
+  }
+
+  .about-me {
+    @include rect(24.375rem);
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .top-bar :deep(.avatar) {
+    position: relative;
+    min-width: min-content;
+
+    &.--xl {
+      @include square(5.5rem);
+      .avatar-img,
+      .icon {
+        @include square(5.5rem, 100%);
+      }
+
+      &::before {
+        @include square(1rem, 100%);
+        @include position(absolute, false, 0.3rem, 0.3rem);
+        border: 0.125rem solid $c-grey-000;
+      }
+    }
+  }
+
+  .about-me {
+    @include rect(20.375rem);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .about-me {
+    @include rect(13.375rem);
+    padding-left: 1.5rem;
+    border-left: 1px solid $c-grey-200;
+  }
+
+  .name {
+    @include font(p2);
+    display: inline-block;
+    margin-bottom: 1.0625rem;
+  }
+
+  .top-bar :deep(.avatar) {
+    position: relative;
+    min-width: min-content;
+
+    &.--xl {
+      @include square(4.5rem);
+      .avatar-img,
+      .icon {
+        @include square(4.5rem, 100%);
+      }
+
+      &::before {
+        @include square(1rem, 100%);
+        @include position(absolute, false, 0.1875rem, 0.1875rem);
+        border: 0.125rem solid $c-grey-000;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .top-bar {
+    display: inline-block;
+    padding: 0rem;
+    background: $c-grey-100;
+  }
+
+  .mobile-avatar {
+    background: $c-grey-000;
+    padding: 1rem;
+    border-radius: 0.625rem;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .mobile-avatar {
+    @include flex;
+  }
+
+  .mobile-name {
+    @include font(p2);
+    display: inline-block;
+    margin-top: 0.8rem;
+    margin-left: 0.5rem;
+  }
+
+  .top-bar :deep(.avatar) {
+    position: relative;
+    min-width: min-content;
+
+    &.--xl {
+      @include square(3.5rem);
+      .avatar-img,
+      .icon {
+        @include square(3.5rem, 100%);
+      }
+
+      &::before {
+        @include square(0.7rem, 100%);
+        @include position(absolute, false, 0.1875rem, 0.1875rem);
+        border: 0.125rem solid $c-grey-000;
+      }
+    }
+  }
+
+  .profile-info {
+    @include flex(false, center);
+    background: $c-grey-000;
+    border-radius: 0.625rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .profile-info-row {
+    padding-right: 2.0625rem;
+  }
+
+  .profile-info-row:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+
+  .about-me {
+    @include rect(100%);
+    padding: 1rem;
+    border-left: none;
+    background: $c-grey-000;
+    border-radius: 0.625rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .top-bar {
+    display: inline-block;
+    padding: 0rem;
+    background: $c-grey-100;
+    width: 100%;
+  }
+
+  .profile-info-row :deep(.location-icon) {
+    width: 11px;
+    height: 14px;
+  }
+
+  .profile-info-row :deep(.rating-icon) {
+    width: 11px;
+    height: 14px;
+  }
+
+  .profile-info-row :deep(.money-earned-icon) {
+    width: 14px;
+    height: 7px;
+  }
+
+  .profile-info-content {
+    font-size: 0.75rem;
+    margin-left: 0.46875rem;
+  }
+
+  .about-me-content {
+    @include font(p4, $c-grey-600);
+    @include line-clamp(6);
+  }
+
+  .about-me-title {
+    @include font(p3);
+    margin-bottom: 1rem;
+  }
+}

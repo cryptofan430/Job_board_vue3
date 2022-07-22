@@ -1,0 +1,84 @@
+.profile-references {
+  @include rect(100%, false, $br-lg);
+  margin-top: 1rem;
+  background: $c-grey-000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.reference {
+  &:first-child {
+    padding: 0 1.5rem 1.5rem 0;
+  }
+
+  &:nth-child(2) {
+    padding: 0 0 1.5rem 1.5rem;
+  }
+
+  &:nth-child(3) {
+    padding: 1.5rem 1.5rem 0 0;
+  }
+
+  &:nth-child(4) {
+    padding: 1.5rem 0 0 1.5rem;
+  }
+}
+
+.desktop-profile-references {
+  display: block;
+}
+
+.mobile-profile-references {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .desktop-profile-references {
+    display: none;
+  }
+
+  .mobile-profile-references :deep(.header) {
+    @include font(p3);
+    padding: 1rem;
+  }
+
+  .reference :deep(.header) {
+    padding: 0rem;
+  }
+
+  .mobile-profile-references {
+    display: block;
+    margin-top: 1rem;
+
+    .expand-wrapper :deep(.content-wrapper) {
+      .content {
+        padding: 0rem;
+      }
+    }
+  }
+
+  .profile-references {
+    @include flex(false, false, column);
+    padding: 0;
+    margin-top: 0rem;
+  }
+
+  .reference {
+    &:first-child {
+      padding: 0 1rem 1.125rem 1rem;
+    }
+
+    &:nth-child(2) {
+      padding: 1rem 1rem 1.125rem 1rem;
+    }
+
+    &:nth-child(3) {
+      padding: 1rem 1rem 1.125rem 1rem;
+    }
+
+    &:nth-child(4) {
+      padding: 1rem 1rem 1.125rem 1rem;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.rating-root {
+  display: table;
+}
+
+.rating-row {
+  display: table-row;
+}
+
+.rating-label,
+.rating-item,
+.rating-numeric-label,
+.empty-cell {
+  display: table-cell;
+  font-size: 0;
+}
+
+.rating-label {
+  @include font(p3, $c-primary-900);
+  vertical-align: middle;
+}
+
+.rating-item {
+  padding: 0.25rem;
+}
+
+.rating-label:first-of-type {
+  padding-left: 1rem;
+  padding-right: 0.75rem;
+}
+.rating-label:last-of-type {
+  padding-left: 0.75rem;
+}
+
+.rating-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 0.1875rem rgba(0, 0, 0, 0.15);
+  border-radius: 100%;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rating-root.--error .rating-input {
+  box-shadow: none;
+  border: 0.0625rem solid $c-system-red-500;
+}
+
+.rating-input:checked::after {
+  content: '';
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  background: $c-primary-500;
+  border-radius: 100%;
+}
+
+.rating-numeric-label {
+  @include font(p4, $c-grey-700);
+  text-align: center;
+  cursor: default;
+  vertical-align: middle;
+}

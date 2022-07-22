@@ -1,0 +1,7 @@
+.my-deleted {
+  color: $c-primary-300;
+}
+
+:not(.my-deleted) {
+  color: $c-grey-300;
+}

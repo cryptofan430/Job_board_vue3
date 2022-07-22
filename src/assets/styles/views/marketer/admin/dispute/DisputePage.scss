@@ -1,0 +1,50 @@
+.dispute {
+  @include flex(false, center, column);
+  width: 100%;
+  padding-top: 4rem;
+}
+
+.dispute-block {
+  width: 50rem;
+  background: $c-grey-000;
+  border-radius: $br-lg;
+  padding: 1.5rem;
+}
+
+.dispute-block:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .dispute-block {
+    width: 18rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .dispute-block {
+    width: 24rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .dispute-block {
+    width: 36rem;
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .dispute-block {
+    padding: 1.5rem;
+    width: 38rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .dispute-block {
+    width: 43.5rem;
+  }
+}

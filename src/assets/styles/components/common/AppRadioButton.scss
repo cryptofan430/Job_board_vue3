@@ -1,0 +1,23 @@
+.radio-button {
+  position: relative;
+  background: $c-grey-000;
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 1.125rem;
+  min-height: 1.125rem;
+  border: 0.1875rem solid $c-primary-500;
+  appearance: none;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+.radio-button:checked::after {
+  content: '';
+  position: absolute;
+  top: 0.1875rem;
+  bottom: 0.1875rem;
+  left: 0.1875rem;
+  right: 0.1875rem;
+  background: $c-primary-500;
+  border-radius: 100%;
+}

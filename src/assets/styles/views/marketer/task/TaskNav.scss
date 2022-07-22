@@ -1,0 +1,148 @@
+.task-nav {
+  @include rect(63rem, 3.5rem, $br-lg $br-lg 0 0);
+  @include flex(flex-start, center);
+  padding: 0 2.5rem;
+  background: $c-primary-500;
+}
+
+.link {
+  @include font(p2);
+  color: $c-grey-000;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 5rem;
+  }
+
+  &.router-link-exact-active::after {
+    @include rect(100%, 0.125rem, $br-md);
+    content: '';
+    display: block;
+    position: absolute;
+    background: $c-grey-000;
+  }
+
+  @include hover() {
+    &::after {
+      @include rect(100%, 0.125rem, $br-md);
+      content: '';
+      display: block;
+      position: absolute;
+      background: $c-grey-000;
+    }
+  }
+}
+
+.mobile-task-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .task-nav {
+    @include rect(100%, 3.5rem, $br-lg $br-lg 0 0);
+    @include flex(flex-start, center);
+    padding: 0 2.5rem;
+    background: $c-primary-500;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .link {
+    @include font(p2);
+    color: $c-grey-000;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-task-nav {
+    display: block;
+  }
+
+  .desktop-task-nav {
+    display: none;
+  }
+
+  .page-content {
+    .task-nav {
+      @include rect(100%, auto, $br-lg);
+      @include flex(false, center, column);
+      padding: 0rem;
+      background: $c-grey-000;
+      margin: 0rem;
+
+      :deep(.header) {
+        padding: 1rem;
+        width: 100%;
+      }
+
+      :deep(.content-wrapper) {
+        width: 100%;
+      }
+    }
+  }
+
+  .link {
+    @include font(p2);
+    color: $c-grey-900;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid $c-grey-200;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 0rem;
+    }
+
+    &.router-link-exact-active {
+      color: $c-primary-500;
+    }
+
+    &.router-link-exact-active::after {
+      @include rect(100%, 0.125rem, $br-md);
+      content: '';
+      display: none;
+      position: absolute;
+      background: $c-grey-000;
+    }
+
+    @include hover() {
+      &::after {
+        @include rect(100%, 0.125rem, $br-md);
+        content: '';
+        display: none;
+        position: absolute;
+        background: $c-grey-000;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .page-content {
+    .task-nav {
+      @include rect(100%, auto, $br-lg);
+      @include flex(false, center, column);
+      padding: 0rem;
+      background: $c-grey-000;
+      margin: 0rem;
+
+      :deep(.header) {
+        padding: 1rem;
+      }
+
+      :deep(.content-wrapper) {
+        width: 100%;
+      }
+    }
+  }
+
+  .link {
+    @include font(p3);
+  }
+}

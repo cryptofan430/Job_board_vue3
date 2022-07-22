@@ -1,0 +1,64 @@
+.payment-method {
+  @include flex(false, center);
+  margin-bottom: 1.5rem;
+}
+
+.billing-card {
+  margin-right: 1.5rem;
+}
+
+.mobile-delete-account {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .payment-method {
+    display: block;
+    margin-bottom: 0rem;
+    @include position(relative);
+
+    .--outlined {
+      display: none;
+    }
+
+    .mobile-delete-account {
+      display: block;
+    }
+  }
+
+  .billing-card {
+    margin-right: 0rem;
+    width: 100% !important;
+    padding: 1rem;
+
+    :deep(.header) {
+      width: 100%;
+      @include flex(flex-end);
+
+      .edit-icon {
+        display: block;
+        cursor: pointer;
+
+        path {
+          fill: $c-grey-500;
+        }
+      }
+    }
+
+    :deep(.footer) {
+      .row {
+        .expiration-date {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  .mobile-delete-account {
+    @include position(absolute, false, 1rem, 2rem, false);
+    z-index: 1;
+    font-size: 0.75rem;
+    color: $c-system-red-500;
+    cursor: pointer;
+  }
+}

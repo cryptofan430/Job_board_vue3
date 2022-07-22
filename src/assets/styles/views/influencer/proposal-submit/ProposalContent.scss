@@ -1,0 +1,295 @@
+.proposal-content {
+  width: auto;
+  padding-right: 5rem;
+  border-right: 1px solid $c-grey-200;
+}
+
+.title {
+  @include font(p1);
+}
+
+.subtitle {
+  @include font(p4, $c-grey-600);
+  margin-top: 0.25rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  @include flex(false, center);
+}
+
+.file-name {
+  @include font(p3, $c-grey-700);
+  @include line-clamp(1);
+}
+
+.file-input-container:hover .file-name {
+  color: $c-grey-500;
+  cursor: pointer;
+}
+
+.file-info {
+  @include font(p3, $c-grey-300);
+  margin-left: 0.5rem;
+}
+
+.terms-title {
+  margin-top: 1rem;
+  @include font(p2);
+}
+
+.terms {
+  margin-top: 0.25rem;
+}
+
+.budget-input-container {
+  position: relative;
+
+  .input {
+    padding: 0rem 0rem 0rem 2rem !important;
+  }
+}
+
+.budget-input-container::before {
+  @include rect(100%, 100%);
+  @include flex(false, center);
+  @include font(p3);
+  content: attr(data-currency);
+  color: $c-grey-700;
+  padding-top: 0.25rem;
+  position: absolute;
+  padding-left: 1rem;
+  pointer-events: none;
+}
+
+.budget-value {
+  @include font(p3, $c-grey-700);
+}
+
+.budget-info {
+  @include font(p4, $c-grey-600);
+  margin-top: 0.5rem;
+}
+
+.estimated {
+  margin-top: 1.25rem;
+}
+
+.estimated-value {
+  @include font(p3, $c-grey-700);
+}
+
+.estimated-info {
+  @include font(p4, $c-grey-600);
+  margin-top: 0.5rem;
+}
+
+.actions {
+  @include flex;
+  margin-top: 1.5rem;
+}
+
+.actions-mobile {
+  display: none;
+}
+
+.skeleton {
+  margin: 1rem 0;
+}
+
+.error-box {
+  margin: 1rem 0;
+}
+
+.cover-letter {
+  width: 24rem;
+}
+
+.social-items-root {
+  width: 24rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .proposal-content {
+    @include rect(auto, auto, $br-lg);
+    background: $c-grey-000;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-right: none;
+  }
+
+  .cover-letter {
+    width: 16rem;
+
+    .title {
+      @include font(p3);
+    }
+
+    .subtitle {
+      @include font(p6);
+      margin-top: 0.5rem;
+    }
+  }
+
+  .social-items-root {
+    width: 16rem;
+  }
+
+  .terms-title {
+    @include font(p3);
+  }
+
+  .estimated {
+    margin-top: 0.5rem;
+  }
+
+  .estimated-value {
+    @include font(p4, $c-grey-700);
+  }
+
+  .estimated-info {
+    @include font(p5, $c-grey-600);
+    margin-top: 0.25rem;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .actions-mobile {
+    @include flex(false, false, row);
+    margin-top: 0;
+  }
+
+  .submit-proposal-mobile-btn,
+  .update-proposal-mobile-btn {
+    width: 18rem !important;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .proposal-content {
+    @include rect(auto, auto, $br-lg);
+    background: $c-grey-000;
+    margin: 1rem 0;
+    padding: 2rem 1rem;
+    border-right: none;
+  }
+
+  .cover-letter {
+    width: 22rem;
+
+    .title {
+      @include font(p3);
+    }
+
+    .subtitle {
+      @include font(p6);
+      margin-top: 0.5rem;
+    }
+  }
+
+  .social-items-root {
+    width: 22rem;
+  }
+
+  .terms-title {
+    @include font(p3);
+  }
+
+  .estimated {
+    margin-top: 0.5rem;
+  }
+
+  .estimated-value {
+    @include font(p4, $c-grey-700);
+  }
+
+  .estimated-info {
+    @include font(p5, $c-grey-600);
+    margin-top: 0.25rem;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .actions-mobile {
+    @include flex(false, false, row);
+    margin-top: 0;
+  }
+
+  .submit-proposal-mobile-btn,
+  .update-proposal-mobile-btn {
+    width: 24rem !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .proposal-content {
+    @include rect(auto, auto, $br-lg);
+    background: $c-grey-000;
+    margin: 0;
+    padding: 0 2rem 0 0;
+    border-right: 1px solid $c-grey-200;
+  }
+
+  .cover-letter {
+    width: 24rem;
+
+    .title {
+      @include font(p2);
+    }
+
+    .subtitle {
+      @include font(p4);
+      margin-top: 0.25rem;
+    }
+  }
+
+  .social-items-root {
+    width: 24rem;
+  }
+
+  .terms-title {
+    margin-top: 1rem;
+    @include font(p2);
+  }
+
+  .estimated {
+    margin-top: 1.25rem;
+  }
+
+  .estimated-value {
+    @include font(p3, $c-grey-700);
+  }
+
+  .estimated-info {
+    @include font(p4, $c-grey-600);
+    margin-top: 0.5rem;
+  }
+
+  .actions {
+    @include flex(false, false, row);
+    margin-top: 1.5rem;
+  }
+
+  .actions-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .proposal-content {
+    padding: 0 5rem 0 0;
+  }
+
+  .cover-letter {
+    .title {
+      @include font(p1);
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.checkbox {
+  @include square(1.5rem);
+  cursor: pointer;
+  position: relative;
+
+  &.--disabled {
+    cursor: not-allowed;
+  }
+}
+
+.checkbox-fake {
+  @include position(absolute, 0, false, false, 0);
+  @include flex(center, center, false, inline-flex);
+  @include square(1.5rem, 0.1875rem);
+  background-color: $c-grey-000;
+
+  &:not(:checked) {
+    @include shadow(smm15);
+  }
+
+  &::after {
+    @include square(1.5rem, 0.1875rem);
+    content: '';
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.checkbox-real {
+  @include square(1.5rem);
+  opacity: 0;
+
+  &:checked + .checkbox-fake {
+    background-color: $c-primary-500;
+
+    &::after {
+      background-image: url('~@/assets/images/checkbox-white-check-mark.svg');
+      background-size: 1.25rem 0.75rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: scale(1);
+      opacity: 1;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  }
+
+  &:focus-visible + .checkbox-fake {
+    @include shadow(fake-focus);
+  }
+}

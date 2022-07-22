@@ -1,0 +1,142 @@
+.billing-methods {
+  @include rect(50.125rem, false, $br-lg);
+  background: $c-grey-000;
+  margin-top: 1rem;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.billings-title {
+  @include font(p1);
+  margin-bottom: 1rem;
+}
+
+.billing-methods-list {
+  @include flex(false, center);
+}
+
+.billing-card {
+  margin-right: 1.5rem;
+}
+
+.add-metthod-button {
+  margin-top: 1.5rem;
+}
+
+.mobile-add-method-button {
+  display: none;
+}
+
+.mobile-delete-account {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .settings-billing {
+    width: 65%;
+  }
+
+  .billing-methods {
+    @include rect(100%, false, $br-lg);
+    background: $c-grey-000;
+    margin-top: 1rem;
+    padding: 1.5rem 1.5rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .billings-title {
+    @include font(p2);
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .billing-methods {
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+
+  .settings-billing {
+    width: 100%;
+  }
+
+  .billings-title {
+    @include font(p3);
+    margin-bottom: 1rem;
+  }
+
+  .add-metthod-button {
+    display: none;
+  }
+
+  .mobile-add-method-button {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+
+    .--md {
+      width: 100%;
+    }
+  }
+
+  .billing-methods-list {
+    @include flex(false, flex-start, column);
+    @include position(relative);
+
+    .billing-card {
+      width: 100%;
+      padding: 1rem;
+      margin-right: 0rem;
+
+      :deep(.front-header) {
+        @include flex(flex-end);
+        width: 100%;
+
+        .edit-icon {
+          display: block;
+          cursor: pointer;
+
+          path {
+            fill: $c-grey-500;
+          }
+        }
+      }
+
+      :deep(.footer) {
+        .row {
+          .expiration-date {
+            font-size: 0.75rem;
+          }
+        }
+      }
+
+      :deep(.back-header) {
+        @include flex(space-between);
+        width: 100%;
+
+        .edit-icon {
+          display: block;
+          cursor: pointer;
+
+          path {
+            fill: $c-grey-500;
+          }
+        }
+      }
+    }
+  }
+
+  .delete-account {
+    .--md {
+      display: none;
+    }
+  }
+
+  .mobile-delete-account {
+    display: block;
+    @include position(absolute, false, 1rem, 2rem, false);
+    z-index: 1;
+    font-size: 0.75rem;
+    color: $c-system-red-500;
+    cursor: pointer;
+  }
+}

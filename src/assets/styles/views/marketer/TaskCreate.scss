@@ -1,0 +1,433 @@
+.task-create {
+  margin: 0 auto;
+  width: 53.1875rem;
+}
+
+.title {
+  @include font(p1);
+  margin: 4rem 0 1.5rem 1.5rem;
+}
+
+.form-wrapper {
+  padding: 1.5rem 1.5rem 2rem;
+  background: $c-grey-000;
+  border-radius: $br-lg;
+  margin-bottom: 1rem;
+}
+
+.form {
+  @include flex(false, false, row);
+}
+
+.info-fields-wrapper {
+  width: 26rem;
+  border-right: 0.0625rem solid $c-grey-200;
+  padding-right: 2rem;
+}
+
+.title-wrapper {
+  margin-bottom: 1rem;
+}
+
+.description-wrapper {
+  margin-bottom: 0.5rem;
+
+  .description-info {
+    @include font(p4);
+    color: $c-grey-600;
+    display: block;
+    margin-top: 0.25rem;
+  }
+}
+
+.budget-input-container {
+  position: relative;
+
+  .input {
+    padding: 0rem 0rem 0rem 2rem !important;
+  }
+}
+
+.budget-input-container::before {
+  @include rect(100%, 100%);
+  @include flex(false, center);
+  @include font(p3);
+  content: attr(data-currency);
+  color: $c-grey-700;
+  padding-top: 0.25rem;
+  position: absolute;
+  padding-left: 1rem;
+  pointer-events: none;
+}
+
+.platform-wrapper {
+  padding-left: 2rem;
+
+  .platforms-text {
+    @include font(p1);
+  }
+
+  .label {
+    @include flex(false, center);
+    margin-top: 0.5rem;
+
+    .checkbox {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.button {
+  margin-top: 1.5rem;
+}
+
+.file-upload {
+  @include flex(center, false, column);
+  margin-bottom: 1rem;
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.3rem;
+    border-radius: $br-sm;
+    background: $c-primary-500;
+    margin-right: 0.5rem;
+  }
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  @include flex(false, center);
+  cursor: pointer;
+}
+
+.file-name {
+  @include font(p3, $c-grey-700);
+  @include line-clamp(1);
+}
+
+.file-input-container:hover .file-name {
+  color: $c-grey-500;
+  cursor: pointer;
+}
+
+.file-info {
+  @include font(p3, $c-grey-300);
+  margin-left: 0.5rem;
+}
+
+.file-input-container {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.post-task-sm-button {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .task-create {
+    width: 18rem;
+  }
+
+  .title {
+    @include font(p3);
+    font-weight: 600;
+    margin: 2rem 0 1rem 1rem;
+  }
+
+  .form {
+    @include flex(false, false, column);
+  }
+
+  .form-wrapper {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .info-fields-wrapper {
+    width: 18rem;
+    border-right: none;
+  }
+
+  .platform-wrapper {
+    padding-left: 0;
+
+    .platforms-text {
+      @include font(p4);
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 0.063rem solid $c-grey-200;
+    }
+
+    .label {
+      @include flex(false, center);
+      margin-top: 0.5rem;
+
+      .platforms-name {
+        @include font(p4);
+      }
+
+      .checkbox {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .description-wrapper {
+    margin-bottom: 1.125rem;
+
+    .description-info {
+      @include font(p6);
+      margin-top: 0.5rem;
+    }
+  }
+
+  .file-info {
+    @include font(p5, $c-grey-300);
+    margin-left: 0.25rem;
+  }
+
+  .post-task-md-button {
+    display: none;
+  }
+
+  .post-task-sm-button {
+    display: block;
+    width: 18rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .task-create {
+    width: 24rem;
+  }
+
+  .title {
+    @include font(p2);
+    font-weight: 600;
+    margin: 3rem 0 1rem 1rem;
+  }
+
+  .form {
+    @include flex(false, false, column);
+  }
+
+  .form-wrapper {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .info-fields-wrapper {
+    width: 24rem;
+    border-right: none;
+  }
+
+  .platform-wrapper {
+    padding-left: 0;
+
+    .platforms-text {
+      @include font(p3);
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 0.063rem solid $c-grey-200;
+    }
+
+    .label {
+      @include flex(false, center);
+      margin-top: 0.5rem;
+
+      .platforms-name {
+        @include font(p3);
+      }
+
+      .checkbox {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .description-wrapper {
+    margin-bottom: 1.125rem;
+
+    .description-info {
+      @include font(p4);
+      margin-top: 0.5rem;
+    }
+  }
+
+  .file-info {
+    @include font(p4, $c-grey-300);
+    margin-left: 0.5rem;
+  }
+
+  .post-task-md-button {
+    display: none;
+  }
+
+  .post-task-sm-button {
+    display: block;
+    width: 24rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .task-create {
+    width: 24rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .task-create {
+    margin: 0 auto;
+    width: 48rem;
+  }
+
+  .title {
+    @include font(p1);
+    margin: 4rem 0 1.5rem 1.5rem;
+  }
+
+  .form-wrapper {
+    padding: 1.5rem 1.5rem 2rem;
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    margin-bottom: 1rem;
+  }
+
+  .form {
+    @include flex(false, false, row);
+  }
+
+  .info-fields-wrapper {
+    width: 26rem;
+    border-right: 0.0625rem solid $c-grey-200;
+    padding-right: 2rem;
+  }
+
+  .title-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .description-wrapper {
+    margin-bottom: 0.5rem;
+
+    .description-info {
+      @include font(p4);
+      color: $c-grey-600;
+      display: block;
+      margin-top: 0.25rem;
+    }
+  }
+
+  .budget-input-container {
+    position: relative;
+
+    .input {
+      padding: 0rem 0rem 0rem 2rem !important;
+    }
+  }
+
+  .budget-input-container::before {
+    @include rect(100%, 100%);
+    @include flex(false, center);
+    @include font(p3);
+    content: attr(data-currency);
+    color: $c-grey-700;
+    padding-top: 0.25rem;
+    position: absolute;
+    padding-left: 1rem;
+    pointer-events: none;
+  }
+
+  .platform-wrapper {
+    padding-left: 2rem;
+
+    .platforms-text {
+      @include font(p1);
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .label {
+      @include flex(false, center);
+      margin-top: 0.5rem;
+
+      .platforms-name {
+        @include font(p4);
+      }
+
+      .checkbox {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 1.5rem;
+  }
+
+  .file-upload {
+    @include flex(center, false, column);
+    margin-bottom: 1rem;
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: 0.3rem;
+      border-radius: $br-sm;
+      background: $c-primary-500;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .file-input {
+    display: none;
+  }
+
+  .file-label {
+    @include flex(false, center);
+    cursor: pointer;
+  }
+
+  .file-name {
+    @include font(p3, $c-grey-700);
+    @include line-clamp(1);
+  }
+
+  .file-input-container:hover .file-name {
+    color: $c-grey-500;
+    cursor: pointer;
+  }
+
+  .file-info {
+    @include font(p3, $c-grey-300);
+    margin-left: 0.5rem;
+  }
+
+  .file-input-container {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-task-md-button {
+    display: block;
+  }
+
+  .post-task-sm-button {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .task-create {
+    margin: 0 auto;
+    width: 53.1875rem;
+  }
+}

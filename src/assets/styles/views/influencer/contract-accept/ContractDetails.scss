@@ -1,0 +1,287 @@
+.contract-details {
+  @include rect(auto, auto, $br-lg);
+  background: $c-grey-000;
+  padding: 2rem 1.5rem;
+}
+
+.contract-bar {
+  @include flex(space-between);
+}
+
+.name {
+  @include font(p1, $c-primary-500);
+}
+
+.rating {
+  @include flex();
+  @include font(p3);
+}
+
+.rating-content {
+  margin-left: 0.6rem;
+  padding-top: 0.125rem;
+}
+
+.date {
+  @include font(p5, $c-grey-600);
+  margin-top: 0.5rem;
+}
+
+.content {
+  @include font(p4, $c-grey-700);
+  margin-top: 1.5rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.platforms {
+  margin-top: 1rem;
+  @include flex(flex-start, center);
+  flex-wrap: wrap;
+
+  .tag:first-of-type {
+    margin-left: 0.5rem;
+  }
+
+  .tag {
+    text-transform: capitalize;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.platforms-text {
+  @include font(p4);
+  margin-top: 0.5rem;
+}
+
+.milestiones-container {
+  margin-top: 2rem;
+}
+
+.footer {
+  margin-top: 1.5rem;
+}
+
+.budget-value {
+  @include font(p3, $c-grey-700);
+}
+
+.budget-info {
+  @include font(p4, $c-grey-600);
+  margin-top: 0.5rem;
+}
+
+.estimated {
+  margin-top: 1rem;
+}
+
+.estimated-value {
+  @include font(p3, $c-grey-700);
+}
+
+.estimated-info {
+  @include font(p4, $c-grey-600);
+  margin-top: 0.5rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+}
+
+.mobile-actions {
+  display: none;
+}
+
+.decline {
+  margin-left: 1rem;
+}
+
+.budget {
+  @include font(p3, $c-grey-700);
+}
+
+@media only screen and (max-width: 576px) {
+  .contract-details {
+    padding: 1rem;
+  }
+
+  .name {
+    @include font(p2, $c-primary-500);
+  }
+
+  .contract-bar {
+    .budget {
+      display: none;
+    }
+  }
+
+  .date {
+    @include font(p6, $c-grey-400);
+  }
+
+  .content {
+    @include font(p3, $c-grey-600);
+    margin-top: 1rem;
+  }
+
+  .milestiones-container {
+    margin-top: 1rem;
+  }
+
+  .footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $c-grey-200;
+
+    .budget-value {
+      @include font(p4, $c-grey-700);
+    }
+
+    .budget-info {
+      @include font(p5, $c-grey-600);
+      margin-top: 0.25rem;
+    }
+
+    .estimated-value {
+      @include font(p4, $c-grey-700);
+    }
+
+    .estimated-info {
+      @include font(p5, $c-grey-600);
+      margin-top: 0.25rem;
+    }
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .mobile-actions {
+    @include flex(space-between, center, row);
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .contract-details {
+    padding: 1rem;
+  }
+
+  .name {
+    @include font(p2, $c-primary-500);
+  }
+
+  .contract-bar {
+    .budget {
+      display: none;
+    }
+  }
+
+  .date {
+    @include font(p6, $c-grey-400);
+  }
+
+  .content {
+    @include font(p3, $c-grey-600);
+    margin-top: 1rem;
+  }
+
+  .milestiones-container {
+    margin-top: 1rem;
+  }
+
+  .footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $c-grey-200;
+
+    .budget-value {
+      @include font(p4, $c-grey-700);
+    }
+
+    .budget-info {
+      @include font(p5, $c-grey-600);
+      margin-top: 0.25rem;
+    }
+
+    .estimated-value {
+      @include font(p4, $c-grey-700);
+    }
+
+    .estimated-info {
+      @include font(p5, $c-grey-600);
+      margin-top: 0.25rem;
+    }
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .mobile-actions {
+    @include flex(space-between, center, row);
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contract-details {
+    padding: 2rem 1.5rem;
+  }
+
+  .name {
+    @include font(p1, $c-primary-500);
+  }
+
+  .contract-bar {
+    .budget {
+      display: block;
+    }
+  }
+
+  .date {
+    @include font(p5, $c-grey-600);
+  }
+
+  .content {
+    @include font(p4, $c-grey-700);
+    margin-top: 1.5rem;
+  }
+
+  .milestiones-container {
+    margin-top: 2rem;
+  }
+
+  .footer {
+    margin-top: 1.5rem;
+    padding-top: 0rem;
+    border-top: none;
+
+    .budget-value {
+      @include font(p3, $c-grey-700);
+    }
+
+    .budget-info {
+      @include font(p4, $c-grey-600);
+      margin-top: 0.5rem;
+    }
+
+    .estimated-value {
+      @include font(p3, $c-grey-700);
+    }
+
+    .estimated-info {
+      @include font(p4, $c-grey-600);
+      margin-top: 0.5rem;
+    }
+  }
+
+  .actions {
+    display: block;
+  }
+
+  .mobile-actions {
+    display: none;
+  }
+}

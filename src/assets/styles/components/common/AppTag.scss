@@ -1,0 +1,52 @@
+.tag {
+  @include flex(center, center, false, inline-flex);
+  @include position(relative);
+  border-color: currentColor;
+  border-style: solid;
+  background: $c-grey-000;
+}
+
+.remove-icon-wrapper {
+  @include position(relative, $l: 0.5rem);
+  @include rect(1rem, 1rem, 50%);
+  border: none;
+  background: transparent;
+  display: inline-block;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove-icon-wrapper:hover,
+.remove-icon-wrapper:focus {
+  background-color: $c-grey-100;
+}
+
+.remove-icon-wrapper .icon {
+  width: 100%;
+  height: 100%;
+}
+
+.--md {
+  height: 1.4375rem;
+  padding: 0 1rem;
+  border-width: 0.09375rem;
+  border-radius: 3.125rem;
+  color: $c-primary-500;
+
+  .tag-text {
+    @include font(p4);
+  }
+}
+
+.--sm {
+  height: 1rem;
+  padding: 0 0.5rem;
+  border-width: 0.0625rem;
+  border-radius: 0.4375rem;
+  color: $c-system-green-500;
+
+  .tag-text {
+    @include font(p5);
+  }
+}

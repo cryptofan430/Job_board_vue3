@@ -1,0 +1,40 @@
+.toast {
+  @include flex(space-between, center);
+  @include rect(20.875rem, auto, $br-md);
+  margin-top: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+
+  &.--base {
+    background: $c-grey-700;
+  }
+
+  &.--success {
+    background: $c-system-green-500;
+  }
+
+  &.--warning {
+    background: $c-system-yellow-500;
+  }
+
+  &.--danger {
+    background: $c-system-red-500;
+  }
+}
+
+.toast-content {
+  @include font(p3, $c-grey-000);
+  @include line-clamp(2);
+  margin-left: 0.5rem;
+}
+
+.icon {
+  min-width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .toast {
+    @include rect(16rem, auto, $br-md);
+  }
+}

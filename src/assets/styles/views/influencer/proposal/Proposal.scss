@@ -1,0 +1,138 @@
+.proposal {
+  margin: 0 auto;
+  width: min-content;
+
+  &.--empty {
+    width: 63rem;
+  }
+  &.--mobile-popup {
+    margin: initial;
+  }
+}
+
+.title {
+  @include font(p1);
+  margin: 4rem 0 1.5rem 1.5rem;
+}
+
+.wrapper {
+  @include rect(63rem, auto, $br-lg);
+  @include flex();
+  background: $c-grey-000;
+  padding: 2rem 1.5rem;
+}
+
+.side {
+  width: 100%;
+  padding-left: 2rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .proposal {
+    &.--empty {
+      width: 18rem;
+    }
+  }
+
+  .title {
+    @include font(h7);
+    margin: 2rem 0 1rem 0;
+  }
+
+  .wrapper {
+    @include rect(18rem, auto, $br-lg);
+    @include flex(false, false, column);
+    background: none;
+    padding: 0;
+  }
+
+  .side {
+    display: none;
+  }
+
+  .mobile-side {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .proposal {
+    &.--empty {
+      width: 24rem;
+    }
+  }
+
+  .title {
+    @include font(h7);
+    margin: 2rem 0 1rem 0;
+  }
+
+  .wrapper {
+    @include rect(24rem, auto, $br-lg);
+    @include flex(false, false, column);
+    background: none;
+    padding: 0;
+  }
+
+  .side {
+    display: none;
+  }
+
+  .mobile-side {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .proposal {
+    &.--empty {
+      width: 34rem;
+    }
+  }
+
+  .wrapper {
+    @include rect(34rem, auto, $br-lg);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .proposal {
+    &.--empty {
+      width: 58rem;
+    }
+  }
+
+  .title {
+    @include font(p1);
+    margin: 4rem 0 1.5rem 1.5rem;
+  }
+
+  .wrapper {
+    @include rect(58rem, auto, $br-lg);
+    @include flex(false, false, row);
+
+    padding: 2rem 1.5rem;
+    background: $c-grey-000;
+  }
+
+  .side {
+    display: block;
+  }
+
+  .mobile-side {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .proposal {
+    &.--empty {
+      width: 63rem;
+    }
+  }
+
+  .wrapper {
+    @include rect(63rem, auto, $br-lg);
+    @include flex(false, false, row);
+  }
+}

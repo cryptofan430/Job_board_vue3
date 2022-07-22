@@ -1,0 +1,30 @@
+.back-icon-text {
+  @include font(p3);
+  padding-left: 0.68rem;
+}
+
+.link {
+  @include flex(center, center, row);
+}
+
+@media only screen and (max-width: 576px) {
+  .back-icon-text {
+    @include font(p3, $c-grey-700);
+    padding-left: 0.43rem;
+    transition-duration: 0.2s;
+
+    &:hover,
+    &:focus {
+      color: $c-grey-800;
+    }
+    &:active {
+      color: $c-grey-900;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .back-icon-text {
+    padding-left: 0.34rem;
+  }
+}

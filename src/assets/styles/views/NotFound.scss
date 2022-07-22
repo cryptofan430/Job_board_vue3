@@ -1,0 +1,166 @@
+.not-found {
+  @include flex(center, center, row);
+}
+
+.image {
+  margin: 0 0 0 5rem;
+
+  .image-background {
+    @include rect(50.8rem, 39.3rem);
+  }
+}
+
+.text-container {
+  .error-text {
+    @include font(h2);
+    color: $c-grey-400;
+  }
+
+  .message {
+    @include font(p1);
+    color: $c-grey-600;
+    margin: 1rem 0 1.5rem;
+  }
+}
+
+.main-page-mobile-btn {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .image {
+    margin: 7rem 0 0;
+    width: 100%;
+
+    .image-background {
+      @include rect(100%, 100%);
+    }
+  }
+
+  .text-container {
+    @include position(absolute, 7rem);
+    text-align: center;
+
+    .error-text {
+      @include font(h1);
+    }
+    .message {
+      @include font(p4);
+      margin: 0 0 1.5rem;
+    }
+  }
+
+  .main-page-btn-container {
+    @include flex(center, center, row);
+    margin: 1rem 0;
+  }
+
+  .main-page-mobile-btn {
+    @include flex(false, false, row);
+    width: 18rem;
+  }
+
+  .main-page-desktop-btn {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .image {
+    margin: 5rem 0 0;
+    @include rect(100%, 100%);
+
+    .image-background {
+      @include rect(100%, 100%);
+    }
+  }
+
+  .text-container {
+    @include position(absolute, 7rem);
+    text-align: center;
+
+    .error-text {
+      @include font(h1);
+    }
+    .message {
+      @include font(p4);
+      margin: 0 0 1.5rem;
+    }
+  }
+
+  .main-page-btn-container {
+    @include flex(center, center, row);
+    margin: 1rem 0;
+  }
+
+  .main-page-mobile-btn {
+    @include flex(false, false, row);
+    width: 21.8rem;
+  }
+
+  .main-page-desktop-btn {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .image {
+    margin: 0 0 0 5rem;
+    @include rect(25.8rem, 39.3rem);
+
+    .image-background {
+      @include rect(25.8rem, 39.3rem);
+    }
+  }
+
+  .text-container {
+    @include position(initial, 0);
+    text-align: center;
+
+    .error-text {
+      @include font(h2);
+    }
+    .message {
+      @include font(p1);
+      margin: 0 0 1.5rem;
+    }
+  }
+
+  .main-page-mobile-btn {
+    display: none;
+  }
+
+  .main-page-desktop-btn {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .image {
+    @include rect(30.8rem, 39.3rem);
+
+    .image-background {
+      @include rect(30.8rem, 39.3rem);
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .image {
+    @include rect(40.8rem, 39.3rem);
+
+    .image-background {
+      @include rect(40.8rem, 39.3rem);
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .image {
+    @include rect(50.8rem, 39.3rem);
+
+    .image-background {
+      @include rect(50.8rem, 39.3rem);
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.resolvation-header {
+  @include font(p1, $c-grey-900);
+  margin-bottom: 1rem;
+}
+
+.money-influencer-text {
+  @include flex(false, false, column);
+  @include font(p1, $c-grey-900);
+}
+
+.explanation {
+  @include flex(false, false, column);
+  @include font(p4, $c-grey-900);
+  margin: 1rem 0 1.5rem;
+}
+
+.budget-input-container {
+  position: relative;
+
+  .input {
+    padding: 0rem 0rem 0rem 2rem !important;
+  }
+}
+
+.budget-input-container::before {
+  @include rect(100%, 100%);
+  @include flex(false, center);
+  @include font(p3);
+  content: attr(data-currency);
+  color: $c-grey-700;
+  padding-top: 0.25rem;
+  position: absolute;
+  padding-left: 1rem;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .resolvation-header {
+    @include font(p3, $c-primary-900);
+    margin-bottom: 1rem;
+  }
+
+  .money-influencer-text {
+    @include font(p3, $c-primary-900);
+    padding-top: 1rem;
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+
+  .explanation {
+    @include flex(false, false, column);
+    @include font(p3, $c-primary-900);
+    margin: 1rem 0 1.5rem;
+  }
+
+  .resolve-dispute-btn {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .resolvation-header {
+    @include font(p1, $c-primary-900);
+    margin-bottom: 1rem;
+  }
+
+  .money-influencer-text {
+    @include font(p3, $c-primary-900);
+    padding-top: 1rem;
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+
+  .explanation {
+    @include flex(false, false, column);
+    @include font(p3, $c-primary-900);
+    margin: 1rem 0 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .money-influencer-text {
+    @include font(p1, $c-grey-900);
+    padding-top: 1rem;
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+
+  .explanation {
+    @include font(p4, $c-grey-900);
+    margin: 1rem 0 1.5rem;
+  }
+}

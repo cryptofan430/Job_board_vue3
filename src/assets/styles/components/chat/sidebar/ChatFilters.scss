@@ -1,0 +1,95 @@
+.chat-filters {
+  @include shadow(md15);
+  position: relative;
+  background: $c-grey-000;
+  padding-left: 6.5rem;
+  padding-right: 1rem;
+  height: 5.25rem;
+}
+
+.chat-filters-content {
+  padding-top: 1rem;
+}
+
+.chat-search.chat-search.chat-search {
+  height: 1.5rem;
+  width: 100%;
+  margin-top: 0;
+  @include font(p5, $c-grey-700);
+}
+
+.chat-search-wrapper {
+  @include flex(false, center);
+  width: 100%;
+  position: relative;
+}
+
+.chat-recent-filters {
+  @include flex(false, center);
+  margin-top: 0.25rem;
+}
+
+.recent-filters-label {
+  min-width: max-content;
+  margin-right: 0.5rem;
+}
+
+.chat-recent-filter-dropdown {
+  width: 100%;
+}
+
+.chat-recent-filter-dropdown :deep(.dropdown) {
+  width: 100% !important;
+}
+
+@media only screen and (max-width: 1199px) {
+  .chat-sidebar {
+    width: 21.5rem;
+  }
+  .chat-filters {
+    @include shadow(md15);
+    position: relative;
+    background: $c-grey-000;
+    padding-left: 3.5rem;
+  }
+  .dialogs-list-item {
+    @include flex(false, stretch);
+    background: $c-grey-100;
+    padding: 1rem 1.5rem 1rem 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .chat-filters {
+    @include shadow(md15);
+    position: relative;
+    background: $c-grey-000;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+  }
+  .dialogs-list-item {
+    @include flex(false, stretch);
+    align-items: stretch;
+    background: $c-grey-100;
+    padding: 1rem 2rem 1rem 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .chat-filters {
+    @include shadow(md15);
+    position: relative;
+    background: $c-grey-000;
+    padding-left: 0.95rem;
+  }
+  .chat-search.chat-search.chat-search {
+    height: 1.5rem;
+    width: 100%;
+    @include font(p5, $c-grey-700);
+  }
+
+  .chat-recent-filters {
+    @include flex(false, center);
+    margin-top: 0.5rem;
+  }
+}

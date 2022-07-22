@@ -1,0 +1,43 @@
+.reference:nth-child(n + 1):nth-last-child(n + 3) {
+  border-bottom: 1px solid $c-grey-200;
+}
+
+.reference:nth-child(2n + 1) {
+  border-right: 1px solid $c-grey-200;
+}
+
+.header {
+  @include flex(false, center);
+}
+
+.author {
+  @include font(p3);
+  margin-left: 0.5rem;
+}
+
+.content {
+  @include font(p4, $c-grey-600);
+  margin-top: 1rem;
+}
+
+.details {
+  cursor: pointer;
+  color: $c-system-blue-600;
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+.rating {
+  @include flex(false, center);
+  margin-top: 1.125rem;
+}
+
+.rating-value {
+  margin-left: 0.35rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .reference:nth-child(2n + 1) {
+    border-right: none;
+  }
+}

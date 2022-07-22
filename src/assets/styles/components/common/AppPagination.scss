@@ -1,0 +1,56 @@
+.pagination {
+  height: 2.5rem;
+  @include flex(center);
+}
+
+.button {
+  @include square(2.5rem);
+  @include font(p4);
+  border: none;
+  background: $c-grey-000;
+  color: $c-grey-600;
+
+  &.--active {
+    background: $c-primary-500;
+    color: $c-grey-100;
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.--active) {
+    @include hover() {
+      background: $c-grey-200;
+    }
+  }
+
+  margin-right: 0.03125rem;
+  margin-left: 0.03125rem;
+  &:first-of-type {
+    margin-left: 0;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.left {
+  border-radius: 0 0 100% 100%;
+  transform: rotate(90deg);
+}
+
+.right {
+  border-radius: 0 0 100% 100%;
+  transform: rotate(-90deg);
+}
+
+@media only screen and (max-width: 576px) {
+  .pagination {
+    height: 2rem;
+  }
+
+  .button {
+    @include square(2rem);
+  }
+}

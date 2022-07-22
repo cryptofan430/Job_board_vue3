@@ -1,0 +1,124 @@
+.messages-list-item {
+  @include flex(false, flex-end);
+  margin-bottom: 0.5rem;
+}
+
+.user-messages {
+  @include flex(false, false, column);
+  width: 100%;
+  flex: 1;
+}
+
+.messages-list-item-user :deep(.message-item-root) {
+  @include font(p4, $c-grey-000);
+  margin-right: auto;
+  padding-left: 1.3125rem;
+  padding-right: 1rem;
+  border-bottom-right-radius: $br-lg;
+}
+
+.messages-list-item-user :deep(.messages-list-avatar) {
+  margin-right: 0.15rem;
+}
+
+.messages-list-item-my :deep(.messages-list-avatar) {
+  margin-left: 0.15rem;
+}
+
+.messages-list-item-my :deep(.message-item-root) {
+  @include font(p4, $c-grey-600);
+  background: $c-grey-200;
+  margin-left: auto;
+  padding-right: 1.3125rem;
+  padding-left: 1rem;
+  border-bottom-left-radius: $br-lg;
+}
+
+.messages-list-item-my :deep(.message-time) {
+  @include font(p5, $c-grey-500);
+}
+
+.messages-list-item-user :deep(.message-time) {
+  @include font(p5);
+}
+
+.messages-list-item-my :deep(.scooped-corner) {
+  left: 100%;
+  transform: scaleX(-1) translateX(3px) translateY(1px);
+  color: $c-grey-200;
+}
+
+.messages-list-item-user :deep(.scooped-corner) {
+  right: 100%;
+  transform: translateX(3px) translateY(1px);
+}
+
+.messages-list-item-user :deep(.button-dot) {
+  border-color: $c-grey-300;
+}
+
+.messages-list-item-user :deep(.open-menu-button:hover .button-dot) {
+  background-color: $c-grey-300;
+}
+
+.messages-list-item-my :deep(.chat-attached-files) {
+  align-items: flex-end;
+  width: 100%;
+}
+
+.messages-list-item-my :deep(.message-time) {
+  @include font(p5, $c-grey-500);
+  flex-direction: row-reverse;
+}
+
+.messages-list-item-my :deep(.button-dot) {
+  border-color: $c-grey-500;
+}
+
+.messages-list-item-my :deep(.open-menu-button:hover .button-dot) {
+  background-color: $c-grey-500;
+}
+
+.messages-list-item-my :deep(.open-menu-button) {
+  margin-left: 0.3125rem;
+}
+
+.messages-list-item-user :deep(.attached-file-link) {
+  color: $c-grey-000;
+}
+
+.messages-list-item-user :deep(.chat-auto-link) {
+  color: $c-grey-300;
+}
+
+.messages-list-item-user :deep(.chat-auto-link:hover) {
+  color: $c-grey-400;
+}
+
+.messages-list-item-user :deep(.attached-file-link:hover) {
+  color: $c-grey-200;
+}
+
+.messages-list-item-my :deep(.attached-file-link),
+.messages-list-item-my :deep(.chat-auto-link) {
+  color: $c-primary-400;
+}
+
+.messages-list-item-my :deep(.attached-file-link:hover),
+.messages-list-item-my :deep(.chat-auto-link:hover) {
+  color: $c-primary-500;
+}
+
+.messages-list-item-user :deep(.chat-reply) {
+  border-left-color: $c-grey-200;
+  color: $c-grey-300;
+}
+
+.messages-list-item-user :deep(.open-menu-button) {
+  margin-right: 0.3125rem;
+}
+
+.messages-list-item:last-of-type :deep(.message-item-root:last-of-type .context-menu-wrapper) {
+  top: initial;
+  bottom: -0.5rem;
+}

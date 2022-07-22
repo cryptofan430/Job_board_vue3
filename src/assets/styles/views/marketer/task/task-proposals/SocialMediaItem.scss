@@ -1,0 +1,24 @@
+.table-row {
+  display: grid;
+  grid-template-columns: 6.5rem 4.25rem 3.125rem auto;
+  grid-column-gap: 0.5rem;
+  column-gap: 0.5rem;
+  border-top: 0.0625rem solid $c-grey-200;
+}
+
+.table-cell {
+  @include font(p4);
+  color: $c-grey-700;
+  text-align: center;
+  padding: 0.5rem 0;
+
+  &.account-cell {
+    text-align: left;
+  }
+
+  .account-tag {
+    color: $c-grey-500;
+    display: block;
+    word-break: break-all;
+  }
+}

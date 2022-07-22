@@ -1,0 +1,25 @@
+.profile {
+  @include flex(center);
+  margin-top: 4rem;
+  padding: 0rem 7rem;
+}
+
+.for-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .profile {
+    margin-top: 2rem;
+  }
+
+  .for-mobile {
+    display: inline-block;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .for-desktop {
+    display: none;
+  }
+}

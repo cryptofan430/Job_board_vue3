@@ -1,0 +1,102 @@
+.settings-nav {
+  @include rect(23.875rem, false, $br-lg);
+  background: $c-grey-000;
+  padding: 0.5rem 1.5rem 1rem;
+  margin-right: 2rem;
+  @include flex(false, false, column);
+  @include shadow(md15);
+}
+
+.link {
+  @include font(p1);
+  color: $c-grey-900;
+  padding: 1rem 0;
+  transition: all 0.15s ease;
+
+  &:not(:first-child) {
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+
+  &.router-link-active {
+    padding-left: 1rem;
+    color: $c-primary-500;
+  }
+}
+
+.mobile-settings-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .desktop-settings-nav {
+    margin-right: 2rem;
+  }
+
+  .settings-nav {
+    @include rect(100%, false, $br-lg);
+    background: $c-grey-000;
+    padding: 0.5rem 1.5rem 1rem;
+    margin-right: 2rem;
+    @include flex(false, false, column);
+    @include shadow(md15);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .desktop-settings-nav {
+    margin-right: 1rem;
+  }
+
+  .link {
+    @include font(p2);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container-nav {
+    width: 100%;
+  }
+
+  .settings-nav {
+    :deep(.header) {
+      padding: 1rem;
+      width: 100%;
+
+      .header-title {
+        @include font(p3);
+      }
+
+      .expand-button {
+        width: 1.21875rem;
+        height: 1.21875rem;
+
+        .expand-menu-icon {
+          width: 1.21875rem;
+          height: 1.21875rem;
+        }
+      }
+    }
+
+    :deep(.content-wrapper) {
+      width: 100%;
+
+      .link {
+        @include font(p3);
+      }
+    }
+  }
+
+  .mobile-settings-nav {
+    display: block;
+    margin-bottom: 1rem;
+
+    .expand-wrapper {
+      margin: 0rem;
+      width: 100%;
+    }
+  }
+
+  .desktop-settings-nav {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+.all-tasks {
+  padding: 1.5rem;
+  background: $c-grey-000;
+  border-radius: $br-lg;
+  margin-bottom: 1.5rem;
+}
+
+.tasks-text {
+  @include font(p2);
+  padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .tasks-text {
+    border-bottom: 0.0625rem solid $c-grey-200;
+  }
+}

@@ -1,0 +1,288 @@
+.edit-task {
+  margin: 0 auto;
+  width: 53.1875rem;
+}
+
+.title {
+  @include font(p1);
+  margin: 4rem 0 1.5rem 1.5rem;
+}
+
+.form-wrapper {
+  padding: 1.5rem 1.5rem 2rem;
+  background: $c-grey-000;
+  border-radius: $br-lg;
+  margin-bottom: 1rem;
+}
+
+.form {
+  @include flex();
+}
+
+.info-fields-wrapper {
+  width: 26rem;
+  border-right: 0.0625rem solid $c-grey-200;
+  padding-right: 2rem;
+}
+
+.title-wrapper {
+  margin-bottom: 1rem;
+}
+
+.description-wrapper {
+  margin-bottom: 0.5rem;
+
+  .description-info {
+    @include font(p4);
+    color: $c-grey-600;
+    display: block;
+    margin-top: 0.25rem;
+  }
+}
+
+.budget-input-container {
+  position: relative;
+
+  .input {
+    padding: 0rem 0rem 0rem 2rem !important;
+  }
+}
+
+.budget-input-container::before {
+  @include rect(100%, 100%);
+  @include flex(false, center);
+  @include font(p3);
+  content: attr(data-currency);
+  color: $c-grey-700;
+  padding-top: 0.25rem;
+  position: absolute;
+  padding-left: 1rem;
+  pointer-events: none;
+}
+
+.platform-wrapper {
+  padding-left: 2rem;
+
+  .platforms-text {
+    @include font(p1);
+  }
+
+  .label {
+    @include flex(false, center);
+    margin-top: 0.5rem;
+
+    .checkbox {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.button {
+  margin-top: 1.5rem;
+}
+
+.file-upload {
+  @include flex(center, false, column);
+  margin-bottom: 1rem;
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.3rem;
+    border-radius: $br-sm;
+    background: $c-primary-500;
+    margin-right: 0.5rem;
+  }
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  @include flex(false, center);
+  cursor: pointer;
+}
+
+.file-name {
+  @include font(p3, $c-grey-700);
+  @include line-clamp(1);
+}
+
+.file-input-container:hover .file-name {
+  color: $c-grey-500;
+  cursor: pointer;
+}
+
+.file-info {
+  @include font(p3, $c-grey-300);
+  margin-left: 0.5rem;
+}
+
+.file-input-container {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-button {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .edit-task {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0rem 14rem;
+  }
+
+  .info-fields-wrapper {
+    width: 55%;
+    border-right: 0.0625rem solid $c-grey-200;
+    padding-right: 2rem;
+  }
+
+  .platform-wrapper {
+    width: 45%;
+  }
+
+  .title-wrapper {
+    .--tall {
+      width: 100%;
+    }
+  }
+
+  .description-wrapper {
+    .textarea {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .budget-input-container {
+    .input {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .edit-task {
+    padding: 0rem 10rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .edit-task {
+    padding: 0rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .edit-task {
+    padding: 0rem 1rem;
+  }
+
+  .title {
+    @include font(p3);
+    font-weight: 600;
+    margin: 2rem 0 1rem 0rem;
+  }
+
+  .form-wrapper {
+    padding: 0;
+    background: $c-grey-100;
+  }
+
+  .form {
+    @include flex(false, false, column);
+    padding: 1rem 1rem 1.5rem 1rem;
+    background: $c-grey-000;
+    border-radius: $br-lg;
+  }
+
+  .info-fields-wrapper {
+    width: 100%;
+    border-right: none;
+    padding-right: 0rem;
+
+    .button {
+      display: none;
+    }
+  }
+
+  .platform-wrapper {
+    padding-left: 0rem;
+    padding-top: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    border-top: 1px solid $c-grey-200;
+
+    .platforms-text {
+      @include font(p4);
+    }
+
+    .label {
+      @include flex(false, center);
+      margin-top: 0.5rem;
+
+      .checkbox {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .title-wrapper {
+    margin-bottom: 1rem;
+
+    .--md {
+      @include font(p3);
+    }
+
+    .--tall {
+      @include font(p4);
+    }
+  }
+
+  .description-wrapper {
+    margin-bottom: 1rem;
+
+    .--md {
+      @include font(p3);
+    }
+
+    .description-info {
+      font-size: 0.75rem;
+    }
+
+    .textarea {
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  .budget-wrapper {
+    .--md {
+      @include font(p3);
+    }
+  }
+
+  .budget-input-container {
+    .input {
+      padding: 0rem 0rem 0rem 1.5rem !important;
+      @include font(p4);
+    }
+  }
+
+  .budget-input-container::before {
+    @include font(p4);
+  }
+
+  .mobile-button {
+    display: block;
+    width: 100%;
+
+    .button {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.chat-header {
+  @include shadow(md15);
+  @include flex(false, center, false, false);
+  background: $c-grey-000;
+  width: 100%;
+  padding: 0.75rem 5.75rem 0.75rem 3rem;
+  z-index: 11;
+}
+
+.chat-user-identity {
+  @include flex(center, false, column, false);
+  flex: 1;
+  margin-left: 0.5rem;
+}
+
+.chat-user-name {
+  @include font(p1, $c-grey-900);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 26rem;
+
+  @media only screen and (max-width: 1366px) {
+    width: 24rem;
+  }
+  @media only screen and (max-width: 992px) {
+    width: 18rem;
+  }
+  @media only screen and (max-width: 767px) {
+    width: 24rem;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 14rem;
+  }
+  @media only screen and (max-width: 380px) {
+    width: 10rem;
+  }
+}
+
+.chat-user-contact {
+  @include font(p3, $c-grey-600);
+  margin-top: 0.1875rem;
+}
+
+.context-menu-wrapper {
+  @include position(absolute);
+  z-index: 2;
+  right: 0;
+  top: 0.7rem;
+}
+
+.chat-popup-icon {
+  @include position(relative);
+}
+
+.chat-popup-icon :deep(.button-dot) {
+  border-color: $c-grey-500;
+}
+
+.chat-popup-icon :deep(.open-menu-button:hover .button-dot) {
+  background-color: $c-grey-300;
+}
+
+.chat-back-icon {
+  display: none;
+}
+
+.archivate-chat-link {
+  color: $c-grey-100;
+}
+
+.chat-header-title-description {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+  .chat-header {
+    @include position(sticky, 0);
+    @include shadow(md15);
+    @include flex(false, center, false, false);
+    background: $c-grey-000;
+    width: 100%;
+    padding: 0.75rem 3.75rem 0.75rem 1.1875rem;
+  }
+
+  .chat-user-name {
+    font-size: 1rem;
+  }
+
+  .chat-user-contact {
+    font-size: 0.75rem;
+    margin-top: 0rem;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  .chat-back-icon {
+    display: inline;
+    cursor: pointer;
+  }
+
+  .chat-back-icon :deep(svg) {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  .chat-user-identity {
+    @include flex(center, false, column, false);
+    flex: 1;
+    margin-left: 1.1875rem;
+  }
+
+  .chat-popup {
+    position: relative;
+    left: 3rem;
+  }
+
+  .chat-popup-icon :deep(.open-menu-button) {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    height: 1rem;
+    width: 1rem;
+    transform: rotate(90deg);
+  }
+}

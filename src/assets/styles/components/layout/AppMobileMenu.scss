@@ -1,0 +1,125 @@
+.menu {
+  @include rect(100%, max-content, 0 0 0.625rem 0.625rem);
+  padding: 1.5rem 0 4rem;
+  background: $c-primary-900;
+
+  .menu-content-wrapper {
+    @include flex(center, center, column);
+
+    .link {
+      @include font(p3);
+      color: $c-grey-100;
+    }
+
+    .login-link {
+      @extend .link;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .message {
+    @include font(h5);
+    color: $c-grey-000;
+  }
+
+  .mobile-menu-item {
+    @include flex(false, center, row);
+    margin-top: 1rem;
+  }
+
+  .profile-text {
+    margin-right: 1rem;
+  }
+
+  .mobile-menu-item:first-child {
+    margin-top: 0;
+  }
+
+  .mobile-menu-item-text {
+    @include font(p3);
+    margin-left: 0.25rem;
+    color: $c-grey-000;
+  }
+
+  .mobile-menu-item-list {
+    width: 100%;
+    @include flex(false, center, column);
+
+    &::before {
+      @include rect(100%, 0.0625rem);
+      display: block;
+      content: '';
+      margin: 1.18rem 0;
+      background: $c-grey-800;
+    }
+  }
+
+  .accounts-list {
+    width: 100%;
+    @include flex(false, center, column);
+
+    &::before,
+    &::after {
+      @include rect(100%, 0.0625rem);
+      display: block;
+      content: '';
+      margin: 1rem 0;
+      background: $c-grey-800;
+    }
+  }
+
+  .account-list-item {
+    margin-top: 1.75rem;
+  }
+
+  .account-list-item:first-child {
+    margin-top: 0;
+  }
+
+  .second-account-list-item {
+    margin-top: 1rem;
+  }
+
+  .account-switch-button {
+    @include font(p4);
+    @include flex(flex-start, center);
+    width: 100%;
+    border: none;
+    background: none;
+    overflow: hidden;
+    text-align: left;
+    cursor: pointer;
+
+    .name {
+      max-width: 17rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $c-grey-200;
+    }
+
+    .dot {
+      @include square(0.5rem, 100%);
+      margin: 0 1rem;
+      display: inline-block;
+      background: $c-primary-500;
+    }
+
+    .account-type {
+      color: $c-grey-300;
+    }
+  }
+
+  .logout-button {
+    @include flex(false, center);
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    .text {
+      @include font(p3);
+      color: $c-grey-000;
+      margin-left: 0.5rem;
+    }
+  }
+}

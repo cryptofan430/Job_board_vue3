@@ -1,0 +1,217 @@
+.task-invitations {
+  @include rect(63rem, false, 0 0 $br-lg $br-lg);
+  @include flex(false, false, column);
+  padding: 1.5rem 4rem 1.5rem 2.5rem;
+  background: $c-grey-000;
+}
+
+.search-bar {
+  @include flex();
+  margin-bottom: 1rem;
+
+  .invitations-autocomplete {
+    margin-right: 0.5rem;
+    flex-grow: 1;
+
+    :deep(.c-autocomplete-wrapper) {
+      width: 100%;
+    }
+  }
+}
+
+.search-info {
+  @include font(p4);
+  color: $c-grey-500;
+  margin-bottom: 1rem;
+}
+
+.filters {
+  @include flex;
+  margin-bottom: 1.875rem;
+
+  :deep(.sort) {
+    margin-right: 1rem;
+  }
+
+  :deep(.mobile-sort) {
+    display: none;
+  }
+}
+
+.pagination {
+  margin-top: 1.5rem;
+}
+
+.skeleton,
+.error-box {
+  margin-bottom: 2rem;
+}
+
+.invitations-table {
+  width: 100%;
+
+  .table-head {
+    .table-heading {
+      @include font(p3);
+      color: $c-primary-500;
+      padding: 1rem 0;
+      text-align: left;
+      border-bottom: 0.0625rem solid $c-grey-200;
+    }
+  }
+
+  .table-body {
+    margin: 0.5rem 0 1.5rem;
+  }
+}
+
+.load-more-button-wrapper {
+  @include flex;
+  margin-top: 1.5rem;
+  width: 100%;
+  border-top: 0.125rem solid $c-grey-200;
+}
+
+.load-more-button {
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loading-error {
+  @include font(p3, $c-system-red-500);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 1399px) {
+  .task-invitations {
+    @include rect(100%, false, 0 0 $br-lg $br-lg);
+    padding: 1.5rem 4rem 1.5rem 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .invitations-table {
+    .table-head {
+      .table-heading {
+        padding-right: 0.5rem;
+      }
+    }
+
+    .table-body {
+      margin: 0.5rem 0 1.5rem;
+    }
+  }
+
+  .--md {
+    width: 8rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .task-invitations {
+    @include rect(100%, false, 0 0 $br-lg $br-lg);
+    padding: 1.5rem 1rem 1.5rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .task-invitations {
+    padding: 0rem;
+    background: $c-grey-100;
+  }
+
+  .search-bar {
+    @include flex(false, false, column);
+    margin-bottom: 0.5rem;
+
+    .invitations-autocomplete {
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+
+      :deep(.c-autocomplete-wrapper) {
+        width: 100%;
+      }
+    }
+
+    .--md {
+      width: 100%;
+    }
+  }
+
+  .search-info {
+    font-size: 0.75rem;
+    color: $c-grey-500;
+    margin-bottom: 1.5rem;
+  }
+
+  .filters {
+    @include flex(false, false, column-reverse);
+    margin-bottom: 1rem;
+
+    :deep(.mobile-sort) {
+      display: block;
+      margin-right: 0rem;
+      width: 100%;
+
+      .dropdown-container.--sh-md15 {
+        width: 100%;
+
+        .dropdown.--sm {
+          width: 100%;
+
+          .dropdown-trigger {
+            @include flex(center, false, row-reverse);
+          }
+
+          .dropdown-current {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+
+    :deep(.sort) {
+      display: none;
+    }
+
+    .filter {
+      margin-right: 0rem;
+      margin-bottom: 0.5rem;
+      width: 100%;
+
+      :deep(.dropdown-container.--sh-md15) {
+        width: 100%;
+
+        .dropdown.--sm {
+          width: 100%;
+
+          .dropdown-current {
+            @include font(p4);
+          }
+        }
+      }
+    }
+  }
+
+  .invitations-table {
+    width: 100%;
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    padding: 0rem;
+
+    .table-head {
+      display: none;
+    }
+
+    .table-body {
+      margin: 0rem;
+    }
+  }
+
+  .load-more-button-wrapper {
+    display: none;
+  }
+}

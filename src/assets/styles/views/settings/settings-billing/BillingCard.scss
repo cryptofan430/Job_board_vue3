@@ -1,0 +1,9 @@
+.billing-method {
+  @include flex(false, center);
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.payment-box {
+  margin-right: 1.5rem;
+}

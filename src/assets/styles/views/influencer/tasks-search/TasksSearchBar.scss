@@ -1,0 +1,82 @@
+.search-bar {
+  @include flex(space-between, center);
+  width: 100%;
+}
+
+.search-input {
+  margin: 0 0.5rem 0 0 !important;
+  height: 2.5rem !important;
+}
+
+@media only screen and (max-width: 576px) {
+  .search-bar {
+    width: 18rem;
+    margin-right: 0;
+    @include flex(false, false, column);
+  }
+
+  .search-input {
+    margin: 0 !important;
+    height: 2.5rem !important;
+  }
+
+  .search-button {
+    width: 100% !important;
+    margin-top: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .search-bar {
+    width: 24rem;
+    @include flex(false, false, column);
+  }
+
+  .search-input {
+    margin: 0 !important;
+    height: 2.5rem !important;
+  }
+
+  .search-button {
+    width: 100% !important;
+    margin-top: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .search-bar {
+    width: 34rem;
+    @include flex(false, false, column);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .search-bar {
+    width: 58rem;
+    @include flex(space-between, center, row);
+  }
+
+  .search-input {
+    margin: 0 0.5rem 0 0 !important;
+    height: 2.5rem !important;
+  }
+
+  .search-button {
+    width: 11rem !important;
+    margin-top: 0rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .search-bar {
+    width: 72rem;
+    @include flex(space-between, center, row);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .search-bar {
+    width: 76rem;
+    @include flex(space-between, center, row);
+  }
+}

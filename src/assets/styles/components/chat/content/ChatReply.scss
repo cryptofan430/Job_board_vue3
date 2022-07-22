@@ -1,0 +1,11 @@
+.chat-reply {
+  @include font(p4, $c-grey-300);
+  padding: 0.1875rem 0.5rem;
+  max-width: calc(100vw - 8rem);
+  margin-bottom: 0.5rem;
+  border-left: 0.125rem solid $c-primary-500;
+  cursor: default;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

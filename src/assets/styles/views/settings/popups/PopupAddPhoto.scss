@@ -1,0 +1,51 @@
+.popup {
+  @include position(fixed, 0, false, false, 0);
+  @include square(100%);
+  @include flex(center, center);
+  background: $c-overlay;
+}
+
+.popup-content {
+  @include rect(37rem, false, $br-lg);
+  @include flex(false, false, column);
+  background: $c-grey-000;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-button {
+  margin: 1.5rem 1.5rem 1rem 0;
+  align-self: flex-end;
+}
+
+.avatar-container {
+  @include rect(100%, 22.25rem);
+  @include flex(center, center);
+  background: $c-grey-200;
+  position: relative;
+
+  .circle {
+    @include square(18.75rem, 100%);
+    @include shadow(md15);
+    background: $c-grey-000;
+    overflow: hidden;
+
+    .avatar {
+      @include square(100%);
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+  :deep(.cropper-container) {
+    position: absolute;
+    top: 0;
+  }
+  :deep(.cropper-view-box) {
+    border-radius: 100%;
+  }
+}
+
+.button {
+  margin: 1.5rem 0 2rem;
+  align-self: center;
+}

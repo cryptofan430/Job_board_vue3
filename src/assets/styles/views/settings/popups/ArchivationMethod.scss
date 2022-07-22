@@ -1,0 +1,127 @@
+.popup {
+  @include position(fixed, 0, false, false, 0);
+  @include square(100%);
+  @include flex(center, center);
+  background: $c-overlay;
+  z-index: 12;
+}
+
+.popup-content {
+  @include rect(37rem, false, $br-lg);
+  @include flex(false, center, column);
+  height: 21.688rem;
+  background: $c-grey-000;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-button {
+  margin: 1.5rem 1.5rem 1rem 0;
+  align-self: flex-end;
+}
+
+.popup-title {
+  @include font(p3, $c-grey-900);
+  margin-bottom: 1.5rem;
+}
+
+.additional-info {
+  @include font(p5, $c-grey-500);
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.user-area {
+  @include shadow(md15);
+  @include flex;
+  width: 24.5rem;
+  margin-bottom: 1.5rem;
+  height: 4.5rem;
+  align-items: center;
+  padding: 1rem 3.5rem;
+  background: $c-grey-000;
+  border-radius: $br-sm;
+}
+
+.user-name {
+  @include font(p3, $c-grey-700);
+}
+
+.chat-title {
+  @include font(p5, $c-grey-600);
+  margin-top: 0.25rem;
+}
+
+.user-desc {
+  padding-left: 0.75rem;
+  @include flex(space-evenly, space-between, column);
+}
+
+.button-area {
+  width: 68%;
+  @include flex(space-around, false, row);
+}
+
+.user-name {
+  @include font(p3, $c-grey-700);
+  margin-bottom: 0.15rem;
+}
+
+.chat-title {
+  @include font(p5, $c-grey-600);
+  width: 12rem;
+}
+
+.popup-back-button {
+  margin-right: auto;
+  margin-bottom: 2.675rem;
+}
+
+@media (min-width: 640px) {
+  .popup-back-button {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup {
+    display: block;
+    position: static;
+    background: transparent;
+    min-height: 33.125rem;
+  }
+  .popup-close-button {
+    display: none;
+  }
+  .popup-content {
+    @include flex(center, center);
+    background: transparent;
+    padding: 1.75rem 1rem 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .user-area {
+    padding: 1rem;
+    width: 100%;
+  }
+  .popup-title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .button-area {
+    width: 100%;
+  }
+
+  .archivate-button {
+    margin-right: 0.5rem;
+    flex: 1;
+  }
+
+  .cancel-button {
+    margin-left: 0.5rem;
+    flex: 1;
+  }
+}

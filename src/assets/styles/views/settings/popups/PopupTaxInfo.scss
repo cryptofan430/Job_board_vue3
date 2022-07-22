@@ -1,0 +1,90 @@
+.popup {
+  @include position(fixed, 0, false, false, 0);
+  @include square(100%);
+  @include flex(center, center);
+  background: $c-overlay;
+}
+
+.popup-content {
+  @include rect(37rem, false, $br-lg);
+  @include flex(false, center, column);
+  background: $c-grey-000;
+}
+
+.close-button {
+  margin: 1.5rem 1.5rem 1rem 0;
+  align-self: flex-end;
+}
+
+.dropdown-wrapper {
+  @include flex(false, false, column);
+  margin-bottom: 1rem;
+
+  .dropdown-container {
+    margin-top: 0.25rem;
+  }
+  .country-text {
+    @include font(p1);
+  }
+}
+
+.label {
+  @include flex(false, false, column);
+
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+}
+
+.button {
+  margin: 1.5rem 0 4.5rem;
+  align-self: center;
+}
+
+.popup-back-button {
+  margin-right: auto;
+  margin-bottom: 2.675rem;
+}
+
+@media (min-width: 640px) {
+  .popup-back-button {
+    display: none;
+  }
+  .popup-content {
+    @include custom-scrollbar;
+    overflow-y: auto;
+    max-height: 80vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup {
+    display: block;
+    position: static;
+    background: transparent;
+    min-height: 33.125rem;
+  }
+  .popup-close-button {
+    display: none;
+  }
+  .popup-content {
+    @include flex(center, center);
+    background: transparent;
+    padding: 1.75rem 1rem 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup-input,
+  .action-button {
+    width: calc(100vw - 4rem);
+  }
+
+  .additional-info {
+    text-align: center;
+  }
+  :deep(.dropdown.dropdown) {
+    width: calc(100vw - 4rem);
+  }
+}

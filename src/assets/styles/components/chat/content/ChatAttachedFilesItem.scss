@@ -1,0 +1,26 @@
+.attached-file-item {
+  margin-top: 0.4rem;
+  padding-bottom: 0.2rem;
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    max-width: calc(100vw - 8rem);
+  }
+}
+
+.attached-file-link {
+  @include flex(false, center);
+  @include font(p3);
+}
+
+.attached-file-name {
+  display: inline-block;
+  margin-left: 0.25rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 34.4375rem;
+}
+
+.attach-icon {
+  min-width: max-content;
+}

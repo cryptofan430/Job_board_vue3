@@ -1,0 +1,204 @@
+.milestone {
+  padding-top: 1rem;
+  border-top: 1px solid $c-grey-200;
+}
+
+.milestone:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.milestone-header {
+  @include flex(space-between);
+}
+
+.milestone-name-wrapper {
+  display: flex;
+}
+
+.disputes-message {
+  @include font(p4, $c-system-red-500);
+  margin-top: 0.5rem;
+}
+
+.name {
+  max-width: 34.5rem;
+  @include font(p2, $c-grey-700);
+  @include line-clamp(1);
+  margin-right: 0.59375rem;
+}
+
+.payment {
+  @include font(p2, $c-primary-500);
+  @include line-clamp(1);
+  min-width: max-content;
+}
+
+.content {
+  max-width: 34.5rem;
+  word-break: break-word;
+  @include font(p4, $c-grey-600);
+  @include line-clamp(2);
+  margin-top: 1rem;
+}
+
+.dispute-context-menu {
+  position: relative;
+}
+
+.disputes-context-menu {
+  @include position(absolute, 100%, $l: 0);
+  z-index: 4;
+}
+
+.mobile-disputes-message {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .milestone-header {
+    @include flex(false, false, column);
+
+    .milestone-name-wrapper {
+      @include flex(space-between, false, row);
+
+      .name {
+        max-width: 14rem;
+        @include font(p3, $c-grey-700);
+      }
+    }
+    .payment {
+      @include font(p4, $c-primary-500);
+      margin-top: 0.25rem;
+    }
+  }
+
+  .disputes-message {
+    display: none;
+  }
+
+  .mobile-disputes-message {
+    display: block;
+    @include font(p4, $c-system-red-500);
+    margin-top: 1rem;
+  }
+
+  .content {
+    max-width: 16rem;
+    @include font(p6, $c-grey-600);
+    margin-top: 0.5rem;
+  }
+
+  .disputes-context-menu {
+    @include position(absolute, 100%, $l: unset, $r: 0);
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .milestone-header {
+    @include flex(false, false, column);
+
+    .milestone-name-wrapper {
+      @include flex(space-between, false, row);
+
+      .name {
+        max-width: 20rem;
+        @include font(p3, $c-grey-700);
+      }
+    }
+    .payment {
+      @include font(p4, $c-primary-500);
+      margin-top: 0.25rem;
+    }
+  }
+
+  .disputes-message {
+    display: none;
+  }
+
+  .mobile-disputes-message {
+    display: block;
+    @include font(p4, $c-system-red-500);
+    margin-top: 1rem;
+  }
+
+  .content {
+    max-width: 22rem;
+    @include font(p6, $c-grey-600);
+    margin-top: 0.5rem;
+  }
+
+  .disputes-context-menu {
+    @include position(absolute, 100%, $l: unset, $r: 0);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .milestone-header {
+    @include flex(space-between, false, row);
+
+    .milestone-name-wrapper {
+      @include flex(false, false, row);
+
+      .name {
+        max-width: 25rem;
+        @include font(p3, $c-grey-700);
+      }
+    }
+    .payment {
+      @include font(p4, $c-primary-500);
+      margin-top: 0rem;
+    }
+  }
+
+  .disputes-message {
+    display: block;
+  }
+
+  .mobile-disputes-message {
+    display: none;
+  }
+
+  .content {
+    max-width: 32rem;
+    @include font(p6, $c-grey-600);
+    margin-top: 0.5rem;
+  }
+
+  .disputes-context-menu {
+    @include position(absolute, 100%, $l: 0, $r: unset);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .milestone-header {
+    .milestone-name-wrapper {
+      .name {
+        max-width: 32.5rem;
+        @include font(p2, $c-grey-700);
+      }
+    }
+    .payment {
+      @include font(p2, $c-primary-500);
+    }
+  }
+
+  .content {
+    max-width: 32rem;
+    @include font(p4, $c-grey-600);
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .milestone-header {
+    .milestone-name-wrapper {
+      .name {
+        max-width: 34.5rem;
+      }
+    }
+  }
+
+  .content {
+    max-width: 34rem;
+  }
+}

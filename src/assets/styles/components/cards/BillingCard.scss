@@ -1,0 +1,43 @@
+.billing-card {
+  @include rect(16.875rem, 10.625rem);
+  @include flex(space-between, flex-start, column, inline-flex);
+  @include shadow(md15);
+  padding: 1.3125rem 1.5rem 1.475rem;
+  border-radius: $br-md;
+  background: $c-grey-000;
+
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer {
+  width: 100%;
+  @include font(p4);
+
+  .row {
+    @include flex(space-between, false, row);
+    width: 100%;
+
+    .name {
+      margin-bottom: 0.4375rem;
+    }
+    .expiration-date {
+      color: $c-grey-600;
+    }
+  }
+
+  .number {
+    color: $c-grey-500;
+  }
+  .money {
+    color: $c-primary-500;
+  }
+  .available-text {
+    color: $c-grey-700;
+  }
+}
+
+.edit-icon {
+  display: none;
+}

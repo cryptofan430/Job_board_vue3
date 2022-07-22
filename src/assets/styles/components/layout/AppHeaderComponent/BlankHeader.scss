@@ -1,0 +1,70 @@
+.header-blank {
+  @include flex(center);
+  width: 100%;
+
+  .back-icon-container {
+    @include position(absolute, 2.19rem, false, false, 7.19rem);
+  }
+
+  .logo-sm-container {
+    display: none;
+  }
+}
+
+.--margin-with-btn,
+.--margin-with-no-btn {
+  padding: 2rem 0;
+}
+
+@media only screen and (max-width: 576px) {
+  .header-blank {
+    .back-icon-container {
+      @include position(absolute, 1.19rem, false, false, 1.19rem);
+    }
+
+    .logo-container {
+      display: none;
+    }
+
+    .logo-sm-container {
+      display: block;
+    }
+  }
+
+  .--margin-with-btn {
+    padding: 4.5rem 0 0;
+  }
+
+  .--margin-with-no-btn {
+    padding: 3rem 0 0;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .header-blank {
+    .back-icon-container {
+      @include position(absolute, 2.19rem, false, false, 1.19rem);
+    }
+  }
+
+  .--margin-with-btn,
+  .--margin-with-no-btn {
+    padding: 2rem 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-blank {
+    .back-icon-container {
+      @include position(absolute, 2.19rem, false, false, 4.19rem);
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header-blank {
+    .back-icon-container {
+      @include position(absolute, 2.19rem, false, false, 7.19rem);
+    }
+  }
+}

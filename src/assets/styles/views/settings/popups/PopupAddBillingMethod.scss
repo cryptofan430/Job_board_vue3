@@ -1,0 +1,95 @@
+.popup {
+  @include position(fixed, 0, false, false, 0);
+  @include square(100%);
+  @include flex(center, center);
+  background: $c-overlay;
+}
+
+.popup-content {
+  @include rect(37rem, false, $br-lg);
+  @include flex(false, center, column);
+  @include custom-scrollbar;
+  padding-bottom: 2rem;
+  background: $c-grey-000;
+}
+
+.button,
+.billing-card {
+  flex-shrink: 0;
+}
+
+.close-button {
+  margin: 1.5rem 1.5rem 1rem 0;
+  align-self: flex-end;
+}
+
+.popup-title {
+  @include font(p3);
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  @include flex(false, false, column);
+  margin-bottom: 1rem;
+}
+
+.row {
+  @include flex;
+  margin-bottom: 1.5rem;
+
+  .input {
+    width: 11.5rem;
+  }
+  .name {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .label:first-of-type {
+    margin-right: 1rem;
+  }
+}
+
+.divider-content {
+  @include font(p3, $c-grey-600);
+  margin: 1.5rem 0;
+}
+
+.billing-card {
+  margin-bottom: 1.5rem;
+}
+
+.popup-back-button {
+  margin-right: auto;
+  margin-bottom: 2.675rem;
+}
+
+@media (min-width: 640px) {
+  .popup-back-button {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup {
+    display: block;
+    position: static;
+    background: transparent;
+    min-height: 33.125rem;
+  }
+  .popup-close-button {
+    display: none;
+  }
+  .popup-content {
+    @include flex(center, center);
+    background: transparent;
+    padding: 1.75rem 1rem 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup-title {
+    margin-bottom: 1rem;
+    margin-top: 2.45rem;
+  }
+}

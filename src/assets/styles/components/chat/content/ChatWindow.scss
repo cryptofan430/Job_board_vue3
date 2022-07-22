@@ -1,0 +1,30 @@
+.chat-window {
+  @include flex(false, false, column);
+  flex: 1;
+  background: $c-grey-000;
+  height: 100%;
+}
+
+.chat-bottom-content-wrapper {
+  @include custom-scrollbar;
+  @include shadow(md15);
+}
+
+.chat-bottom-content {
+  @include flex(flex-end, false, column);
+  position: relative;
+}
+
+.chat-content-state {
+  padding: 3rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .chat-window {
+    display: none;
+  }
+
+  .activechatwindow {
+    @include flex(false, false, column);
+  }
+}

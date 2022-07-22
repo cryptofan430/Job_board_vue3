@@ -1,0 +1,74 @@
+.social-title {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  @include font(p3, $c-grey-700);
+}
+
+.social-item {
+  @include flex(false, center);
+  margin-bottom: 0.5rem;
+}
+
+.social-item:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+.social-box {
+  @include rect(100%, auto, $br-sm);
+  @include shadow(md15);
+  @include flex(false, false, column);
+  padding: 0.625rem 1rem;
+  margin-left: 1rem;
+}
+
+.main-social-info {
+  @include flex(false, center, row);
+}
+
+.icon {
+  min-width: max-content;
+}
+
+.social-name {
+  @include font(p2, $c-primary-900);
+  @include line-clamp(1);
+  margin-left: 0.5rem;
+}
+
+.no-social-content {
+  @include font(p4, $c-grey-500);
+  margin-bottom: 0.5rem;
+}
+
+.no-social-link {
+  @include font(p3, $c-system-blue-600);
+}
+
+.unavailable-account {
+  @include flex(false, center, row);
+  margin-top: 0.5rem;
+
+  .text {
+    @include font(p6, $c-system-red-500);
+    padding-left: 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .social-title {
+    margin: 1rem 0 0.5rem;
+    @include font(p4, $c-grey-700);
+  }
+
+  .no-social-info {
+    margin-top: 1rem;
+  }
+
+  .no-social-content {
+    @include font(p6, $c-grey-500);
+  }
+
+  .social-name {
+    @include font(p4, $c-primary-900);
+  }
+}

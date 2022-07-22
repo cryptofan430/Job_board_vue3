@@ -1,0 +1,20 @@
+.dialogs-list {
+  @include custom-scrollbar;
+  width: 100%;
+  overscroll-behavior: auto;
+  overflow: auto;
+  height: calc(100vh - 10.25rem);
+}
+
+.dialog-link-wrapper {
+  @include shadow(md15);
+}
+
+.dialogs-list::after {
+  @include shadow(md15);
+  content: '';
+  overflow: hidden;
+  display: block;
+  height: 0.0625rem;
+  width: 100%;
+}

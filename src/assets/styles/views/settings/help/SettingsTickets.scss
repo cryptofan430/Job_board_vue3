@@ -1,0 +1,28 @@
+.settings-tickets {
+  margin-top: 2.5rem;
+}
+
+.ticket-section-header {
+  @include font(p1, $c-primary-900);
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .ticket-section-header {
+    @include font(p2, $c-primary-900);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .settings-tickets {
+    margin-top: 1rem;
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+
+  .ticket-section-header {
+    @include font(p3, $c-primary-900);
+    margin-bottom: 1rem;
+  }
+}

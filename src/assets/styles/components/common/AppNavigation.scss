@@ -1,0 +1,114 @@
+.expand-wrapper.expand-wrapper {
+  background: $c-grey-000;
+  border-radius: $br-lg;
+  padding: 0;
+
+  margin: 3rem;
+}
+
+.header {
+  @include flex(space-between, center);
+  @include font(p1, $c-grey-900);
+  width: 100%;
+  cursor: pointer;
+  padding: 1.5rem;
+}
+
+.header-title {
+  @include font(p2);
+  position: relative;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  left: 0rem;
+}
+
+.expanded-header-title {
+  @include font(p2, $c-primary-500);
+  transition-timing-function: ease-in;
+  left: 1rem;
+}
+
+.expand-button {
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 100%;
+  border: none;
+  position: relative;
+}
+
+.expand-menu-icon {
+  position: relative;
+  transform: scale(1.33333333333333);
+  color: $c-primary-500;
+  border-radius: 100%;
+  transition-duration: 0.15s;
+}
+
+.expand-button.--expanded .expand-menu-icon {
+  opacity: 0;
+}
+
+.expand-button:hover .expand-menu-icon {
+  color: $c-primary-600;
+}
+
+.content-wrapper {
+  overflow: hidden;
+  height: 0;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.content {
+  @include flex(center, false, column);
+  min-height: max-content;
+  border-top: 0.0625rem solid $c-grey-200;
+}
+
+.link {
+  @include font(p2, $c-grey-900);
+  padding: 1.5rem;
+}
+
+.link:not(:last-child) {
+  border-bottom: 0.0625rem solid $c-grey-200;
+}
+
+.router-link-exact-active {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .expand-wrapper.expand-wrapper {
+    @include rect(18rem);
+  }
+
+  .header {
+    @include rect(18rem, 3.5rem);
+    padding: 0.8rem 1rem;
+  }
+
+  .header-title {
+    @include font(p3);
+  }
+
+  .expanded-header-title {
+    @include font(p3, $c-primary-500);
+  }
+
+  .content {
+    @include flex(center, false, column);
+  }
+
+  .link {
+    @include font(p3, $c-grey-900);
+    padding: 1rem;
+  }
+
+  .link:not(:last-child) {
+    border-bottom: 0.0625rem solid $c-grey-200;
+  }
+}

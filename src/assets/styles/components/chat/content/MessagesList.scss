@@ -1,0 +1,31 @@
+.chat-messages-list-wrapper {
+  @include custom-scrollbar;
+  @include flex($wrap: wrap);
+  width: 100%;
+  max-height: calc(100vh - 19.25rem);
+  height: 100%;
+  flex: 1;
+  overflow: auto;
+  padding-top: 1.8125rem;
+  overscroll-behavior: contain;
+}
+.chat-messages-list-wrapper-mobile {
+  max-height: calc(100% - 11.5rem);
+}
+.chat-messages-list {
+  @include flex(flex-end, false, column);
+  margin-top: auto;
+  padding: 0 3rem;
+  flex: 1;
+}
+.chat-messages-error {
+  @include flex(center, center);
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .chat-messages-list {
+    padding: 1rem;
+  }
+}

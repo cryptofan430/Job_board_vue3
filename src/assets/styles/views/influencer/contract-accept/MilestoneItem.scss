@@ -1,0 +1,26 @@
+.milestone {
+  padding-top: 1rem;
+  border-top: 1px solid $c-grey-200;
+}
+
+.milestone:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.name {
+  @include font(p3, $c-grey-700);
+  @include flex(space-between);
+  word-break: break-word;
+}
+
+.money {
+  @include font(p3, $c-primary-500);
+  white-space: nowrap;
+}
+
+.content {
+  @include font(p4, $c-grey-600);
+  padding-right: 3.8125rem;
+  padding-top: 0.5rem;
+  @include line-clamp(2);
+}

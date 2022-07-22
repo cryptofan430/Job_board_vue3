@@ -1,0 +1,43 @@
+.task-list-item {
+  @include flex(space-between);
+  padding: 1.5rem 0;
+  border-top: 0.0625rem solid $c-grey-200;
+}
+
+.link-with-time {
+  @include flex(false, false, column);
+  overflow: hidden;
+
+  .link {
+    @include font(p2);
+    color: $c-primary-500;
+    margin: 0 1rem 1rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .created-time {
+    @include font(p4);
+    color: $c-grey-500;
+  }
+}
+
+.proposal-count {
+  @include font(p3);
+  color: $c-grey-700;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 576px) {
+  .task-list-item {
+    padding: 1rem 0 0 0;
+    border-top: none;
+  }
+
+  .link-with-time {
+    .link {
+      margin: 0 1rem 0.25rem 0;
+    }
+  }
+}

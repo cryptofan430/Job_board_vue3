@@ -1,0 +1,46 @@
+.contracts {
+  border-radius: $br-lg;
+  background: $c-grey-000;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+.title-with-button {
+  @include flex(space-between);
+}
+
+.contracts-title {
+  @include font(p2);
+  margin: 0.5rem 0 1rem;
+}
+
+.show-all-button-sm {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .contracts {
+    border-radius: unset;
+    background: unset;
+    padding: unset;
+  }
+
+  .contracts-title {
+    @include font(p3);
+  }
+
+  .title-with-button {
+    border-radius: $br-lg;
+    background: $c-grey-000;
+    padding: 0.5rem 0 0 1rem;
+  }
+
+  .show-all-button-md {
+    display: none;
+  }
+
+  .show-all-button-sm {
+    display: flex;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}

@@ -1,0 +1,165 @@
+.review-form {
+  @include flex(false, center, column);
+}
+
+.popup {
+  @include position(fixed, 0, false, false, 0);
+  @include square(100%);
+  @include flex(center, center);
+  background: $c-overlay;
+}
+
+.popup-content {
+  @include rect(37rem, false, $br-lg);
+  @include flex(false, center, column);
+  background: $c-grey-000;
+}
+
+.popup-header {
+  @include rect(100%, auto);
+  @include flex(space-between);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+
+  &.--justify-flex-end {
+    justify-content: flex-end;
+  }
+}
+
+.message {
+  @include font(p3, $c-primary-900);
+  width: 11.5rem;
+}
+
+.review-button {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.behavior-review {
+  @include font(p4, $c-primary-900);
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.rate-text {
+  @include font(p3, $c-primary-900);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.rating-error {
+  padding-left: 1rem;
+}
+
+.unloaded-container {
+  padding: 0 2rem 2rem;
+  width: 100%;
+}
+
+.review-account {
+  display: flex;
+  align-items: center;
+}
+
+.account-checkbox {
+  margin-right: 1rem;
+}
+
+.rating-form-item {
+  margin-top: 1rem;
+}
+
+.message-long {
+  @include font(p3, $c-primary-900);
+}
+
+.account-rating {
+  margin-top: 1.5rem;
+}
+
+.rating-error {
+  padding-left: 1rem;
+}
+
+.rate-influencer-text {
+  @include font(p3, $c-primary-900);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.popup-back-button {
+  margin-right: auto;
+  margin-bottom: 2.675rem;
+}
+
+@media (min-width: 640px) {
+  .popup-back-button {
+    display: none;
+  }
+  .popup-content {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .rate-hint {
+    display: none;
+  }
+  .hidden-desktop-button {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup {
+    display: block;
+    position: static;
+    background: transparent;
+    min-height: 33.125rem;
+    width: 100%;
+  }
+  .popup-close-button {
+    display: none;
+  }
+  .popup-content {
+    @include flex(center, center);
+    background: transparent;
+    padding: 1.75rem 1rem 1rem;
+    width: 100%;
+  }
+  .popup-header {
+    padding: 0;
+  }
+  .popup-textarea,
+  .action-button {
+    width: calc(100vw - 4rem);
+  }
+  .popup-rating :deep(.rating-label),
+  .popup-rating :deep(.empty-cell) {
+    display: none;
+  }
+  .review-form,
+  .account-card {
+    width: 100%;
+  }
+  .action-button-half {
+    width: calc(50vw - 2.5rem);
+  }
+  .action-button-half:first-of-type {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 474px) {
+  .rating-wrapper {
+    width: 100%;
+  }
+  .popup-account-card {
+    width: calc(100% - 3rem);
+    height: 3.75rem;
+  }
+  .popup-account-card-full {
+    width: 100%;
+  }
+  .review-account {
+    padding-left: 1rem;
+  }
+}

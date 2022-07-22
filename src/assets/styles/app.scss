@@ -1,0 +1,31 @@
+@import '@/assets/styles/fonts';
+
+body {
+  height: 100%;
+  width: 100%;
+  // min-width: 79rem;
+  color: $c-primary-900;
+  font-family: Cabin, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  @include flex(false, stretch, column);
+  height: 100%;
+  max-width: 100vw;
+
+  #app-container {
+    @include flex(space-between, false, column);
+    flex: 1;
+    background: $c-grey-100;
+
+    main {
+      flex: 1;
+    }
+
+    &.white-background {
+      background: $c-grey-000;
+    }
+  }
+}

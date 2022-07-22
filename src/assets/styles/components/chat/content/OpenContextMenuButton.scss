@@ -1,0 +1,22 @@
+.open-menu-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  height: 1rem;
+  width: 1rem;
+}
+
+.open-menu-button:hover .button-dot {
+  background-color: transparent;
+}
+
+.button-dot {
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 100%;
+  border: 0.0675rem solid transparent;
+  margin-right: 0.0675rem;
+}

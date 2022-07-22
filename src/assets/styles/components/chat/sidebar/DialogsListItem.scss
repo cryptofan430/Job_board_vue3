@@ -1,0 +1,91 @@
+.dialogs-list-item {
+  @include flex(false, stretch);
+  background: $c-grey-100;
+  padding: 1rem 1rem 1rem 3.5rem;
+}
+
+.users-list-item-new-messages {
+  background: $c-primary-100;
+}
+
+.users-list-item-active {
+  background: $c-grey-000;
+}
+
+.user-identity {
+  @include flex(space-between, false, column, false, wrap);
+  flex: 1;
+  margin-left: 0.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.2rem 0;
+}
+
+.user-name {
+  @include font(p4, $c-grey-700);
+}
+
+.chat-description-link {
+  display: inline-block;
+  width: min-content;
+}
+
+.user-contact {
+  @include font(p5, $c-grey-600);
+  display: inline-block;
+  width: min-content;
+}
+
+.message-date {
+  @include font(p5, $c-grey-500);
+  margin: 0.5rem auto auto 0;
+  text-transform: uppercase;
+}
+
+.user-typing-message {
+  @include font(p5, $c-primary-500);
+}
+
+.new-message-count {
+  @include font(p5, $c-grey-200);
+  @include flex(center, center);
+  border-radius: $br-lg;
+  padding: 0.125rem 0.5rem;
+  margin-top: 0.125rem;
+  margin-left: auto;
+  width: min-content;
+  min-width: 1.625rem;
+  background: $c-primary-500;
+}
+
+.users-list-item-new-messages {
+  .user-name {
+    color: $c-grey-900;
+    font-weight: 500;
+  }
+  .user-contact {
+    color: $c-grey-800;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .dialogs-list-item {
+    @include flex;
+    align-items: stretch;
+    background: $c-grey-100;
+    padding: 1rem 2rem 1rem 1.5rem;
+  }
+  .users-list-item-active {
+    background: $c-grey-000;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .dialogs-list-item {
+    @include flex(false, stretch);
+    background: $c-grey-100;
+    padding: 1rem 2rem 1rem 1rem;
+  }
+}

@@ -1,0 +1,118 @@
+.proposal-marketer-info {
+  margin-top: 2rem;
+}
+
+.title {
+  @include font(p2, $c-primary-500);
+}
+
+.name {
+  @include font(p3);
+  margin-top: 1rem;
+}
+
+.company {
+  @include font(p4, $c-grey-700);
+  margin-top: 0.5rem;
+  margin-bottom: 1.0625rem;
+}
+
+.icon-row-title {
+  @include font(p3);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 18rem;
+}
+
+.since {
+  @include font(p3, $c-grey-600);
+  margin-top: 0.75rem;
+}
+
+.marketer-metrics {
+  display: table;
+}
+
+.icon-row {
+  display: table-row;
+
+  .location-icon,
+  .rating-icon,
+  .money-spent-icon,
+  .icon-row-title,
+  .icon-row-value {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .icon-row-value {
+    padding-left: 1rem;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+  }
+  .icon-row-title {
+    padding-left: 0.5625rem;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+  }
+  .location-icon,
+  .rating-icon {
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
+  }
+  .money-spent-icon {
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .proposal-marketer-info {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $c-grey-200;
+  }
+
+  .name {
+    margin-top: 0.938rem;
+  }
+
+  .since {
+    @include font(p3, $c-grey-600);
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .proposal-marketer-info {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $c-grey-200;
+  }
+
+  .name {
+    margin-top: 0.938rem;
+  }
+
+  .since {
+    @include font(p3, $c-grey-600);
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .proposal-marketer-info {
+    margin-top: 2rem;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .name {
+    margin-top: 1rem;
+  }
+
+  .since {
+    @include font(p3, $c-grey-600);
+    margin-bottom: 0.75rem;
+  }
+}

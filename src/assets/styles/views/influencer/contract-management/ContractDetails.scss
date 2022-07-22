@@ -1,0 +1,263 @@
+.contract-details {
+  @include rect(50rem, auto, $br-lg);
+  background: $c-grey-000;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+}
+
+.name {
+  @include font(p1, $c-primary-500);
+  @include line-clamp(1);
+}
+
+.type {
+  @include font(p4, $c-grey-500);
+  margin-top: 0.4375rem;
+}
+
+.marketer-title {
+  @include font(p1);
+  margin-top: 1rem;
+}
+
+.marketer-info {
+  margin-top: 1rem;
+  @include flex(false, center);
+}
+
+.marketer-name {
+  @include font(p3, $c-grey-700);
+  @include line-clamp(1);
+  margin: 0 1.5rem 0 0.5rem;
+}
+
+.milestones-container {
+  margin-top: 2.5rem;
+}
+
+.milestones-info {
+  @include flex(space-between);
+  @include font(p1);
+  margin-bottom: 1rem;
+}
+
+.review-button {
+  margin-top: 2rem;
+}
+
+.mobile-chat-button {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .contract-details {
+    @include rect(18rem, auto, $br-lg);
+    background: unset;
+    padding: 0rem;
+  }
+
+  .name {
+    @include font(p3, $c-primary-500);
+  }
+
+  .type {
+    @include font(p6, $c-grey-500);
+    margin-top: 0.5rem;
+  }
+
+  .marketer-title {
+    @include font(p3, $c-primary-900);
+  }
+
+  .marketer-info {
+    margin-top: 0.5rem;
+    @include flex(false, center);
+  }
+
+  .project-info {
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    padding: 1rem;
+  }
+
+  .chat-button {
+    display: none;
+  }
+
+  .mobile-chat-button {
+    display: block;
+    width: 100%;
+    margin: 1rem 0rem 1.5rem;
+  }
+
+  .milestones-container {
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    padding: 1rem;
+  }
+
+  .review-button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .milestones-info {
+    @include flex(space-between);
+    @include font(p3, $c-primary-900);
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .contract-details {
+    @include rect(24rem, auto, $br-lg);
+    background: unset;
+    padding: 0rem;
+  }
+
+  .name {
+    @include font(p3, $c-primary-500);
+  }
+
+  .type {
+    @include font(p6, $c-grey-500);
+    margin-top: 0.5rem;
+  }
+
+  .marketer-title {
+    @include font(p3, $c-primary-900);
+  }
+
+  .marketer-info {
+    margin-top: 0.5rem;
+    @include flex(false, center);
+  }
+
+  .project-info {
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    padding: 1rem;
+  }
+
+  .chat-button {
+    display: none;
+  }
+
+  .mobile-chat-button {
+    display: block;
+    width: 100%;
+    margin: 1rem 0rem 1.5rem;
+  }
+
+  .milestones-container {
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    padding: 1rem;
+  }
+
+  .review-button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .milestones-info {
+    @include flex(space-between);
+    @include font(p3, $c-primary-900);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contract-details {
+    @include rect(34rem, auto, $br-lg);
+    background: $c-grey-000;
+    padding: 1rem;
+  }
+
+  .name {
+    @include font(p3, $c-primary-500);
+  }
+
+  .type {
+    @include font(p6, $c-grey-500);
+    margin-top: 0.5rem;
+  }
+
+  .marketer-title {
+    @include font(p3, $c-primary-900);
+  }
+
+  .marketer-info {
+    margin-top: 0.5rem;
+    @include flex(false, center);
+  }
+
+  .project-info {
+    background: unset;
+    border-radius: unset;
+    padding: 0rem;
+  }
+
+  .chat-button {
+    display: block;
+  }
+
+  .mobile-chat-button {
+    display: none;
+  }
+
+  .milestones-container {
+    background: unset;
+    border-radius: unset;
+    padding: 0rem;
+  }
+
+  .review-button {
+    width: 11rem;
+    margin-top: 1rem;
+  }
+
+  .milestones-info {
+    @include flex(space-between);
+    @include font(p3, $c-primary-900);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contract-details {
+    @include rect(48rem, auto, $br-lg);
+    background: $c-grey-000;
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+  }
+
+  .name {
+    @include font(p1, $c-primary-500);
+  }
+
+  .type {
+    @include font(p4, $c-grey-500);
+    margin-top: 0.4375rem;
+  }
+
+  .marketer-title {
+    @include font(p1, $c-primary-900);
+  }
+
+  .marketer-info {
+    margin-top: 1rem;
+    @include flex(false, center);
+  }
+
+  .review-button {
+    width: 11rem;
+    margin-top: 2rem;
+  }
+
+  .milestones-info {
+    @include flex(space-between);
+    @include font(p1, $c-primary-900);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .contract-details {
+    @include rect(50rem, auto, $br-lg);
+  }
+}

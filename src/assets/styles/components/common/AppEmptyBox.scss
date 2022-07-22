@@ -1,0 +1,23 @@
+.empty-box {
+  @include flex(center, center, column, false, wrap);
+  flex: 1;
+  padding: 5.5rem;
+}
+
+.empty-box-content {
+  @include font(p1);
+
+  &.--saturated {
+    color: $c-grey-700;
+  }
+
+  &.--primary {
+    color: $c-primary-900;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .empty-box {
+    padding: 2.5rem;
+  }
+}

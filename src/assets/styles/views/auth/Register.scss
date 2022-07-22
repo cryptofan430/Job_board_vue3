@@ -1,0 +1,128 @@
+.title {
+  @include font(h3);
+  margin: 2rem 0 1.5rem;
+  text-align: center;
+  color: $c-primary-900;
+}
+
+.form {
+  width: min-content;
+  margin: 0 auto;
+
+  @include flex(false, false, column);
+
+  .first-name-container,
+  .last-name-container {
+    @include flex(center, false, column);
+    margin-bottom: 1rem;
+  }
+
+  .email-container {
+    @include flex(center, false, column);
+  }
+
+  .password-container {
+    @include flex(center, false, column);
+    margin-top: 1rem;
+
+    .password-length-info {
+      @include font(p3);
+      margin-top: 0.25rem;
+      color: $c-grey-600;
+    }
+  }
+
+  .password-input-container {
+    position: relative;
+
+    .input {
+      padding-right: 3.5rem;
+    }
+
+    .show-password-button {
+      @include flex(center, center, false, inline-flex);
+      @include position(absolute, 0, 0);
+      height: calc(100% - 0.25rem);
+      padding: 0 1rem;
+      margin-top: 0.25rem;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+
+  .register-consents {
+    width: 24rem;
+    margin: 2rem 0 0.5rem;
+
+    .consent-text {
+      @include font(p4);
+      color: $c-grey-600;
+
+      .link {
+        color: $c-system-blue-600;
+      }
+    }
+  }
+  .form-error-message {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.or {
+  @include font(p3);
+  display: block;
+  margin: 1.5rem 0;
+  color: $c-grey-600;
+  text-align: center;
+}
+
+.social-media-auth-buttons {
+  @include flex(false, center, column);
+
+  .social-media-auth-button.--google {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .title {
+    @include font(h5);
+  }
+
+  .form {
+    .register-consents {
+      width: 18rem;
+      text-align: center;
+      margin: 2rem 0 1rem;
+
+      .consent-text {
+        @include font(p4);
+      }
+    }
+
+    .password-container {
+      .password-length-info {
+        @include font(p4);
+      }
+    }
+
+    .register-button {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .form {
+    .register-button {
+      @include rect(24rem, 3.375rem);
+      @include font(h3);
+      @include shadow(md);
+
+      &.--outlined {
+        border-width: 0.1875rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  font-feature-settings: 'salt' on;
+  src: local('Cabin'), url('~@/assets/fonts/Cabin-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-weight: 400;
+  font-feature-settings: 'salt' on;
+  src: local('Cabin'), url('~@/assets/fonts/Cabin-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 500;
+  font-feature-settings: 'salt' on;
+  src: local('Cabin'), url('~@/assets/fonts/Cabin-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-weight: 500;
+  font-feature-settings: 'salt' on;
+  src: local('Cabin'), url('~@/assets/fonts/Cabin-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 600;
+  font-feature-settings: 'salt' on;
+  src: local('Cabin'), url('~@/assets/fonts/Cabin-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-weight: 600;
+  font-feature-settings: 'salt' on;
+  src: local('Cabin'), url('~@/assets/fonts/Cabin-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 700;
+  font-feature-settings: 'salt' on;
+  src: local('Cabin'), url('~@/assets/fonts/Cabin-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-weight: 700;
+  font-feature-settings: 'salt' on;
+  src: local('Cabin'), url('~@/assets/fonts/Cabin-BoldItalic.ttf') format('truetype');
+}

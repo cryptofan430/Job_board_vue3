@@ -1,0 +1,104 @@
+.tasks {
+  margin: 0 auto;
+}
+
+.title {
+  @include font(p1);
+  margin: 4rem 0 1.5rem;
+}
+
+.wrapper {
+  @include flex();
+}
+
+.tasks-list-header {
+  @include flex(space-between);
+}
+
+.list-title {
+  @include font(p2);
+  padding-bottom: 1rem;
+}
+
+.tasks-list-wrapper {
+  background: $c-grey-000;
+  border-radius: $br-lg;
+  padding: 1.5rem;
+  margin-right: 2.625rem;
+}
+
+.wrapper-empty {
+  width: 50rem;
+  height: max-content;
+}
+
+.mobile-for-contracts-button {
+  display: none;
+}
+
+.mobile-for-contracts-button :deep(.--md) {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1399px) {
+  .tasks {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 5rem;
+  }
+
+  .tasks-list-wrapper {
+    width: 65%;
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    padding: 1.5rem;
+    margin-right: 2.625rem;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .tasks {
+    padding: 0 4rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .tasks {
+    padding: 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tasks {
+    padding: 0 1rem;
+  }
+
+  .title {
+    @include font(p3);
+    margin: 2rem 0rem 1rem;
+  }
+
+  .wrapper {
+    @include flex(false, false, column-reverse);
+  }
+
+  .tasks-list-wrapper {
+    width: 100%;
+    margin-top: 0rem;
+    padding: 1rem;
+  }
+
+  .mobile-for-contracts-button {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  .tasks-list-header :deep(.--md) {
+    display: none;
+  }
+
+  .list-title {
+    @include font(p2);
+    padding-bottom: 0.5rem;
+  }
+}

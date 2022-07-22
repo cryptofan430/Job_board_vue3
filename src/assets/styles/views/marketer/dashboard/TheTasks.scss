@@ -1,0 +1,44 @@
+.tasks {
+  padding: 1rem 1.5rem 1.5rem;
+  background: $c-grey-000;
+  border-radius: $br-lg;
+  margin-bottom: 1rem;
+}
+
+.title-with-button {
+  @include flex(space-between);
+}
+
+.title {
+  @include font(p2);
+  margin: 0.5rem 0 1rem;
+}
+
+.show-all-button-sm {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .tasks {
+    padding: 1rem;
+  }
+
+  .title {
+    @include font(p3);
+    margin: 0rem 0 1rem;
+  }
+
+  .title-with-button {
+    border-bottom: 0.0625rem solid $c-grey-200;
+  }
+
+  .show-all-button-md {
+    display: none;
+  }
+
+  .show-all-button-sm {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}

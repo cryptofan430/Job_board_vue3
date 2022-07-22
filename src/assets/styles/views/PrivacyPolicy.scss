@@ -1,0 +1,50 @@
+.privacy-policy {
+  margin: 0 auto;
+  max-width: 50rem;
+}
+
+.header {
+  @include flex(space-between);
+  width: 100%;
+  margin: 4rem 0 1.5rem;
+  padding-left: 1.5rem;
+
+  .title {
+    @include font(p1);
+  }
+
+  .date {
+    @include font(p4);
+    color: $c-primary-500;
+  }
+}
+
+.privacy-policy-container {
+  padding: 1.5rem 1.5rem 2rem;
+  background: $c-grey-000;
+  border-radius: $br-lg;
+
+  .intro {
+    @include font(p3);
+  }
+
+  .list-item {
+    margin-top: 2rem;
+  }
+
+  .list-title {
+    @include font(p1);
+    color: $c-primary-500;
+    margin-bottom: 0.5rem;
+  }
+
+  .list-text {
+    @include font(p3);
+    color: $c-grey-700;
+  }
+
+  .custom-list-style {
+    list-style: initial;
+    padding-left: 1.2rem;
+  }
+}

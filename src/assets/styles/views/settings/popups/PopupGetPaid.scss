@@ -1,0 +1,111 @@
+.popup {
+  @include position(fixed, 0, false, false, 0);
+  @include square(100%);
+  @include flex(center, center);
+  background: $c-overlay;
+}
+
+.popup-content {
+  @include rect(37rem, false, $br-lg);
+  @include flex(false, center, column);
+  padding-bottom: 4.5rem;
+  background: $c-grey-000;
+}
+
+.close-button {
+  margin: 1.5rem 1.5rem 1rem 0;
+  align-self: flex-end;
+}
+
+.popup-title {
+  @include font(p3);
+  margin-bottom: 1.5rem;
+}
+
+.billing-card {
+  margin-bottom: 1.5rem;
+}
+
+.card-label {
+  @include flex(false, center);
+  align-self: flex-start;
+  margin-left: 6.5rem;
+}
+
+.billing-method-card {
+  margin-left: 1.5rem;
+}
+
+.budget-input-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.budget-input-wrapper::before {
+  @include square(100%);
+  @include flex(false, center);
+  @include font(p3, $c-grey-700);
+  content: attr(data-currency);
+  position: absolute;
+  padding-left: 1rem;
+  padding-top: 0.25rem;
+  pointer-events: none;
+}
+
+.popup-input {
+  padding: 0rem 0rem 0rem 2.25rem !important;
+}
+
+.popup-back-button {
+  margin-right: auto;
+  margin-bottom: 2.675rem;
+}
+
+@media (min-width: 640px) {
+  .popup-back-button {
+    display: none;
+  }
+  .popup-content {
+    @include custom-scrollbar;
+    overflow-y: auto;
+    max-height: 80vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup {
+    display: block;
+    position: static;
+    background: transparent;
+    min-height: 33.125rem;
+  }
+  .popup-close-button {
+    display: none;
+  }
+  .popup-content {
+    @include flex(center, center);
+    background: transparent;
+    padding: 1.75rem 1rem 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup-input,
+  .action-button {
+    width: calc(100vw - 4rem);
+  }
+  .popup-title {
+    text-align: center;
+  }
+  .card-label {
+    margin-left: 0;
+  }
+  .billing-method-card {
+    margin-left: 0.75rem;
+    width: 100%;
+  }
+  .card-label {
+    width: 100%;
+  }
+}

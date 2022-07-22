@@ -1,0 +1,137 @@
+.disputes-page {
+  @include flex(false, false, row);
+  margin: 4rem auto;
+}
+
+.disputes-state {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.disputes-filter-show-sm-btn {
+  display: none;
+}
+
+.icon-btn-container {
+  @include flex(center, center, row);
+}
+
+.icon-btn-text {
+  margin-left: 0.625rem;
+}
+
+.disputes-page-header {
+  @include font(p1, $c-primary-900);
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.disputes-list {
+  margin-bottom: 1.5rem;
+  min-height: 21.5rem;
+}
+
+.disputes-mobile-filters {
+  display: none;
+  overflow: hidden;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+@media only screen and (max-width: 576px) {
+  .disputes-page {
+    margin: 2rem auto;
+  }
+
+  .disputes-state {
+    width: 18rem;
+  }
+
+  .disputes-page-header {
+    @include font(h7, $c-primary-900);
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .disputes-filters {
+    display: none;
+  }
+
+  .disputes-filter-show-sm-btn {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .disputes-mobile-filters {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .disputes-page {
+    margin: 2rem auto;
+  }
+
+  .disputes-state {
+    width: 24rem;
+  }
+
+  .disputes-page-header {
+    @include font(h6, $c-primary-900);
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .disputes-filters {
+    display: none;
+  }
+
+  .disputes-filter-show-sm-btn {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .disputes-mobile-filters {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .disputes-state {
+    width: 36rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .disputes-page {
+    @include flex(false, false, row);
+    margin: 4rem auto;
+  }
+
+  .disputes-state {
+    width: 38rem;
+  }
+
+  .disputes-page-header {
+    @include font(p1, $c-primary-900);
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .disputes-filters {
+    display: block;
+  }
+
+  .disputes-filter-show-sm-btn {
+    display: none;
+  }
+
+  .disputes-mobile-filters {
+    display: none;
+  }
+}

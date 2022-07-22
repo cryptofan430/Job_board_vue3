@@ -1,0 +1,87 @@
+.account-card {
+  @include flex(flex-start, false, row, inline-flex);
+  @include shadow(md15);
+  padding: 0.625rem 1rem;
+  border-radius: $br-md;
+  background: $c-grey-000;
+  height: auto !important;
+
+  @include hover() {
+    background: $c-grey-100;
+  }
+}
+
+.account-info-container {
+  @include flex(flex-start, false, column, inline-flex);
+  width: inherit;
+  padding-right: 1.5rem;
+}
+
+.main-info {
+  @include flex(flex-start, center, row, inline-flex);
+}
+
+.unavailable-account {
+  @include flex(center, center, row);
+  margin-top: 0.5rem;
+
+  .text {
+    @include font(p6, $c-system-red-500);
+    padding-left: 0.25rem;
+  }
+}
+
+.md {
+  @include rect(21rem, 3.75rem);
+  @include font(p4);
+
+  .icon {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    width: 100% !important;
+  }
+}
+
+.sm {
+  @include rect(21.5rem, 3.25rem);
+  @include font(p2);
+
+  .icon {
+    min-width: 2rem;
+    min-height: 2rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    width: 100% !important;
+  }
+}
+
+.account-info {
+  margin-left: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.name {
+  white-space: nowrap;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.tag-list {
+  @include flex($wrap: wrap);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $c-system-green-500;
+}
+
+.tag {
+  margin-top: 0.25rem;
+  margin-left: 0.25rem;
+}

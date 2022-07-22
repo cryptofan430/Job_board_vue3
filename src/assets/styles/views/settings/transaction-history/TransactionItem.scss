@@ -1,0 +1,152 @@
+.transactions-row {
+  @include flex;
+  width: 100%;
+}
+
+.transactions-rows:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.--date {
+  width: 15%;
+  @include font(p4, $c-grey-500);
+}
+
+.--desc {
+  width: 40%;
+  @include font(p4);
+}
+
+.--client {
+  width: 25%;
+  @include font(p4);
+}
+
+.--amount {
+  width: 10%;
+  @include font(p4);
+
+  &.--increase {
+    color: $c-system-green-500;
+  }
+
+  &.--decrease {
+    color: $c-system-red-500;
+  }
+}
+
+.--invoice {
+  width: 10%;
+  @include flex(center, flex-start);
+}
+
+.invoice-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-transactions-row {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .--date {
+    width: 15%;
+    @include font(p4, $c-grey-500);
+    word-wrap: break-word;
+  }
+
+  .--desc {
+    width: 40%;
+    @include font(p4);
+  }
+
+  .--client {
+    width: 20%;
+    @include font(p4);
+    word-wrap: break-word;
+  }
+
+  .--amount {
+    width: 15%;
+    @include font(p4);
+
+    &.--increase {
+      color: $c-system-green-500;
+    }
+
+    &.--decrease {
+      color: $c-system-red-500;
+    }
+  }
+
+  .--invoice {
+    width: 10%;
+    @include flex(center, flex-start);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-transactions-row {
+    display: block;
+  }
+
+  .mobile-client-amount {
+    @include flex(space-between);
+    margin-bottom: 0.5rem;
+
+    .mobile-client {
+      color: $c-primary-900;
+      @include font(p4);
+
+      span {
+        color: $c-primary-500;
+      }
+    }
+
+    .mobile-amount {
+      @include font(p4);
+
+      &.--increase {
+        color: $c-system-green-500;
+      }
+
+      &.--decrease {
+        color: $c-system-red-500;
+      }
+    }
+  }
+
+  .mobile-date {
+    color: $c-grey-500;
+    @include font(p5);
+    margin-bottom: 1rem;
+  }
+
+  .mobile-desc {
+    color: $c-grey-600;
+    font-size: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .mobile-invoice {
+    .invoice-button {
+      @include flex(false, center);
+
+      span {
+        @include font(p4);
+        color: $c-primary-500;
+      }
+    }
+  }
+
+  .transactions-row {
+    display: none;
+  }
+
+  .transactions-rows {
+    padding: 1rem;
+    border-top: 0.0625rem solid $c-grey-200;
+  }
+}

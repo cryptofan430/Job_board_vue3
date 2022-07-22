@@ -1,0 +1,107 @@
+.task-proposals {
+  @include rect(63rem, false, 0 0 $br-lg $br-lg);
+  padding: 1.5rem 4rem 0.5rem 2.5rem;
+  background: $c-grey-000;
+
+  &.--empty {
+    padding: 0;
+  }
+}
+
+.proposals-list-header {
+  margin-bottom: 1rem;
+}
+
+.pagination {
+  margin-top: 1.5rem;
+}
+
+.skeleton,
+.error-box {
+  margin-bottom: 2rem;
+}
+
+.proposals-list-header :deep(.desktop-sort) {
+  display: block;
+  width: 12.5rem;
+}
+
+.proposals-list-header :deep(.mobile-sort) {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .task-proposals {
+    @include rect(100%, false, 0 0 $br-lg $br-lg);
+    padding: 1.5rem 4rem 0.5rem 2.5rem;
+    background: $c-grey-000;
+
+    &.--empty {
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .task-proposals {
+    @include rect(100%, false, 0 0 $br-lg $br-lg);
+    padding: 1.5rem;
+    background: $c-grey-000;
+
+    &.--empty {
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .task-proposals {
+    @include rect(100%, false, $br-lg);
+    padding: 0rem;
+    background: $c-grey-100;
+    margin-top: 1rem;
+
+    &.--empty {
+      padding: 0;
+    }
+  }
+
+  .proposals-list-header {
+    margin-bottom: 0rem;
+    @include rect(100%, false, $br-lg);
+  }
+
+  .proposals-list {
+    margin-top: 1rem;
+    background: $c-grey-100;
+    padding: 0rem;
+
+    :deep(.no-accounts-message) {
+      @include font(p3);
+    }
+  }
+
+  .proposals-list-header :deep(.desktop-sort) {
+    display: none;
+  }
+
+  .proposals-list-header :deep(.mobile-sort) {
+    display: block;
+
+    .dropdown-container {
+      width: 100%;
+    }
+
+    .dropdown.--sm {
+      width: 100%;
+
+      .dropdown-trigger {
+        @include flex(center, center, row-reverse);
+
+        .dropdown-current {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+}

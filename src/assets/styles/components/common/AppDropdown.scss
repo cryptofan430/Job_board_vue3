@@ -1,0 +1,149 @@
+.dropdown-container {
+  @include shadow(md15);
+  width: min-content;
+  border-radius: $br-sm;
+
+  &.--sh-md15 {
+    @include shadow(md15);
+  }
+  &.--sh-smm15 {
+    @include shadow(smm15);
+  }
+  &.--sh-sm {
+    @include shadow(sm);
+  }
+}
+
+.dropdown {
+  @include rect(17.5rem, 2.5rem);
+  position: relative;
+
+  &.--sm {
+    width: 12.5rem;
+  }
+  &.--md {
+    width: 17.5rem;
+  }
+  &.--lg {
+    width: 24rem;
+  }
+
+  &.--full-width {
+    width: 100%;
+  }
+
+  &.--tall {
+    height: 3.375rem;
+  }
+  &.--short {
+    height: 1.5rem;
+  }
+}
+
+.hidden-element {
+  @include visually-hidden;
+}
+
+.dropdown-trigger {
+  @include flex(space-between, center);
+  @include rect(100%, 100%, $br-sm);
+  @include button-reset();
+  @include font(p3, $c-grey-700);
+  background: $c-grey-000;
+  padding-left: 1rem;
+  padding-right: 0.5625rem;
+  cursor: pointer;
+}
+
+.dropdown-icon {
+  @include flex;
+}
+
+.dropdown-items {
+  @include rect(100%, max-content, $br-sm);
+  @include shadow(md15);
+  background: $c-grey-000;
+  display: block;
+  @include position(absolute, 100%, $z: 2);
+  transition: all 0.2s ease;
+}
+
+.dropdown-items:before {
+  @include rect(100%, 1rem);
+  content: '';
+  display: flex;
+  background: $c-grey-000;
+  top: -0.5rem;
+  position: absolute;
+  @include position(absolute, -0.5rem);
+}
+
+.dropdown-items:after {
+  @include flex;
+  @include rect(calc(100% - 2rem), 0.0625rem);
+  content: '';
+  background: $c-grey-100;
+  @include position(absolute, 0, $l: 1rem);
+}
+
+.list {
+  @include rect(inherit, auto);
+  @include custom-scrollbar;
+  overflow: auto;
+  max-height: 9rem;
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.list-item {
+  @include font(p3, $c-grey-700);
+  cursor: pointer;
+
+  @include hover() {
+    color: $c-primary-500;
+  }
+}
+
+.list-item:not(:first-child) {
+  padding-top: 1rem;
+}
+.dropdown-enter-active {
+  animation: slideIn 0.2s;
+}
+.dropdown-leave-active {
+  animation: slideOut 0.2s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-0.125rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-0.125rem);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-trigger {
+    line-height: 1.06rem;
+    font-size: 0.893rem;
+    background: $c-grey-000;
+    padding-left: 0.3rem;
+    padding-right: 0.5625rem;
+    cursor: pointer;
+  }
+}

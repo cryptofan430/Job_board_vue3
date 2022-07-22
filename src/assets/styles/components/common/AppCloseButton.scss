@@ -1,0 +1,6 @@
+.close-button {
+  @include square(1.5rem);
+  background: none;
+  cursor: pointer;
+  border: none;
+}

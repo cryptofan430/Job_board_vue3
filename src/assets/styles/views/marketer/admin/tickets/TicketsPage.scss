@@ -1,0 +1,137 @@
+.tickets-page {
+  @include flex(false, false, row);
+  margin: 4rem auto;
+}
+
+.tickets-state {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.tickets-filter-show-sm-btn {
+  display: none;
+}
+
+.icon-btn-container {
+  @include flex(center, center, row);
+}
+
+.icon-btn-text {
+  margin-left: 0.625rem;
+}
+
+.tickets-page-header {
+  @include font(p1, $c-primary-900);
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tickets-list {
+  margin-bottom: 1.5rem;
+  min-height: 21.5rem;
+}
+
+.tickets-mobile-filters {
+  display: none;
+  overflow: hidden;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+@media only screen and (max-width: 576px) {
+  .tickets-page {
+    margin: 2rem auto;
+  }
+
+  .tickets-state {
+    width: 18rem;
+  }
+
+  .tickets-page-header {
+    @include font(h7, $c-primary-900);
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .tickets-filters {
+    display: none;
+  }
+
+  .tickets-filter-show-sm-btn {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .tickets-mobile-filters {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .tickets-page {
+    margin: 2rem auto;
+  }
+
+  .tickets-state {
+    width: 24rem;
+  }
+
+  .tickets-page-header {
+    @include font(h6, $c-primary-900);
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .tickets-filters {
+    display: none;
+  }
+
+  .tickets-filter-show-sm-btn {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .tickets-mobile-filters {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .tickets-state {
+    width: 36rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .tickets-page {
+    @include flex(false, false, row);
+    margin: 4rem auto;
+  }
+
+  .tickets-state {
+    width: 38rem;
+  }
+
+  .tickets-page-header {
+    @include font(p1, $c-primary-900);
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tickets-filters {
+    display: block;
+  }
+
+  .tickets-filter-show-sm-btn {
+    display: none;
+  }
+
+  .tickets-mobile-filters {
+    display: none;
+  }
+}

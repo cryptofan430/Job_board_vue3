@@ -1,0 +1,353 @@
+.disputes-list-item {
+  display: flex;
+  background: $c-grey-000;
+  padding: 1.5rem;
+  border-radius: $br-lg;
+  width: 43.5rem;
+  margin-bottom: 1rem;
+}
+
+.disputes-content {
+  padding-right: 1.5rem;
+  margin-right: 0;
+  border-right: 0.0625rem solid $c-grey-200;
+}
+
+.project-name {
+  @include font(p2, $c-primary-500);
+  margin-bottom: 0.5rem;
+  width: 25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.milestone-name {
+  @include font(p3, $c-grey-500);
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  @include font(p4, $c-grey-600);
+  margin-bottom: 1rem;
+}
+
+.project-time {
+  @include font(p4, $c-grey-500);
+  margin-bottom: 1rem;
+}
+
+.chat-button {
+  margin-left: 1rem;
+}
+
+.disputes-aside {
+  @include flex(false, false, column);
+  padding: 0 0 0 1.5rem;
+}
+
+.dispute-admin-label,
+.dispute-status-label {
+  @include font(p2, $c-primary-900);
+  margin-bottom: 0.5rem;
+}
+
+.dispute-admin-name {
+  @include font(p3, $c-primary-500);
+  margin-bottom: 1rem;
+
+  &.--not-selected {
+    color: $c-grey-500;
+  }
+}
+
+.dispute-status-value {
+  @include font(p3, $c-grey-500);
+
+  &.--new {
+    color: $c-system-yellow-500;
+  }
+  &.--closed {
+    color: $c-system-green-500;
+  }
+}
+
+.menu-actions {
+  margin-left: auto;
+}
+
+.menu-sm-actions {
+  display: none;
+}
+
+.button-sm-actions {
+  display: none;
+}
+
+.dotted-button-wrapper {
+  position: relative;
+}
+
+.dispute-context-menu {
+  @include position(absolute, 100%, $l: 0);
+  z-index: 4;
+}
+
+@media only screen and (max-width: 576px) {
+  .disputes-list-item {
+    @include flex(false, false, column);
+    width: 18rem;
+    padding: 1rem;
+  }
+
+  .button-actions {
+    display: none;
+  }
+
+  .menu-actions {
+    display: none;
+  }
+
+  .menu-sm-actions {
+    display: block;
+    padding-left: 0.5rem;
+    margin-right: 0.25rem;
+  }
+
+  .button-sm-actions {
+    @include flex(space-between, center, row);
+    width: 18rem;
+    margin-bottom: 1rem;
+  }
+
+  .button-sm-actions > * {
+    width: 45%;
+  }
+
+  .disputes-content {
+    @include flex(space-between, false, row);
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+
+    .dispute-content-info-container {
+      width: 100%;
+    }
+
+    .project-name {
+      width: 100%;
+    }
+    .milestone-name {
+      @include font(p4, $c-grey-500);
+    }
+    .project-time {
+      @include font(p6);
+    }
+  }
+
+  .disputes-aside {
+    @include flex(space-between, center, row);
+    padding: 1rem 0 0 0;
+    border-top: 0.0625rem solid $c-grey-200;
+
+    .dispute-admin-label,
+    .dispute-status-label {
+      @include font(p3, $c-primary-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .dispute-admin-name {
+      @include font(p6, $c-primary-500);
+      margin-bottom: 0;
+    }
+    .dispute-status-value {
+      @include font(p6);
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .disputes-list-item {
+    @include flex(false, false, column);
+    width: 24rem;
+    padding: 1rem;
+  }
+
+  .button-actions {
+    display: none;
+  }
+
+  .menu-actions {
+    display: none;
+  }
+
+  .menu-sm-actions {
+    display: block;
+    padding-left: 0.5rem;
+    margin-right: 0.25rem;
+  }
+
+  .button-sm-actions {
+    @include flex(space-between, center, row);
+    width: 24rem;
+    margin-bottom: 1rem;
+  }
+
+  .button-sm-actions > * {
+    width: 45%;
+  }
+
+  .disputes-content {
+    @include flex(space-between, false, row);
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+
+    .dispute-content-info-container {
+      width: 100%;
+    }
+
+    .project-name {
+      width: 100%;
+    }
+    .milestone-name {
+      @include font(p4, $c-grey-500);
+    }
+    .project-time {
+      @include font(p6);
+    }
+  }
+
+  .disputes-aside {
+    @include flex(space-between, center, row);
+    padding: 1rem 0 0 0;
+    border-top: 0.0625rem solid $c-grey-200;
+
+    .dispute-admin-label,
+    .dispute-status-label {
+      @include font(p3, $c-primary-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .dispute-admin-name {
+      @include font(p6, $c-primary-500);
+      margin-bottom: 0;
+    }
+    .dispute-status-value {
+      @include font(p6);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .disputes-list-item {
+    width: 36rem;
+    padding: 1.5rem;
+  }
+
+  .disputes-content {
+    .milestone-name {
+      @include font(p3, $c-grey-500);
+    }
+    .project-time {
+      @include font(p4, $c-grey-500);
+      margin-bottom: 1rem;
+    }
+  }
+
+  .disputes-aside {
+    @include flex(space-between, center, row);
+    padding: 1rem 0 0 0;
+
+    .dispute-admin-label,
+    .dispute-status-label {
+      @include font(p2, $c-primary-900);
+      margin-bottom: 0.5rem;
+    }
+
+    .dispute-admin-name {
+      @include font(p3, $c-primary-500);
+      margin-bottom: 0;
+    }
+    .dispute-status-value {
+      @include font(p3);
+    }
+  }
+
+  .button-sm-actions {
+    width: 36rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .disputes-list-item {
+    @include flex(false, false, row);
+    padding: 1.5rem;
+    width: 38rem;
+    margin-bottom: 1rem;
+  }
+
+  .button-actions {
+    display: block;
+  }
+
+  .menu-actions {
+    display: block;
+  }
+
+  .menu-sm-actions {
+    display: none;
+  }
+
+  .button-sm-actions {
+    display: none;
+  }
+
+  .disputes-content {
+    @include flex(false, false, column);
+    padding-right: 1.5rem;
+    margin-right: 0;
+    border-right: 0.0625rem solid $c-grey-200;
+
+    .dispute-content-info-container {
+      width: 100%;
+    }
+
+    .project-name {
+      width: 26rem;
+    }
+  }
+
+  .disputes-aside {
+    display: block;
+    padding: 0 0 0 1.5rem;
+    border-top: none;
+
+    .dispute-admin-label,
+    .dispute-status-label {
+      @include font(p2, $c-primary-900);
+      margin-bottom: 0.5rem;
+    }
+
+    .dispute-admin-name {
+      @include font(p3, $c-primary-500);
+      margin-bottom: 1rem;
+    }
+
+    .dispute-status-value {
+      @include font(p3, $c-grey-500);
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .disputes-list-item {
+    width: 43.5rem;
+  }
+
+  .disputes-content {
+    .project-name {
+      width: 30rem;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.notification {
+  @include flex();
+}
+
+.notification:first-of-type {
+  border-top: 1px solid $c-grey-200;
+  padding-top: 1.5rem;
+}
+
+.notification:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.content {
+  @include font(p4, $c-primary-900);
+  margin-bottom: 0.25rem;
+}
+
+.actions {
+  @include flex(space-between);
+  padding-top: 0.25rem;
+  margin-left: auto;
+}
+
+.date {
+  @include font(p4, $c-grey-500);
+}
+
+.actions-remove {
+  @include flex();
+  @include button-reset;
+  margin-left: 2rem;
+  cursor: pointer;
+  height: min-content;
+}
+
+.notification-mobile-action-container {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .notification:first-of-type {
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .notification {
+    margin-top: 1.5rem;
+  }
+
+  .notification-action-container {
+    display: none;
+  }
+
+  .notification-mobile-action-container {
+    @include flex(false, false, row);
+    margin-top: 0.5rem;
+  }
+
+  .date {
+    @include font(p5, $c-grey-500);
+  }
+
+  .actions {
+    padding-top: 0rem;
+  }
+
+  .actions-remove {
+    margin-left: 0.78rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .notification:first-of-type {
+    border-top: 1px solid $c-grey-200;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .notification {
+    margin-top: 1.5rem;
+  }
+
+  .notification-action-container {
+    display: none;
+  }
+
+  .notification-mobile-action-container {
+    @include flex(false, false, row);
+    margin-top: 0.5rem;
+  }
+
+  .date {
+    @include font(p4, $c-grey-500);
+  }
+
+  .actions {
+    padding-top: 0.25rem;
+  }
+
+  .actions-remove {
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .notification:first-of-type {
+    border-top: 1px solid $c-grey-200;
+    padding-top: 1.5rem;
+    margin-top: 0rem;
+  }
+
+  .notification:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  .notification-action-container {
+    display: block;
+  }
+
+  .notification-mobile-action-container {
+    display: none;
+    margin-top: 0rem;
+  }
+
+  .actions-remove {
+    margin-left: 2rem;
+  }
+}

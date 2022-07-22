@@ -1,0 +1,31 @@
+.__input-decoration {
+  @include flex(false, center);
+  @include position(relative);
+  flex: 1;
+}
+
+.__left-icon-wrapper {
+  @include flex(false, center);
+  @include position(absolute);
+  pointer-events: none;
+  margin-left: 0.5rem;
+  color: #fff;
+}
+
+.__left-icon-input.__left-icon-input.__left-icon-input {
+  padding-left: 1.75rem;
+  padding-right: 1.5rem;
+}
+
+.__right-icon-wrapper {
+  @include flex(false, center);
+  @include position(absolute);
+  margin-right: 1.088rem;
+  color: #fff;
+  right: 0;
+  cursor: pointer;
+}
+
+.__right-icon-input.__right-icon-input.__right-icon-input {
+  padding-right: 2.5rem;
+}

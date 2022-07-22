@@ -1,0 +1,64 @@
+.menu {
+  @include rect(30rem, max-content, 0 0 0.625rem 0.625rem);
+  padding: 1.5rem 2rem;
+  background: $c-primary-900;
+
+  .message {
+    @include font(h5);
+    color: $c-grey-000;
+  }
+
+  .accounts-list {
+    &::before,
+    &::after {
+      @include rect(100%, 0.0625rem);
+      display: block;
+      content: '';
+      margin: 1rem 0;
+      background: $c-grey-800;
+    }
+  }
+
+  .account-switch-button {
+    @include font(p1);
+    @include flex(flex-start, center);
+    width: 100%;
+    border: none;
+    background: none;
+    overflow: hidden;
+    text-align: left;
+    cursor: pointer;
+
+    .name {
+      max-width: 17rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $c-grey-200;
+    }
+
+    .dot {
+      @include square(0.5rem, 100%);
+      margin: 0 1rem;
+      display: inline-block;
+      background: $c-primary-500;
+    }
+
+    .account-type {
+      color: $c-grey-300;
+    }
+  }
+
+  .logout-button {
+    @include flex(false, center);
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    .text {
+      @include font(p1);
+      color: $c-grey-000;
+      margin-left: 0.5rem;
+    }
+  }
+}

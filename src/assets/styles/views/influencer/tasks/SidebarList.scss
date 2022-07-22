@@ -1,0 +1,37 @@
+.wrapper:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.title {
+  @include font(p2);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $c-grey-200;
+  margin-bottom: 1rem;
+}
+
+.button {
+  margin-top: 1.5rem;
+}
+
+.item:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.item-name {
+  @include line-clamp();
+  @include font(p3, $c-primary-500);
+}
+
+.item-date {
+  @include font(p5, $c-grey-500);
+  margin-top: 0.25rem;
+}
+
+.no-items {
+  @include font(p2, $c-grey-700);
+}
+
+.sidebar-item-link {
+  display: inline-block;
+  width: 100%;
+}

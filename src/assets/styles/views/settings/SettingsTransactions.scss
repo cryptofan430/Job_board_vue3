@@ -1,0 +1,144 @@
+.settings-transactions {
+  @include rect(50.125rem, false, $br-lg);
+  background: $c-grey-000;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.header {
+  @include flex(space-between);
+}
+
+.title {
+  @include font(p1);
+}
+
+.transactions-table {
+  margin-top: 1rem;
+}
+
+.transactions-header {
+  @include flex(space-between);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $c-grey-200;
+  margin-bottom: 1rem;
+}
+
+.transactions-cell {
+  @include font(p4, $c-primary-500);
+
+  &.--date {
+    width: 15%;
+  }
+
+  &.--desc {
+    width: 40%;
+    @include font(p4);
+  }
+
+  &.--client {
+    width: 25%;
+    @include font(p4);
+  }
+
+  &.--amount {
+    width: 10%;
+    @include font(p4);
+  }
+
+  &.--invoice {
+    width: 10%;
+    @include flex(center);
+  }
+}
+
+.special-state {
+  margin-top: 1rem;
+}
+
+.transaction-wrapper {
+  @include flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: stretch;
+}
+
+.mobile-settings-transactions {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .transactions {
+    width: 65%;
+  }
+
+  .settings-transactions {
+    @include rect(100%, false, $br-lg);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .title {
+    @include font(p2);
+  }
+
+  .transactions-cell {
+    @include font(p4, $c-primary-500);
+
+    &.--date {
+      width: 15%;
+    }
+
+    &.--desc {
+      width: 40%;
+      @include font(p4);
+    }
+
+    &.--client {
+      width: 20%;
+      @include font(p4);
+    }
+
+    &.--amount {
+      width: 15%;
+      @include font(p4);
+    }
+
+    &.--invoice {
+      width: 10%;
+      @include flex(center);
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-settings-transactions {
+    display: block;
+    width: 100%;
+
+    .--md {
+      width: 100%;
+    }
+
+    .mobile-transactions {
+      width: 100%;
+      background: $c-grey-000;
+      border-radius: $br-lg;
+      padding: 0rem;
+      margin-top: 1rem;
+
+      .title {
+        padding: 1rem;
+        color: $c-primary-900;
+        @include font(p3);
+      }
+    }
+  }
+
+  .transactions {
+    width: 100%;
+  }
+
+  .settings-transactions {
+    display: none;
+  }
+}

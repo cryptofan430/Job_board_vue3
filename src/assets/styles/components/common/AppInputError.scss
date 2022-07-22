@@ -1,0 +1,5 @@
+.input-error {
+  @include font(p3);
+  color: $c-system-red-500;
+  margin-top: 0.25rem;
+}

@@ -1,0 +1,35 @@
+.chat-sidebar {
+  width: 24.5rem;
+}
+
+.mobile-chat-popup-footer {
+  width: 0;
+}
+
+.chat-empty-sidebar {
+  @include font(p1, $c-grey-700);
+  @include flex(center, center);
+  margin: 2rem 0;
+}
+
+@media only screen and (max-width: 1199px) {
+  .chat-sidebar {
+    width: 21.5rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .chat-sidebar {
+    width: 17.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .chat-sidebar {
+    width: 100%;
+  }
+
+  .dialogslist {
+    display: none;
+  }
+}

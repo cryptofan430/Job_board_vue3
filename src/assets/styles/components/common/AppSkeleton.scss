@@ -1,0 +1,165 @@
+.skeleton {
+  @include rect(100%, auto, $br-lg);
+  @include flex(false, center);
+  background: $c-grey-200;
+  padding: 1.6rem;
+  overflow: hidden;
+}
+
+.row:not(:first-child) {
+  margin-top: 1rem;
+}
+.row {
+  @include flex(space-between);
+}
+
+.line {
+  @include rect(100%, 1rem, $br-sm);
+  background: $c-grey-300;
+  position: relative;
+
+  &::before {
+    @include rect(100%, 100%);
+    content: '';
+    position: absolute;
+    opacity: 0.3;
+    background-image: linear-gradient(to right, $c-grey-300 0%, $c-grey-200 75%, transparent 90%);
+    background-repeat: no-repeat;
+    background-size: 50rem;
+    animation: blinking 1.25s linear infinite;
+  }
+}
+
+.column--1 {
+  width: 80%;
+  margin-right: 1rem;
+
+  .row--1 {
+    .line--1 {
+      @include rect(25%, 1.8rem);
+      min-width: 4rem;
+    }
+
+    .line--2 {
+      @include rect(10%, 1.8rem);
+      min-width: 2rem;
+    }
+  }
+
+  .row--2 {
+    margin-top: 0.5rem;
+
+    .line--1 {
+      @include rect(20%, 1.1rem);
+      min-width: 3rem;
+    }
+  }
+
+  .row--3 {
+    .line--1 {
+      @include rect(100%, 3rem);
+    }
+  }
+
+  .row--4 {
+    margin-top: 0.5rem;
+
+    .line--1 {
+      @include rect(10%, 1.5rem);
+      min-width: 4rem;
+    }
+  }
+
+  .row--5 {
+    justify-content: flex-start;
+    align-items: center;
+
+    .line--1 {
+      @include rect(15%, 1.1rem);
+      min-width: 2rem;
+      margin-right: 0.75rem;
+    }
+
+    .line--2 {
+      @include rect(20%, 1.5rem);
+      min-width: 2rem;
+    }
+  }
+}
+
+.column--2 {
+  @include rect(20%, auto);
+
+  margin-left: 1rem;
+
+  .row--1 {
+    margin-top: 0.5rem;
+    justify-content: flex-start;
+
+    .line--1 {
+      @include rect(20%, 1.5rem);
+      min-width: 1.5rem;
+      margin-right: 0.35rem;
+    }
+
+    .line--2 {
+      @include rect(25%, 1.5rem);
+    }
+  }
+
+  .row--2 {
+    margin-top: 0.5rem;
+    justify-content: flex-start;
+
+    .line--1 {
+      @include rect(20%, 1.5rem);
+      min-width: 1.5rem;
+      margin-right: 0.35rem;
+    }
+
+    .line--2 {
+      @include rect(35%, 1.5rem);
+    }
+  }
+
+  .row--3 {
+    margin-top: 0.5rem;
+    justify-content: flex-start;
+
+    .line--1 {
+      @include rect(20%, 1.5rem);
+      min-width: 1.5rem;
+      margin-right: 0.35rem;
+    }
+
+    .line--2 {
+      @include rect(45%, 1.5rem);
+    }
+  }
+
+  .row--4 {
+    margin-top: 1.2rem;
+    justify-content: flex-start;
+
+    .line--1 {
+      @include rect(55%, 1.5rem);
+    }
+  }
+}
+
+.column--full {
+  width: 100%;
+
+  .column--1 {
+    width: 100%;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    background-position: -50rem 0;
+  }
+  100% {
+    background-position: 50rem 0;
+  }
+}

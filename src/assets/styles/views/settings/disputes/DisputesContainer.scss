@@ -1,0 +1,19 @@
+.disputes-container {
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.disputes-section-header {
+  @include font(p1, $c-primary-900);
+  margin-bottom: 1.625rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .disputes-container {
+    padding: 0;
+  }
+
+  .disputes-section-header {
+    @include font(p3, $c-primary-900);
+    margin-bottom: 1rem;
+  }
+}

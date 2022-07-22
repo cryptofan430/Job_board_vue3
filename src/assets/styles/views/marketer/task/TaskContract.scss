@@ -1,0 +1,227 @@
+.task-contract {
+  @include rect(50rem, false);
+  margin: 0 auto;
+  padding-top: 4rem;
+
+  &.task-contract-mobile-popup.task-contract-mobile-popup {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.error-box,
+.skeleton {
+  margin-bottom: 0.5rem;
+}
+
+.task-contract-wrapper {
+  padding: 1.5rem 1.5rem 1rem;
+  border-radius: $br-lg;
+  background: $c-grey-000;
+}
+
+.header {
+  @include flex(space-between, false, column);
+  width: 100%;
+  .task-name {
+    @include font(p1);
+    color: $c-primary-500;
+    margin-bottom: 0.4375rem;
+  }
+
+  .contract-text {
+    @include font(p4);
+    color: $c-grey-500;
+  }
+
+  .mobile-chat-button {
+    display: none;
+  }
+}
+
+.task-box {
+  @include flex(space-between);
+}
+
+.task-info {
+  margin-bottom: 1rem;
+}
+
+.influencer-info {
+  .influencer-text {
+    @include font(p1);
+  }
+
+  .influencer-wrapper {
+    @include flex(false, center);
+    margin-top: 1rem;
+  }
+
+  .avatar {
+    margin-right: 0.5rem;
+  }
+
+  .influencer-name {
+    @include font(p3);
+    color: $c-grey-700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .link {
+    margin-left: 1.5rem;
+  }
+}
+
+.buttons-wrapper {
+  @include flex(false, false, column);
+  margin-left: 1rem;
+
+  .button {
+    margin-top: 1rem;
+  }
+}
+
+.milestones-list {
+  margin-top: 2.5rem;
+
+  .milestones-list-header {
+    @include flex(space-between);
+    margin-bottom: 1rem;
+
+    .milestones-counter,
+    .payments-counter {
+      @include font(p1);
+    }
+  }
+}
+
+.chat-button {
+  margin-left: 1rem;
+}
+
+.review-button {
+  margin-top: 1rem;
+}
+
+.mobile-buttons-wrapper {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .task-contract {
+    @include rect(100%, false);
+    padding: 4rem 10rem;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .task-contract {
+    @include rect(100%, false);
+    padding: 4rem 8rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .task-contract {
+    @include rect(100%, false);
+    padding: 4rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .task-contract {
+    @include rect(100%, false);
+    padding: 2rem 1rem;
+  }
+
+  .task-contract-wrapper {
+    padding: 0rem;
+    border-radius: none;
+    background: $c-grey-100;
+  }
+
+  .header {
+    @include flex(false, false, column);
+
+    .task-box {
+      margin-top: 1rem;
+      background: $c-grey-000;
+      border-radius: $br-lg;
+      padding: 1rem;
+    }
+
+    .task-name {
+      @include font(p3);
+      color: $c-primary-500;
+      margin-bottom: 0.5rem;
+    }
+
+    .contract-text {
+      font-size: 0.75rem;
+      color: $c-grey-500;
+    }
+
+    .mobile-chat-button {
+      display: block;
+      margin-top: 1rem;
+
+      .--sm {
+        width: 100%;
+      }
+    }
+  }
+
+  .mobile-buttons-wrapper {
+    @include flex(false, false, column);
+    margin-left: 0rem;
+    width: 100%;
+
+    .button {
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .--md {
+      width: 100%;
+    }
+  }
+
+  .buttons-wrapper {
+    display: none;
+  }
+
+  .chat-button {
+    display: none;
+  }
+
+  .influencer-info {
+    .influencer-text {
+      @include font(p3);
+    }
+  }
+
+  .milestones-list {
+    margin-top: 1rem;
+    background: $c-grey-000;
+    border-radius: $br-lg;
+    padding: 0rem;
+
+    .milestones-list-header {
+      @include flex(space-between);
+      padding: 1rem;
+      border-bottom: 0.0625rem solid $c-grey-200;
+      margin-bottom: 0rem;
+
+      .milestones-counter,
+      .payments-counter {
+        @include font(p3);
+      }
+    }
+  }
+
+  .review-button {
+    width: 100%;
+  }
+}

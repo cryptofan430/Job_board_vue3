@@ -1,0 +1,7 @@
+.chat-attached-files {
+  @include flex(false, false, column);
+
+  @media (max-width: 767px) {
+    max-width: calc(100vw - 8rem);
+  }
+}

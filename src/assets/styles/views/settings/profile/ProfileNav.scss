@@ -1,0 +1,90 @@
+.account-type-nav {
+  @include rect(100%, 3.5rem, $br-lg $br-lg 0 0);
+  @include flex(false, center);
+  background: $c-primary-500;
+}
+
+.link {
+  @include font(p2);
+  color: $c-grey-000;
+  @include position(relative);
+  margin: 0 1.5rem;
+
+  &.router-link-exact-active::after {
+    @include rect(100%, 0.125rem, $br-md);
+    content: '';
+    display: block;
+    @include position(absolute);
+    background: $c-grey-000;
+  }
+
+  @include hover() {
+    &::after {
+      @include rect(100%, 0.125rem, $br-md);
+      content: '';
+      display: block;
+      @include position(absolute);
+      background: $c-grey-000;
+    }
+  }
+}
+
+.mobile-account-type-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .account-type-nav {
+    display: none;
+  }
+
+  .mobile-account-type-nav {
+    @include rect(100%, 2.5rem, $br-lg $br-lg 0 0);
+    @include flex(false, center);
+    background: $c-grey-000;
+    border-bottom: 0.0625rem solid $c-grey-100;
+  }
+
+  .mobile-account-type-nav :deep(.link):first-child {
+    border-radius: $br-lg 0 0 0;
+  }
+
+  .mobile-account-type-nav :deep(.link):last-child {
+    border-radius: 0 $br-lg 0 0;
+  }
+
+  .link {
+    @include font(p3);
+    color: $c-grey-300;
+    @include position(relative);
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 0.7rem;
+
+    &.router-link-exact-active {
+      background: $c-primary-500;
+      color: $c-grey-000;
+    }
+
+    &.router-link-exact-active::after {
+      @include rect(5rem, 0.125rem, $br-md);
+      content: '';
+      display: block;
+      @include position(relative);
+      background: $c-grey-000;
+      margin: 0 auto;
+    }
+
+    @include hover() {
+      &::after {
+        @include rect(5rem, 0.125rem, $br-md);
+        content: '';
+        display: block;
+        @include position(relative);
+        background: $c-grey-000;
+      }
+    }
+  }
+}

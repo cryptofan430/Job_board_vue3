@@ -1,0 +1,31 @@
+.profile {
+  @include flex(center);
+  margin-top: 4rem;
+}
+
+.wrapper {
+  width: 63rem;
+}
+
+@media only screen and (max-width: 1399px) {
+  .profile {
+    @include flex(center);
+    width: 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 0rem 8rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .profile {
+    margin-top: 2rem;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 0rem 1rem;
+  }
+}

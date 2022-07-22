@@ -1,0 +1,78 @@
+.proposal {
+  padding-bottom: 1.5rem;
+}
+
+.proposal:not(:last-child) {
+  border-bottom: 1px solid $c-grey-200;
+  margin-bottom: 1.5rem;
+}
+
+.name {
+  @include font(p2, $c-primary-500);
+  @include line-clamp(1);
+}
+
+.created {
+  @include font(p4, $c-grey-500);
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .proposal {
+    padding-bottom: 0rem;
+  }
+
+  .proposal:not(:last-child) {
+    margin-bottom: 1rem;
+    border-bottom: none;
+  }
+
+  .name {
+    @include font(p3, $c-primary-500);
+  }
+
+  .created {
+    @include font(p5, $c-grey-500);
+    margin-top: 0.25rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .proposal {
+    padding-bottom: 0rem;
+  }
+
+  .proposal:not(:last-child) {
+    margin-bottom: 1rem;
+    border-bottom: none;
+  }
+
+  .name {
+    @include font(p3, $c-primary-500);
+  }
+
+  .created {
+    @include font(p5, $c-grey-500);
+    margin-top: 0.25rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .proposal {
+    padding-bottom: 1.5rem;
+  }
+
+  .proposal:not(:last-child) {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid $c-grey-200;
+  }
+
+  .name {
+    @include font(p2, $c-primary-500);
+  }
+
+  .created {
+    @include font(p4, $c-grey-500);
+    margin-top: 1rem;
+  }
+}

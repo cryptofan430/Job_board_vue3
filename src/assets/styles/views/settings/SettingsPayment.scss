@@ -1,0 +1,67 @@
+.payment-methods {
+  @include rect(50.125rem, false, $br-lg);
+  background: $c-grey-000;
+  margin-top: 1rem;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.payments-title {
+  @include font(p1);
+  margin-bottom: 1rem;
+}
+
+.mobile-add-method {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .settings-payment {
+    width: 65%;
+  }
+
+  .payment-methods {
+    @include rect(100%, false, $br-lg);
+    background: $c-grey-000;
+    margin-top: 1rem;
+    padding: 1.5rem 1.5rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .payments-title {
+    @include font(p2);
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .settings-payment {
+    width: 100%;
+  }
+
+  .payment-methods {
+    @include rect(100%, false, $br-lg);
+    background: $c-grey-000;
+    margin-top: 1rem;
+    padding: 1rem;
+
+    .--md {
+      display: none;
+    }
+  }
+
+  .payments-title {
+    @include font(p3);
+    margin-bottom: 1rem;
+  }
+
+  .mobile-add-method {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+
+    .--md {
+      width: 100%;
+    }
+  }
+}

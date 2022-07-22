@@ -1,0 +1,24 @@
+.payment-box {
+  @include rect(270px, 170px, $br-md);
+  @include shadow(md15);
+  @include flex(flex-end);
+  flex-flow: column wrap;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.payment-box-row {
+  @include flex(space-between);
+}
+
+.name {
+  @include font(p4);
+}
+
+.expire {
+  @include font(p4, $c-grey-600);
+}
+
+.card-number {
+  @include font(p4, $c-grey-500);
+  margin-top: 0.4375rem;
+}

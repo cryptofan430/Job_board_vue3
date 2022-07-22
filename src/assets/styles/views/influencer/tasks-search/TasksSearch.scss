@@ -1,0 +1,163 @@
+.title {
+  @include font(p1);
+  margin: 4rem 0 1.5rem;
+}
+
+.tasks-search {
+  margin: 0 auto;
+  width: min-content;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.error-box,
+.skeleton {
+  align-self: flex-start;
+}
+
+.mobile-header-btn-container {
+  display: none;
+}
+
+.tasks-mobile-filters,
+.tasks-mobile-sorters {
+  margin-top: 1rem;
+}
+
+.tasks-mobile-filters,
+.tasks-mobile-sorters {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .header {
+    width: 100%;
+    @include flex(false, false, column);
+  }
+
+  .title {
+    @include font(h7);
+    margin: 2rem 0 1rem;
+  }
+
+  .mobile-header-btn-container {
+    @include flex(false, false, row);
+    margin-top: 1rem;
+
+    .icon-btn-container {
+      @include flex(center, center, row);
+    }
+
+    .icon-btn-text {
+      margin-left: 0.625rem;
+    }
+
+    .tasks-sort-show-sm-btn,
+    .tasks-filter-show-sm-btn {
+      width: 100% !important;
+      border: unset;
+    }
+  }
+
+  .tasks-mobile-filters,
+  .tasks-mobile-sorters {
+    display: block;
+  }
+
+  .tasks-filter,
+  .tasks-sorter {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .header {
+    width: 100%;
+    @include flex(false, false, column);
+  }
+
+  .title {
+    @include font(h7);
+    margin: 2rem 0 1rem;
+  }
+
+  .mobile-header-btn-container {
+    @include flex(false, false, row);
+    margin-top: 1rem;
+
+    .icon-btn-container {
+      @include flex(center, center, row);
+    }
+
+    .icon-btn-text {
+      margin-left: 0.625rem;
+    }
+
+    .tasks-sort-show-sm-btn,
+    .tasks-filter-show-sm-btn {
+      width: 100% !important;
+      border: unset;
+    }
+  }
+
+  .tasks-mobile-filters,
+  .tasks-mobile-sorters {
+    display: block;
+  }
+
+  .tasks-filter,
+  .tasks-sorter {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    @include font(p1);
+    margin: 4rem 0 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header {
+    width: 100%;
+    @include flex(false, false, row);
+  }
+
+  .title {
+    @include font(p1);
+  }
+
+  .mobile-header-btn-container {
+    display: none;
+  }
+
+  .tasks-mobile-filters,
+  .tasks-mobile-sorters {
+    display: none;
+  }
+
+  .tasks-filter,
+  .tasks-sorter {
+    display: block;
+    width: 17.5rem;
+  }
+
+  .tasks-filter {
+    margin-left: 2rem;
+  }
+}

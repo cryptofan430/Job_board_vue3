@@ -1,0 +1,44 @@
+.toasts {
+  @include position(fixed, false, 1.5rem, 1.5rem);
+  z-index: 12;
+}
+
+.toasts-list {
+  @include flex(false, false, column);
+  position: relative;
+}
+
+.list-enter-from {
+  opacity: 0;
+  transform: translateX(2rem);
+}
+
+.list-enter-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(2rem);
+  transform-origin: bottom bottom;
+}
+
+.list-leave-active {
+  transition: all 0.3s ease-in-out;
+  @include position(absolute, false, false, 0);
+}
+
+.list-move {
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 767px) {
+  .toasts {
+    @include position(fixed, 1rem, unset, unset, unset);
+    @include flex(center, center, row);
+    width: 100%;
+  }
+  .list-leave-active {
+    @include position(absolute, 0, false, unset);
+  }
+}

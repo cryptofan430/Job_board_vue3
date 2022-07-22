@@ -1,0 +1,146 @@
+.c-root {
+  @include flex(false, false, column);
+  width: min-content;
+  cursor: pointer;
+  border: 0.0625rem solid transparent;
+}
+.c-autocomplete-label {
+  margin-bottom: 0.25rem;
+}
+.c-autocomplete-wrapper {
+  @include shadow(md15);
+  @include rect(24rem, auto, $br-sm);
+  @include position(relative);
+  @include flex($wrap: wrap);
+  background: $c-grey-000;
+  color: $c-grey-700;
+  flex-grow: 1;
+  border: 0.0625rem solid transparent;
+
+  &.--active {
+    border-color: $c-primary-500;
+  }
+
+  &.--xl {
+    width: 45rem;
+  }
+  &.--lg {
+    width: 38.5625rem;
+  }
+  &.--md {
+    width: 13.75rem;
+  }
+  &.--sm {
+    width: 6.75rem;
+  }
+}
+.c-autocomplete-checkbox-label {
+  @include flex(false, center);
+  @include font(p4);
+}
+.c-options-wrapper {
+  height: 100%;
+  display: inline-flex;
+  flex-grow: 1;
+}
+.c-options {
+  @include position(absolute, 100%, 0, false, 0, 2);
+  @include shadow(md15);
+  @include custom-scrollbar;
+  flex: 1;
+  display: block;
+  background: $c-grey-000;
+  transition: all 0.2s ease;
+  padding: 0.75rem 0 0.75rem 0;
+  max-height: 8rem;
+  overflow: auto;
+}
+.c-option {
+  @include font(p3, $c-grey-700);
+  @include flex(false, flex-end);
+  @include hover() {
+    color: $c-primary-500;
+  }
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.c-option_selected {
+  background-color: $c-primary-100;
+}
+.c-autocomplete-checkbox {
+  margin-right: 1rem;
+}
+.c-autocomplete-input {
+  background: transparent;
+  border: none;
+  width: 100%;
+  flex-grow: 1;
+  height: 2.25rem;
+  min-width: 2rem;
+
+  padding-left: 1rem;
+  padding-right: 0.5625rem;
+  outline: none;
+
+  &.--tall {
+    height: 3.125rem;
+    padding: 0.8125rem 0.875rem;
+  }
+  &.--short {
+    height: 1.25rem;
+    padding: 0.5rem 0.875rem 0.5625rem;
+  }
+}
+.c-autocomplete-value {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.c-autocomplete-value ~ .c-options-wrapper .c-autocomplete-input {
+  padding-top: 0;
+}
+
+.c-root.--max-items {
+  .c-autocomplete-wrapper.--active {
+    border-color: $c-grey-600;
+  }
+
+  .c-option {
+    color: $c-grey-600;
+  }
+
+  .c-option-overwhelming {
+    cursor: not-allowed;
+  }
+}
+
+.autocomplete-enter-active {
+  animation: slideIn 0.2s;
+}
+.autocomplete-leave-active {
+  animation: slideOut 0.2s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-0.125rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-0.125rem);
+    opacity: 0;
+  }
+}

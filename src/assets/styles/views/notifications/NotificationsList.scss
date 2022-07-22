@@ -1,0 +1,52 @@
+.notifications-list:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.title {
+  @include flex(space-between);
+  @include font(p3, $c-primary-500);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.title-action {
+  @include font(p3, $c-grey-300);
+  display: inline-block;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.empty {
+  border-top: 1px solid $c-grey-200;
+  padding-top: 1.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .title {
+    margin-bottom: 0.5rem;
+  }
+
+  .title-action {
+    @include font(p4, $c-grey-300);
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .title {
+    margin-bottom: 0.5rem;
+  }
+
+  .title-action {
+    @include font(p3, $c-grey-300);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    margin-bottom: 1rem;
+  }
+
+  .title-action {
+    @include font(p3, $c-grey-300);
+  }
+}

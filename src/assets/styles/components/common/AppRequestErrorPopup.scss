@@ -1,0 +1,34 @@
+.popup {
+  @include position(fixed, 0, false, false, 0);
+  @include square(100%);
+  @include flex(center, center);
+  background: $c-overlay;
+}
+
+.popup-content {
+  @include rect(37rem, false, $br-lg);
+  @include flex(false, center, column);
+  background: $c-grey-000;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-button {
+  margin: 1.5rem 1.5rem 1rem 0;
+  align-self: flex-end;
+}
+
+.popup-title {
+  @include font(p3, $c-system-red-600);
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.button {
+  margin: 1.5rem 0;
+}
+
+.additional-info {
+  @include font(p4, $c-grey-500);
+  margin-top: 2rem;
+}

@@ -1,0 +1,47 @@
+.select-account-type {
+  @include flex(center, center, column);
+  margin-bottom: 2rem;
+}
+
+.message {
+  @include font(p1);
+  margin-bottom: 1.5rem;
+}
+
+.marketer-button {
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .select-account-type {
+    @include flex(initial, center, column);
+    margin-top: 1.5rem;
+  }
+
+  .message {
+    @include font(p2);
+    margin-bottom: 1rem;
+  }
+
+  .marketer-button {
+    margin-bottom: 1rem;
+  }
+
+  .marketer-button,
+  .influencer-button {
+    width: 18rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .marketer-button,
+  .influencer-button {
+    @include rect(24rem, 3.375rem);
+    @include font(h3);
+    @include shadow(md);
+
+    &.--outlined {
+      border-width: 0.1875rem;
+    }
+  }
+}

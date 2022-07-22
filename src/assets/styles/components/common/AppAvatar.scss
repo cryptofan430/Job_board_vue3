@@ -1,0 +1,94 @@
+.avatar {
+  position: relative;
+  min-width: min-content;
+
+  &.status {
+    &::before {
+      content: '';
+      display: block;
+      background: $c-grey-200;
+    }
+  }
+
+  &.--online::before {
+    background: $c-system-green-500;
+  }
+  &.--away::before {
+    background: $c-system-yellow-500;
+  }
+
+  &.--xs {
+    @include square(1.5rem);
+
+    .avatar-img,
+    .icon {
+      @include square(1.5rem, 100%);
+    }
+
+    &::before {
+      @include square(0.375rem, 100%);
+      @include position(absolute, false, 0.0625rem, 0.0625rem);
+      border: 0.0625rem solid $c-grey-000;
+    }
+  }
+
+  &.--sm {
+    @include square(2rem);
+
+    .avatar-img,
+    .icon {
+      @include square(2rem, 100%);
+    }
+
+    &::before {
+      @include square(0.375rem, 100%);
+      @include position(absolute, false, 0.0625rem, 0.0625rem);
+      border: 0.0625rem solid $c-grey-000;
+    }
+  }
+
+  &.--md {
+    @include square(2.5rem);
+
+    .avatar-img,
+    .icon {
+      @include square(2.5rem, 100%);
+    }
+
+    &::before {
+      @include square(0.5rem, 100%);
+      @include position(absolute, false, 0.125rem, 0.125rem);
+      border: 0.0625rem solid $c-grey-000;
+    }
+  }
+
+  &.--lg {
+    @include square(3.75rem);
+
+    .avatar-img,
+    .icon {
+      @include square(3.75rem, 100%);
+    }
+
+    &::before {
+      @include square(0.625rem, 100%);
+      @include position(absolute, false, 0.275rem, 0.275rem);
+      border: 0.0625rem solid $c-grey-000;
+    }
+  }
+
+  &.--xl {
+    @include square(7.5rem);
+
+    .avatar-img,
+    .icon {
+      @include square(7.5rem, 100%);
+    }
+
+    &::before {
+      @include square(1rem, 100%);
+      @include position(absolute, false, 0.625rem, 0.625rem);
+      border: 0.125rem solid $c-grey-000;
+    }
+  }
+}

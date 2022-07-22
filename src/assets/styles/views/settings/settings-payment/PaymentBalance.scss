@@ -1,0 +1,67 @@
+.balance {
+  @include rect(50.125rem, false, $br-lg);
+  background: $c-grey-000;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.header {
+  @include flex(space-between);
+}
+
+.title {
+  @include font(p1);
+}
+
+.balance-info {
+  @include font(p3, $c-grey-600);
+  margin-top: 0.25rem;
+}
+
+.mobile-balance {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .balance {
+    @include rect(100%, false, $br-lg);
+    background: $c-grey-000;
+    padding: 1.5rem 1.5rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .title {
+    @include font(p2);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .balance {
+    display: none;
+  }
+
+  .mobile-balance {
+    display: block;
+    width: 100%;
+
+    .header {
+      background: $c-grey-000;
+      border-radius: $br-lg;
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      .title {
+        @include font(p3);
+      }
+
+      .balance-info {
+        @include font(p3);
+        color: $c-primary-900;
+      }
+    }
+
+    .--md {
+      width: 100%;
+    }
+  }
+}

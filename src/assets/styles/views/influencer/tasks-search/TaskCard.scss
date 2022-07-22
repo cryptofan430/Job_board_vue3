@@ -1,0 +1,263 @@
+.task-card {
+  @include rect(56.5rem, false, $br-lg);
+  @include flex();
+  background: $c-grey-000;
+  padding: 1.5rem;
+}
+
+.task-card:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.main {
+  @include flex(false, false, column, false, wrap);
+  width: 75%;
+  margin-right: 2rem;
+}
+
+.header {
+  @include flex(space-between, false);
+}
+
+.title {
+  @include font(p1, $c-primary-500);
+  @include line-clamp(1);
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+
+.budget {
+  @include font(p1);
+}
+
+.details {
+  @include font(p3, $c-system-blue-500);
+  @include flex();
+  width: min-content;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.platforms {
+  @include flex(flex-start, center);
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+
+  .tag:first-of-type {
+    margin-left: 0.5rem;
+  }
+
+  .tag {
+    text-transform: capitalize;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.platforms-text {
+  @include font(p3, $c-primary-900);
+  margin-top: 0.5rem;
+}
+
+.tag {
+  text-transform: capitalize;
+}
+
+.time {
+  @include font(p4, $c-grey-400);
+  margin-top: 0.5rem;
+}
+
+.description {
+  @include font(p3, $c-grey-600);
+  margin-top: 1rem;
+  word-break: break-word;
+}
+
+.line-clamped {
+  @include line-clamp(3);
+}
+
+.truncated ~ .details {
+  display: none;
+}
+
+.side {
+  width: 25%;
+  padding: 2rem 0rem 2rem 2rem;
+  border-left: 1px solid $c-grey-200;
+}
+
+.side-content-proposal {
+  margin-top: 1.625rem;
+  color: $c-grey-700;
+}
+
+.side-content {
+  @include flex(false, center);
+  margin-top: 0.25rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 10rem;
+
+  span {
+    margin-left: 0.5rem;
+  }
+}
+
+.task-location-icon {
+  min-width: 1.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .task-card {
+    @include rect(18rem, false, $br-lg);
+    @include flex(false, false, column);
+    padding: 1rem;
+
+    .main {
+      width: 100%;
+      margin-right: 0;
+
+      .title {
+        @include font(p2, $c-primary-500);
+        padding-right: 1rem;
+      }
+
+      .budget {
+        @include font(p2, $c-primary-900);
+      }
+
+      .time {
+        @include font(p6, $c-grey-400);
+      }
+    }
+
+    .side {
+      @include flex(space-between, false, row);
+      width: 100%;
+      margin-top: 1rem;
+      padding: 1.125rem 0rem 0rem 0rem;
+      border-left: none;
+      border-top: 1px solid $c-grey-200;
+
+      .side-content-info {
+        flex: 1;
+        margin-right: 1rem;
+      }
+      .side-content-proposal {
+        margin-top: 0rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .task-card {
+    @include rect(24rem, false, $br-lg);
+    @include flex(false, false, column);
+    padding: 1rem;
+
+    .main {
+      width: 100%;
+      margin-right: 0;
+
+      .title {
+        @include font(p2, $c-primary-500);
+        padding-right: 1rem;
+      }
+
+      .budget {
+        @include font(p2, $c-primary-900);
+      }
+
+      .time {
+        @include font(p6, $c-grey-400);
+      }
+    }
+
+    .side {
+      @include flex(space-between, false, row);
+      width: 100%;
+      margin-top: 1rem;
+      padding: 1.125rem 0rem 0rem 0rem;
+      border-left: none;
+      border-top: 1px solid $c-grey-200;
+
+      .side-content-info {
+        flex: 1;
+        margin-right: 1rem;
+      }
+      .side-content-proposal {
+        margin-top: 0rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .task-card {
+    @include rect(34rem, false, $br-lg);
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .task-card {
+    @include rect(38.5rem, false, $br-lg);
+    @include flex(false, false, row);
+
+    .main {
+      @include flex(false, false, column, false, wrap);
+      width: 75%;
+      margin-right: 2rem;
+
+      .title {
+        @include font(p1, $c-primary-500);
+        @include line-clamp(1);
+        padding-right: 1.5rem;
+        cursor: pointer;
+      }
+
+      .budget {
+        @include font(p1);
+      }
+
+      .time {
+        @include font(p4, $c-grey-400);
+        margin-top: 0.5rem;
+      }
+    }
+
+    .side {
+      @include flex(false, false, column);
+      width: 25%;
+      margin-top: 0rem;
+      padding: 2rem 0rem 2rem 2rem;
+      border-left: 1px solid $c-grey-200;
+      border-top: none;
+
+      .side-content-info {
+        flex: 1;
+        margin-right: 0rem;
+      }
+
+      .side-content-proposal {
+        margin-top: 1.625rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .task-card {
+    @include rect(52.5rem, false, $br-lg);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .task-card {
+    @include rect(56.5rem, false, $br-lg);
+  }
+}

@@ -1,0 +1,17 @@
+.settings-taxInfo {
+  @include rect(50.125rem, false, $br-lg);
+  background: $c-grey-000;
+}
+
+@media only screen and (max-width: 1399px) {
+  .settings-taxInfo {
+    @include rect(65%, false, $br-lg);
+    background: $c-grey-000;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .settings-taxInfo {
+    @include rect(100%, false, $br-lg);
+  }
+}

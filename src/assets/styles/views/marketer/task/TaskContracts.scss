@@ -1,0 +1,58 @@
+.task-contracts {
+  @include rect(63rem, false, 0 0 $br-lg $br-lg);
+  @include flex(space-between);
+  padding: 0 2.5rem 0.5rem;
+  background: $c-grey-000;
+
+  &.--empty {
+    padding: 0;
+  }
+}
+
+.task-contracts-list {
+  width: 100%;
+}
+
+.task-contracts-list-item:not(:first-child) {
+  border-top: 0.0625rem solid $c-grey-200;
+}
+
+.skeleton,
+.error-box {
+  margin: 1.5rem 0 1rem;
+}
+
+.pagination {
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 1399px) {
+  .task-contracts {
+    @include rect(100%, false, 0 0 $br-lg $br-lg);
+    @include flex(space-between);
+    padding: 0 2.5rem 0.5rem;
+    background: $c-grey-000;
+
+    &.--empty {
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .task-contracts {
+    padding: 0 1.5rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .task-contracts {
+    padding: 0rem;
+    background: $c-grey-100;
+    margin-top: 0rem;
+
+    &.--empty {
+      padding: 0;
+    }
+  }
+}

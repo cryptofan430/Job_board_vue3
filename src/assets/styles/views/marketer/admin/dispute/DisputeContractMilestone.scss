@@ -1,0 +1,150 @@
+.milestone-list-item {
+  @include flex;
+  width: 100%;
+  border-top: 0.0625rem solid $c-grey-200;
+  padding-top: 1rem;
+}
+
+.milestone-list-item:not(:last-child) {
+  padding-bottom: 1rem;
+}
+
+.milestone-name {
+  @include font(p2, $c-grey-700);
+  width: 34.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.disputes-message {
+  @include font(p4, $c-system-red-500);
+  margin-top: 0.5rem;
+}
+
+.milestone-description {
+  @include font(p4, $c-grey-600);
+  width: 34.5rem;
+  word-break: break-word;
+  margin-top: 1rem;
+}
+
+.milestone-payment {
+  @include flex(flex-end);
+  flex-grow: 1;
+}
+
+.milestone-sm-payment,
+.disputes-sm-message {
+  display: none;
+}
+
+.money-earned {
+  @include font(p2, $c-primary-600);
+}
+
+@media only screen and (max-width: 576px) {
+  .milestone-name {
+    @include font(p3, $c-grey-700);
+    width: 16rem;
+  }
+
+  .milestone-description {
+    @include font(p6, $c-grey-600);
+    width: 16rem;
+    margin-top: 0.5rem;
+  }
+
+  .milestone-payment,
+  .disputes-message {
+    display: none;
+  }
+
+  .milestone-sm-payment {
+    margin-top: 0.25rem;
+    .money-earned {
+      @include font(p4, $c-primary-500);
+    }
+  }
+
+  .disputes-sm-message {
+    @include font(p4, $c-system-red-500);
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .milestone-name {
+    @include font(p3, $c-grey-700);
+    width: 21rem;
+  }
+
+  .milestone-description {
+    @include font(p6, $c-grey-600);
+    width: 21rem;
+    margin-top: 0.5rem;
+  }
+
+  .milestone-payment,
+  .disputes-message {
+    display: none;
+  }
+
+  .milestone-sm-payment {
+    margin-top: 0.25rem;
+    .money-earned {
+      @include font(p4, $c-primary-500);
+    }
+  }
+
+  .disputes-sm-message {
+    @include font(p4, $c-system-red-500);
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .milestone-name {
+    width: 27rem;
+  }
+
+  .milestone-description {
+    width: 27rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .milestone-name {
+    @include font(p2, $c-grey-700);
+    width: 26rem;
+  }
+
+  .milestone-description {
+    @include font(p4, $c-grey-600);
+    width: 26rem;
+    margin-top: 0.5rem;
+  }
+
+  .milestone-sm-payment,
+  .disputes-sm-message {
+    display: none;
+  }
+
+  .milestone-payment {
+    @include flex(flex-end);
+    flex-grow: 1;
+  }
+  .disputes-message {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .milestone-name {
+    width: 31rem;
+  }
+
+  .milestone-description {
+    width: 31rem;
+  }
+}

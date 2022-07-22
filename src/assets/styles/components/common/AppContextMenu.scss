@@ -1,0 +1,18 @@
+.context-menu.context-menu {
+  @include position(relative);
+  background: $c-primary-500;
+  padding: 1rem;
+  border-radius: $br-sm;
+}
+
+.context-menu-primary {
+  background: $c-grey-200;
+}
+
+.context-menu-primary :deep(.context-menu-item) {
+  color: $c-grey-500;
+
+  &:not(:first-child) {
+    border-color: $c-grey-700;
+  }
+}

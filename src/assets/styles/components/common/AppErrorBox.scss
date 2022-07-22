@@ -1,0 +1,18 @@
+.error-box {
+  @include rect(100%, auto, $br-lg);
+  @include flex(space-between, center);
+  flex-flow: column wrap;
+  background-color: $c-grey-200;
+  padding: 5.5rem;
+}
+
+.error-box-content {
+  @include font(p2);
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .error-box {
+    padding: 2.5rem;
+  }
+}

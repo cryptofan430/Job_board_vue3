@@ -1,0 +1,13 @@
+.tasks-list {
+  margin-top: 1rem;
+}
+
+.title {
+  @include font(p4, $c-grey-600);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $c-grey-200;
+}
+
+.list {
+  margin-top: 0.5rem;
+}

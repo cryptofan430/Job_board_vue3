@@ -1,0 +1,134 @@
+.profile-sidebar {
+  @include rect(24rem, min-content, $br-lg);
+  background: $c-grey-000;
+  margin-left: 2rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+}
+
+.mobile-profile-sidebar {
+  display: none;
+}
+
+.title {
+  @include font(p2);
+}
+
+.list {
+  margin-top: 1.5rem;
+}
+
+.list-title {
+  @include font(p3, $c-grey-600);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $c-grey-200;
+  text-transform: capitalize;
+}
+
+.account-card {
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1399px) {
+  .desktop-profile-sidebar {
+    margin-left: 1.5rem;
+  }
+
+  .profile-sidebar {
+    @include rect(100%, min-content, $br-lg);
+    background: $c-grey-000;
+    margin-left: 0rem;
+    padding: 1.5rem 1rem 2rem 1rem;
+  }
+
+  .account-card {
+    width: 17rem;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .profile-sidebar {
+    @include rect(100%, min-content, $br-lg);
+    background: $c-grey-000;
+    margin-left: 0rem;
+    padding: 1.5rem 1rem 2rem 1rem;
+  }
+
+  .account-card {
+    width: 13rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .profile-sidebar {
+    @include rect(100%, min-content, $br-lg);
+    background: $c-grey-000;
+    margin-left: 0rem;
+    padding: 1.5rem 1rem 2rem 1rem;
+  }
+
+  .account-card {
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .desktop-profile-sidebar {
+    display: none;
+  }
+
+  .mobile-profile-sidebar {
+    display: block;
+  }
+
+  .mobile-profile-sidebar :deep(.header) {
+    @include font(p3);
+    padding: 1rem;
+  }
+
+  .mobile-profile-sidebar :deep(.expand-menu-icon) {
+    width: 1.21875rem;
+    height: 1.21875rem;
+  }
+
+  .mobile-profile-sidebar :deep(.content) {
+    padding: 0rem;
+  }
+
+  .profile-sidebar {
+    @include rect(32rem, min-content, $br-lg);
+    background: $c-grey-000;
+    margin-left: 0rem;
+    padding: 0rem 1.5rem 2rem 1.5rem;
+  }
+
+  .account-card {
+    width: 29rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .profile-sidebar {
+    @include rect(100%, min-content, $br-lg);
+    background: $c-grey-000;
+    margin-left: 0rem;
+    padding: 0rem 1rem;
+  }
+
+  .account-card {
+    width: 17rem;
+    margin-top: 0.5rem;
+  }
+
+  .title {
+    @include font(p3);
+  }
+
+  .list-title {
+    font-size: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .list {
+    margin-top: 1.125rem;
+  }
+}

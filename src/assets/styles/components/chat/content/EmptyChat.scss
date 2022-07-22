@@ -1,0 +1,12 @@
+.empty-chat {
+  @include flex;
+  flex: 1;
+  align-items: center;
+  background: $c-grey-000;
+}
+
+@media only screen and (max-width: 767px) {
+  .empty-chat {
+    display: none;
+  }
+}

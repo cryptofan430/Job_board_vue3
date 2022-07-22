@@ -1,0 +1,9 @@
+.chat-message-typing {
+  @include font(p5, $c-grey-500);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 5.75rem;
+  margin-top: 0.25rem;
+  cursor: default;
+}

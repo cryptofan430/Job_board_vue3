@@ -1,0 +1,219 @@
+.message-item-root {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 37.8125rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-top-left-radius: $br-lg;
+  border-top-right-radius: $br-lg;
+  position: relative;
+  min-width: 4.5rem;
+  word-break: break-word;
+
+  .content-wrapper {
+    .attached-file-link {
+      @include flex(false, center);
+    }
+  }
+
+  @media (max-width: 960px) {
+    max-width: 28rem;
+  }
+}
+
+.message-item-main-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.message-item-root:not(:last-of-type) {
+  border-radius: $br-lg;
+}
+
+.message-item-root:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+.message-time {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.25rem;
+  cursor: default;
+  position: relative;
+}
+
+.message-time-text {
+  line-height: 1rem;
+}
+
+.scooped-corner {
+  @include position(absolute, false, false, 0);
+  @include flex;
+  overflow: hidden;
+  padding: 0;
+}
+
+.context-menu-wrapper {
+  @include position(absolute);
+  z-index: 2;
+  top: 0;
+  right: 0;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.message-item-root:not(:last-of-type) .scooped-corner {
+  display: none;
+}
+
+.system-message-item-root {
+  position: relative;
+  top: -0.4rem;
+  border-left: solid 0.125rem $c-primary-500;
+  padding: 0.2rem 0 0.2rem 0.4rem;
+  margin-top: 1rem;
+}
+
+.other-user-bg-0 {
+  background: $c-primary-500;
+
+  .scooped-corner {
+    color: $c-primary-500;
+  }
+  .message-time {
+    color: $c-grey-300;
+  }
+}
+
+.other-user-bg-1 {
+  background: $c-system-green-500;
+
+  .scooped-corner {
+    color: $c-system-green-500;
+  }
+  .message-time {
+    color: $c-grey-200;
+  }
+}
+
+.other-user-bg-2 {
+  background: $c-system-yellow-500;
+
+  .scooped-corner {
+    color: $c-system-yellow-500;
+  }
+  .message-time {
+    color: $c-grey-100;
+  }
+}
+
+.other-user-bg-3 {
+  background: $c-system-red-500;
+
+  .scooped-corner {
+    color: $c-system-red-500;
+  }
+  .message-time {
+    color: $c-grey-200;
+  }
+}
+
+.other-user-bg-4 {
+  background: $c-system-blue-500;
+
+  .scooped-corner {
+    color: $c-system-blue-500;
+  }
+  .message-time {
+    color: $c-grey-100;
+  }
+}
+
+.other-user-bg-5 {
+  background: $c-grey-900;
+
+  .scooped-corner {
+    color: $c-grey-900;
+  }
+  .message-time {
+    color: $c-grey-300;
+  }
+}
+
+.other-user-bg-6 {
+  background: $c-primary-300;
+
+  .scooped-corner {
+    color: $c-primary-300;
+  }
+  .message-time {
+    color: $c-grey-200;
+  }
+}
+
+.other-user-bg-7 {
+  background: $c-grey-600;
+
+  .scooped-corner {
+    color: $c-grey-600;
+  }
+  .message-time {
+    color: $c-grey-200;
+  }
+}
+
+.other-user-bg-8 {
+  background: $c-grey-400;
+
+  .scooped-corner {
+    color: $c-grey-400;
+  }
+  .message-time {
+    color: $c-grey-200;
+  }
+}
+
+.other-user-bg-9 {
+  background: $c-primary-700;
+
+  .scooped-corner {
+    color: $c-primary-700;
+  }
+  .message-time {
+    color: $c-grey-300;
+  }
+}
+
+.other-user-bg-10 {
+  background: $c-system-green-700;
+
+  .scooped-corner {
+    color: $c-system-green-700;
+  }
+  .message-time {
+    color: $c-grey-200;
+  }
+}
+
+.other-user-bg-11 {
+  background: $c-system-yellow-600;
+
+  .scooped-corner {
+    color: $c-system-yellow-600;
+  }
+  .message-time {
+    color: $c-grey-200;
+  }
+}
+
+.other-user-bg-12 {
+  background: $c-system-red-400;
+
+  .scooped-corner {
+    color: $c-system-red-400;
+  }
+  .message-time {
+    color: $c-grey-200;
+  }
+}

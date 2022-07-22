@@ -1,0 +1,27 @@
+.label {
+  color: $c-primary-900;
+}
+.--md {
+  @include font(p1);
+}
+.--sm {
+  @include font(p4);
+}
+
+@media only screen and (max-width: 576px) {
+  .--responsive {
+    @include font(p3);
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .--responsive {
+    @include font(p2);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .--responsive {
+    @include font(p1);
+  }
+}

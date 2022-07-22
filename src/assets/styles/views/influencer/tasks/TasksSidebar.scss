@@ -1,0 +1,65 @@
+.tasks-sidebar {
+  @include rect(24rem, min-content, $br-lg);
+  background: $c-grey-000;
+  padding: 1.5rem;
+}
+
+.title {
+  @include font(p2);
+}
+
+.mobile-tasks-sidebar {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .tasks-sidebar {
+    @include rect(100%, min-content, $br-lg);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tasks-sidebar {
+    @include rect(100%, min-content, $br-lg);
+  }
+
+  .desktop-tasks-sidebar {
+    display: none;
+  }
+
+  .mobile-tasks-sidebar {
+    display: block;
+  }
+
+  .mobile-tasks-sidebar :deep(.header) {
+    @include font(p2);
+    padding: 1rem;
+  }
+
+  .mobile-tasks-sidebar :deep(.expand-menu-icon) {
+    width: 1.21875rem;
+    height: 1.21875rem;
+  }
+
+  .mobile-tasks-sidebar :deep(.expand-wrapper):first-child {
+    margin-bottom: 1rem;
+  }
+
+  .mobile-tasks-sidebar :deep(.expand-wrapper):first-child + a + div {
+    margin-bottom: 1rem;
+  }
+
+  .mobile-tasks-sidebar :deep(.wrapper) {
+    padding: 1rem 0rem;
+    border-top: 1px solid $c-grey-200;
+  }
+
+  .expand-wrapper + a :deep(button) {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .expand-wrapper :deep(.list + a) {
+    display: none;
+  }
+}

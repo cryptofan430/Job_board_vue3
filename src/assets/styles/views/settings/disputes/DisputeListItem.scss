@@ -1,0 +1,53 @@
+.disputes-item-content {
+  display: flex;
+  @include shadow(md15);
+  padding: 1rem;
+  width: 34rem;
+  border-radius: $br-lg;
+}
+
+.disputes-item-header {
+  @include font(p3, $c-grey-700);
+  margin-bottom: 0.25rem;
+  width: 19rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dispute-milestone-name {
+  @include font(p5, $c-grey-600);
+  width: 19rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  margin-left: auto;
+}
+
+.contract-button {
+  margin-right: 1rem;
+}
+
+.disputes-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.disputes-item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.post-content {
+  margin-left: 0.375rem;
+  position: relative;
+}
+
+.dispute-context-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}

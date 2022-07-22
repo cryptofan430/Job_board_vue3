@@ -1,0 +1,296 @@
+.footer {
+  width: 100%;
+  margin-top: 5rem;
+  background: $c-primary-900;
+}
+
+.footer-content-wrapper {
+  @include flex(space-around, flex-end, row);
+  max-width: 63rem;
+  padding: 1.8125rem 0 2.625rem;
+  margin: 0 auto;
+}
+
+.info-wrapper {
+  .logo-sm-container {
+    display: none;
+  }
+
+  .owner-and-links {
+    @include flex(center, $wrap: wrap);
+    max-width: 30rem;
+    margin: 0.8125rem 0 1rem;
+  }
+
+  .owner {
+    @include font(p3);
+    color: $c-grey-000;
+    margin-right: 3.75rem;
+  }
+
+  .links {
+    display: flex;
+  }
+  .terms-of-use-link {
+    margin: 0 1.5rem;
+  }
+
+  .privacy-policy-link,
+  .terms-of-use-link {
+    @include font(p3);
+    color: $c-grey-100;
+  }
+
+  .copyright {
+    @include font(p4);
+    color: $c-grey-300;
+  }
+}
+
+.contact-us {
+  margin-bottom: 0;
+
+  .title-wrapper {
+    text-align: unset;
+  }
+
+  .title {
+    @include font(p3);
+    color: $c-grey-100;
+  }
+
+  .mail-wrapper {
+    margin: 1.1875rem 0 0.6rem;
+  }
+
+  .mail-wrapper,
+  .location-wrapper {
+    @include flex(false, center);
+  }
+
+  .mail,
+  .location {
+    @include font(p3);
+    color: $c-grey-300;
+  }
+
+  .mail-icon,
+  .location-icon {
+    margin-right: 0.625rem;
+  }
+
+  .icon-wrapper {
+    padding-top: 0.3rem;
+  }
+}
+
+.links-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .footer-content-wrapper {
+    @include flex(center, center, column);
+    padding: 2rem 3rem 4rem;
+  }
+
+  .info-wrapper {
+    @include flex(center, center, column);
+
+    .logo-container {
+      display: none;
+    }
+
+    .logo-sm-container {
+      display: block;
+    }
+
+    .owner-and-links {
+      @include flex(center, center);
+      margin: 1rem 0 1.44rem;
+    }
+
+    .links {
+      display: none;
+    }
+
+    .owner {
+      margin-right: 0rem;
+    }
+  }
+
+  .contact-us {
+    .title-wrapper {
+      text-align: center;
+    }
+
+    .mail-wrapper {
+      margin: 1.064rem 0 0.3rem;
+    }
+
+    .mail,
+    .location {
+      @include font(p4);
+    }
+  }
+
+  .links-mobile {
+    @include flex(center, center, column);
+    margin-top: 2.5rem;
+
+    .privacy-policy-link,
+    .terms-of-use-link {
+      @include font(p3);
+      padding: 0.25rem 0;
+      color: $c-grey-100;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .footer-content-wrapper {
+    @include flex(center, center, column);
+    padding: 2rem 3rem 4rem;
+  }
+
+  .info-wrapper {
+    @include flex(center, center, column);
+
+    .logo-container {
+      display: none;
+    }
+
+    .logo-sm-container {
+      display: block;
+    }
+
+    .owner-and-links {
+      @include flex(center, center);
+      margin: 1rem 0 1.44rem;
+    }
+
+    .links {
+      display: none;
+    }
+
+    .owner {
+      margin-right: 0rem;
+    }
+  }
+
+  .contact-us {
+    .title-wrapper {
+      text-align: center;
+    }
+
+    .mail-wrapper {
+      margin: 1.064rem 0 0.3rem;
+    }
+
+    .mail,
+    .location {
+      @include font(p4);
+    }
+  }
+
+  .links-mobile {
+    @include flex(center, center, column);
+    margin-top: 2.5rem;
+
+    .privacy-policy-link,
+    .terms-of-use-link {
+      @include font(p3);
+      padding: 0.25rem 0;
+      color: $c-grey-100;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-content-wrapper {
+    @include flex(space-around, flex-end, row);
+    padding: 1.8125rem 0 2.625rem;
+    margin: 0 auto;
+  }
+
+  .info-wrapper {
+    @include flex(center, center, column);
+
+    .logo-container {
+      display: block;
+    }
+
+    .logo-sm-container {
+      display: none;
+    }
+
+    .owner-and-links {
+      @include flex(center, $align: center, $wrap: wrap, $direction: column);
+      margin: 0.8125rem 0 1rem;
+    }
+
+    .links {
+      display: flex;
+      margin-top: 0.5rem;
+    }
+
+    .terms-of-use-link {
+      margin: 0 0 0 1.5rem;
+    }
+
+    .owner {
+      margin-right: 0rem;
+    }
+  }
+
+  .contact-us {
+    .title-wrapper {
+      text-align: initial;
+    }
+
+    .mail-wrapper {
+      margin: 1.1875rem 0 0.4rem;
+    }
+
+    .mail,
+    .location {
+      @include font(p3);
+    }
+  }
+
+  .links-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-content-wrapper {
+    @include flex(space-around, flex-end, row);
+  }
+
+  .info-wrapper {
+    .owner-and-links {
+      @include flex(center, $align: center, $wrap: wrap, $direction: row);
+      margin: 0.8125rem 0 1rem;
+    }
+
+    .links {
+      display: flex;
+      margin-top: 0rem;
+    }
+
+    .terms-of-use-link {
+      margin: 0 0 0 1.5rem;
+    }
+
+    .owner {
+      margin-right: 3.75rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer-content-wrapper {
+    @include flex(space-between, flex-end, row);
+  }
+}

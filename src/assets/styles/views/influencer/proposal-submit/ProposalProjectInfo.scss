@@ -1,0 +1,136 @@
+.project-details {
+  @include rect(auto, auto, $br-lg);
+  background: $c-grey-000;
+}
+
+.project-bar {
+  @include flex(space-between);
+}
+
+.name {
+  @include font(p1, $c-primary-500);
+  word-break: break-word;
+}
+
+.rating {
+  @include flex();
+  @include font(p3);
+}
+
+.rating-content {
+  margin-left: 0.3438rem;
+  padding-top: 0.125rem;
+}
+
+.date {
+  @include font(p5, $c-grey-400);
+  margin-top: 0.5rem;
+}
+
+.content {
+  @include font(p4, $c-grey-600);
+  margin-top: 1.5rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.platforms {
+  margin-top: 1rem;
+  @include flex(flex-start, center);
+  flex-wrap: wrap;
+
+  .tag:first-of-type {
+    margin-left: 0.5rem;
+  }
+
+  .tag {
+    text-transform: capitalize;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .tag {
+    text-transform: capitalize;
+  }
+}
+
+.platforms-text {
+  margin-top: 0.5rem;
+  @include font(p4);
+}
+
+.budget {
+  @include font(p3, $c-grey-700);
+}
+
+@media only screen and (max-width: 576px) {
+  .project-details {
+    padding-bottom: 1rem;
+    border-bottom: 0.063rem solid $c-grey-200;
+  }
+
+  .name {
+    @include font(p2, $c-primary-500);
+  }
+
+  .budget {
+    @include font(p2, $c-grey-700);
+  }
+
+  .date {
+    @include font(p6);
+  }
+
+  .content {
+    @include font(p3, $c-grey-600);
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .project-details {
+    padding-bottom: 1rem;
+    border-bottom: 0.063rem solid $c-grey-200;
+  }
+
+  .name {
+    @include font(p2, $c-primary-500);
+  }
+
+  .budget {
+    @include font(p2, $c-grey-700);
+  }
+
+  .date {
+    @include font(p6);
+  }
+
+  .content {
+    @include font(p3, $c-grey-600);
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .project-details {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .name {
+    @include font(p1, $c-primary-500);
+  }
+
+  .budget {
+    @include font(p3, $c-grey-700);
+  }
+
+  .date {
+    @include font(p5, $c-grey-400);
+  }
+
+  .content {
+    @include font(p4, $c-grey-600);
+    margin-top: 1.5rem;
+  }
+}

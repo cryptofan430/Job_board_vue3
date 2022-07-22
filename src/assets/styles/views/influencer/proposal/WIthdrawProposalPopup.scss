@@ -1,0 +1,74 @@
+.popup {
+  @include position(fixed, 0, false, false, 0);
+  @include square(100%);
+  @include flex(center, center);
+  background: $c-overlay;
+}
+
+.popup-content {
+  @include rect(37rem, false, $br-lg);
+  @include flex(false, center, column);
+  background: $c-grey-000;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-button {
+  margin: 1.5rem 1.5rem 1rem 0;
+  align-self: flex-end;
+}
+
+.popup-title {
+  @include font(p3, $c-grey-900);
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  @include flex;
+  margin-bottom: 4.5rem;
+}
+
+.popup-action-button {
+  margin-right: 1rem;
+}
+
+.popup-back-button {
+  margin-right: auto;
+  margin-bottom: 2.675rem;
+}
+
+@media (min-width: 640px) {
+  .popup-back-button {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup {
+    display: block;
+    position: static;
+    background: transparent;
+    min-height: 33.125rem;
+  }
+  .popup-close-button {
+    display: none;
+  }
+  .popup-content {
+    @include flex(center, center);
+    background: transparent;
+    padding: 1.75rem 1rem 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup-title {
+    margin-bottom: 1rem;
+    margin-top: 2.45rem;
+    width: 100%;
+    text-align: center;
+  }
+  .action-button-half {
+    width: calc(50vw - 2.5rem);
+  }
+}

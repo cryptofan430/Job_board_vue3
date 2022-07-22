@@ -1,0 +1,146 @@
+.contract-list-item {
+  padding: 1.5rem 0;
+  border-top: 1px solid $c-grey-200;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contract-title {
+  @include font(p2);
+  color: $c-primary-500;
+  white-space: nowrap;
+}
+
+.boxes-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.influencer-box {
+  width: 32.5rem;
+  min-width: 32.5rem;
+  border-right: 1px solid $c-grey-200;
+  padding-right: 2.5rem;
+  @include flex(space-between, flex-end);
+
+  .status {
+    @include font(p3);
+    color: $c-primary-500;
+
+    &.--accepted {
+      color: $c-system-green-600;
+    }
+  }
+
+  .avatar-with-name {
+    @include flex(false, center);
+    margin-top: 0.5rem;
+  }
+
+  .avatar {
+    margin-right: 0.5rem;
+  }
+
+  .influencer-name {
+    @include font(p3);
+    color: $c-grey-700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .contract-info-wrapper {
+    margin-right: 1.5rem;
+  }
+
+  .open-link {
+    margin-left: auto;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+}
+
+.milestone-box {
+  margin-left: 4rem;
+  overflow: hidden;
+
+  .milestone-text {
+    @include font(p3);
+  }
+
+  .progress-with-name {
+    @include flex(false, center);
+    margin-top: 0.5rem;
+  }
+
+  .completion-progress {
+    @include square(1.625rem, 50%);
+    margin-right: 0.5rem;
+  }
+
+  .milestone-name {
+    @include font(p3);
+    color: $c-grey-700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .milestone-progress {
+    min-width: max-content;
+  }
+}
+
+.contract-list-item-sm-buttons {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .influencer-box {
+    .status {
+      @include font(p4);
+    }
+
+    .avatar-with-name {
+      margin-top: 1rem;
+    }
+  }
+
+  .boxes-container {
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  .milestone-box {
+    margin-left: 0;
+    margin-top: 1rem;
+    border-top: 1px solid $c-grey-200;
+    padding-top: 1rem;
+  }
+
+  .contract-list-item {
+    padding: 0;
+    border-top: unset;
+  }
+
+  .contract-list-item-content {
+    border-radius: $br-lg;
+    background: $c-grey-000;
+    padding: 1rem;
+  }
+
+  .contract-list-item-md-buttons {
+    display: none;
+  }
+
+  .contract-list-item-sm-buttons {
+    display: flex;
+    margin: 1rem auto;
+    justify-content: space-between;
+  }
+
+  .contract-list-item-sm-buttons > * {
+    width: 45%;
+  }
+}
